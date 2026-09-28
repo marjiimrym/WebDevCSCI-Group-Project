@@ -579,7 +579,11 @@ Astronomy imagery and data remain subject to the licensing and attribution requi
 
 ---
 
-## 🌠 Explore Beyond Earth
+## 🌠 Roles
+Maryam : Project Manager
+Dhruv: Full Stack Lead
+Gamze: Backend Lead
+Nithin: Frontend Lead
 
 **Cosmic Explorer turns publicly available astronomy data into an interactive journey through the universe.**
 
