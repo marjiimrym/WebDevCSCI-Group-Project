@@ -10,31 +10,31 @@ Cosmic Explorer is a single-page web application for exploring astronomy and spa
 
 ## Team Members & Roles
 
-### Member 1 - Project Lead / Frontend
+### Member 1 - Project Lead / Frontend - Maryam
 
 * Coordinate project structure and development
 * Build the main Explore page
 * Implement reusable UI components
 
-### Member 2 - API / Data
+### Member 2 - API / Data - Dhruv
 
 * Research and integrate the NASA API
 * Define the application's data structure
 * Handle API data mapping and sample data
 
-### Member 3 - Search / Filtering
+### Member 3 - Search / Filtering - Dhruv
 
 * Design and implement search functionality
 * Implement filtering and sorting
 * Build the search results interface
 
-### Member 4 - Object Details / Missions
+### Member 4 - Object Details / Missions - Nithin
 
 * Build astronomical object detail pages
 * Design mission-related interfaces
 * Create detailed object and mission views
 
-### Member 5 - UI / Accessibility
+### Member 5 - UI / Accessibility Gamze
 
 * Develop responsive layouts
 * Implement accessibility requirements
