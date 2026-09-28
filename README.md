@@ -580,10 +580,10 @@ Astronomy imagery and data remain subject to the licensing and attribution requi
 ---
 
 ## 🌠 Roles
-Maryam : Project Manager
-Dhruv: Full Stack Lead
-Gamze: Backend Lead
-Nithin: Frontend Lead
+* Maryam : Project Manager -- ensures the project is developing on schedule and Github is upto date. Contributes to frontend and backend equally as the rest. 
+* Dhruv: Full Stack Lead -- ensures the project is running smoothly and is in charge for fixing any bugs. Contributes to frontend and backend equally as the rest. 
+* Gamze: Backend Lead -- ensures the functionality of the website is developed properly. 
+* Nithin: Frontend Lead -- ensures the layout and structure of the website. 
 
 **Cosmic Explorer turns publicly available astronomy data into an interactive journey through the universe.**
 
