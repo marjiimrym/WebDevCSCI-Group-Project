@@ -1,0 +1,375 @@
+:root {
+    --night: #100e26;
+    --deep: #1a1740;
+    --panel: #221f4d;
+    --line: #4a4690;
+    --ink: #f3ecdc;
+    --muted: #c4bfdf;
+    --ember: #ff9a52;
+    --teal: #6fd6d1;
+    --violet: #c3b6ff;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--night);
+    color: var(--ink);
+    font: 1.0625rem/1.6 var(--body);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--teal);
+    text-underline-offset: .2em;
+}
+
+a:hover {
+    color: var(--ember);
+}
+
+:focus-visible {
+    outline: 3px solid #ffd29e;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.skip {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    background: var(--ember);
+    color: #1a1020;
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.skip:focus {
+    top: 1rem;
+}
+
+.wrap {
+    width: min(72rem, 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -.01em;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 4.25rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 62ch;
+}
+
+
+.site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--night);
+}
+
+.site-header .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.brand {
+    font: 600 1.35rem var(--display);
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.brand::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffd29e, var(--ember) 55%, #b04a1e);
+    box-shadow: 0 0 0 4px var(--night), 0 0 0 5px var(--line);
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: .4rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+    color: var(--ink);
+    border-color: var(--ember);
+}
+
+/* hero with orbit rings */
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border-bottom: 1px solid var(--line);
+}
+
+.hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:linear-gradient(90deg,rgba(16,14,38,.55) 0%,rgba(16,14,38,.25) 55%,rgba(16,14,38,0) 100%);
+}
+
+.hero .wrap {
+    padding-block: clamp(3rem, 9vw, 7rem);
+    position: relative;
+}
+
+.hero .wrap::after,
+.hero .wrap::before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(195, 182, 255, .45);
+    border-radius: 50%;
+    pointer-events: none;
+    right: -6rem;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.hero .wrap::before {
+    width: 34rem;
+    height: 34rem;
+}
+
+.hero .wrap::after {
+    width: 22rem;
+    height: 22rem;
+    right: -.5rem;
+    border-color: rgba(255, 154, 82, .55);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-top: 1.25rem;
+}
+.tools {
+    background: var(--deep);
+    border-bottom: 1px solid var(--line);
+}
+
+.tools form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+    padding-block: 1.25rem;
+}
+
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: .35rem;
+    font-size: .95rem;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    min-height: 2.9rem;
+    padding: .55rem .8rem;
+    background: var(--night);
+    color: var(--ink);
+    border: 1px solid #8e89d0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.btn {
+    min-height: 2.9rem;
+    padding: .55rem 1.4rem;
+    background: var(--ember);
+    color: #1a1020;
+    border: 0;
+    border-radius: 8px;
+    font: 700 1rem var(--body);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #ffb27a;
+    color: #1a1020;
+}
+
+/* results */
+.results {
+    padding-block: 2.5rem 4rem;
+}
+
+.count {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.75rem;
+}
+
+.card {
+    position: relative;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: var(--ember);
+}
+
+.crop {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #000;
+}
+/*this should make the pictures fit in place */
+.crop img.fit{object-fit:contain;transform:none}
+
+.crop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(var(--z, 2.4));
+    transform-origin: var(--x, 50%) var(--y, 50%);
+}
+
+.card-body {
+    padding: 1.1rem 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+    flex: 1;
+}
+
+.tag {
+    align-self: flex-start;
+    font-size: .85rem;
+    font-weight: 600;
+    color: #1a1020;
+    background: var(--violet);
+    padding: .1rem .65rem;
+    border-radius: 99px;
+}
+
+.card h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.card h2 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.card h2 a:focus-visible {
+    outline: none;
+}
+
+.card:has(h2 a:focus-visible) {
+    outline: 3px solid #ffd29e;
+    outline-offset: 3px;
+}
+
+.card p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.meta {
+    margin: auto 0 0;
+    padding-top: .75rem;
+    display: flex;
+    gap: 1.5rem;
+    font-size: .95rem;
+}
+
+.meta dt {
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+.meta dd {
+    margin: 0;
+    font-weight: 600;
+}
+
+.meta div {
+    min-width: 0;
+}
+
