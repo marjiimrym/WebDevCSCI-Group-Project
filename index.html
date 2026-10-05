@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore the cosmos | Cosmic Explorer</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Learn and browse about planets and stars!.">
+    <title>Cosmic Explorer — CSCI 3230U Group Project</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Cosmic Explorer - A single-page web application for exploring astronomy and space discovery data. Built by Team Cosmic Explorer for CSCI 3230U.">
 </head>
 <body>
     <a class="skip" href="#main">Skip to main content</a>
@@ -15,185 +15,167 @@
             <a class="brand" href="index.html">Cosmic Explorer</a>
             <nav aria-label="Main">
                 <ul class="nav">
-                    <li><a href="index.html" aria-current="page">Explore</a></li>
+                    <li><a href="pages/explore.html">Explore</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#milestones">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="page-title">
-            <img src="images/openpage.jpg" alt="" width="728" height="408">
-            <div class="wrap">
-                <h1 id="page-title">Find your way around the cosmos</h1>
-                <p>From the Moon next door to a galaxy 2.5 million light-years away.</p>
+        <section class="hero" aria-labelledby="landing-title" style="text-align: center;">
+            <img src="assets/images/openpage.jpg" alt="Deep space starfield" width="728" height="408">
+            <div class="wrap" style="max-width: 48rem;">
+                <h1 id="landing-title" style="font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 1rem;">Cosmic Explorer</h1>
+                <p style="font-size: 1.35rem; color: var(--muted); margin-bottom: 2rem;">A single-page web application for exploring astronomy and space discovery data</p>
+                <p style="color: var(--ink); max-width: 40ch; margin: 0 auto 2rem;">Browse celestial objects from our solar system and beyond. Search, filter, and discover planets, moons, stars, and galaxies — powered by NASA's open APIs.</p>
+                <a class="btn" href="pages/explore.html" style="font-size: 1.1rem; padding: .75rem 2rem;">Launch Explorer →</a>
             </div>
         </section>
 
-        <section class="tools" aria-label="Search and filter">
+        <section id="about" class="detail" style="padding-block: 4rem; background: var(--deep);">
             <div class="wrap">
-                <form action="index.html" method="get" role="search">
-                    <div class="field">
-                        <label for="q">Search by name</label>
-                        <input id="q" name="q" type="search" placeholder="Saturn">
-                    </div>
-                    <div class="field">
-                        <label for="type">Type of object</label>
-                        <select id="type" name="type">
-                            <option>All types</option>
-                            <option>Planets</option>
-                            <option>Moons</option>
-                            <option>Stars</option>
-                            <option>Galaxies</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="sort">Sort by</label>
-                        <select id="sort" name="sort">
-                            <option>Distance from Earth</option>
-                            <option>Name (A to Z)</option>
-                            <option>Size</option>
-                        </select>
-                    </div>
-                    <button class="btn" type="submit">Apply filters</button>
-                </form>
+                <h2 style="text-align: center; margin-bottom: 2.5rem;">About the Project</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Course</h3>
+                        <p style="color: var(--muted); margin: 0;">CSCI 3230U — Web Development (Winter 2026)</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Type</h3>
+                        <p style="color: var(--muted); margin: 0;">React Single-Page Application (SPA)</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Data Source</h3>
+                        <p style="color: var(--muted); margin: 0;">NASA Open APIs (APOD, NEO, Mars Rover, Earth imagery)</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Status</h3>
+                        <p style="color: var(--muted); margin: 0;">M1 Static Prototype — Milestone 1 Complete</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="results" aria-labelledby="results-title">
+        <section id="features" class="detail" style="padding-block: 4rem;">
             <div class="wrap">
-                <h2 id="results-title" class="vh">Results</h2>
-                <p class="count">Showing 6 of 6 objects, based on distance from earth</p>
-                <ul class="grid">
-                    <li class="card">
-                        <div class="crop">
-                            <img class="fit" src="images/moon.jpg" alt="A moon in the sky." style="--x:45%;--y:45%;--z:1" loading="lazy" width="700" height="400">
+                <h2 style="text-align: center; margin-bottom: 2.5rem;">Core Features</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Search & Filter</h3>
+                        <p style="color: var(--muted); margin: 0;">Find objects by name, filter by type (planet, moon, star, galaxy), and sort by distance, size, or name.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Detail Pages</h3>
+                        <p style="color: var(--muted); margin: 0;">Each object has a dedicated page with rich data: specs, exploration history, surface features, and more.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Favourites</h3>
+                        <p style="color: var(--muted); margin: 0;">Save favourite objects locally — persisted in localStorage, accessible across sessions.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Responsive & Accessible</h3>
+                        <p style="color: var(--muted); margin: 0;">Mobile-first design, WCAG AA contrast, semantic HTML, keyboard navigation, and screen-reader support.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="detail" style="padding-block: 4rem; background: var(--deep);">
+            <div class="wrap">
+                <h2 style="text-align: center; margin-bottom: 2.5rem;">Team Cosmic Explorer</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Maryam</h3>
+                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">Project Lead / Frontend</p>
+                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Coordinates project structure, builds main Explore page, implements reusable UI components.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Dhruv</h3>
+                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">API / Data & Search</p>
+                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Integrates NASA APIs, defines data structures, handles data mapping, implements search, filter, and sort.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Nithin</h3>
+                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">Object Details / Missions</p>
+                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Builds astronomical object detail pages, designs mission-related interfaces, creates detailed views.</p>
+                    </article>
+                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Gamze</h3>
+                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">UI / Accessibility</p>
+                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Develops responsive layouts, implements accessibility requirements, builds favourites and saved interfaces.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="milestones" class="detail" style="padding-block: 4rem;">
+            <div class="wrap">
+                <h2 style="text-align: center; margin-bottom: 2.5rem;">Project Milestones</h2>
+                <div style="max-width: 48rem; margin: 0 auto;">
+                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
+                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--ember); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M0</div>
                         </div>
-                        <div class="card-body">
-                            <span class="tag">Moon</span>
-                            <h2><a href="moon.html">The Moon</a></h2>
-                            <p>Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>384,400 km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>1,737 km</dd>
-                                </div>
-                            </dl>
+                        <div>
+                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Team & Topic</h3>
+                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Team formed, GitHub repo created, topic locked: Cosmic Explorer using NASA APIs.</p>
                         </div>
-                    </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="images/mars.jpg" alt="A reddish planet partly hidden by clouds, from a space collage." style="--x:27%;--y:79%;--z:4.5" loading="lazy" width="735" height="490">
+                    </article>
+                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
+                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--ember); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M1</div>
                         </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="mars.html">Mars</a></h2>
-                            <p>A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>225 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>3,390 km</dd>
-                                </div>
-                            </dl>
+                        <div>
+                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Proposal & Static Prototype</h3>
+                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Written proposal, wireframes, and static HTML/CSS prototype (this site) — semantic, responsive, accessible.</p>
                         </div>
-                    </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="images/sun.jpg" alt="The sun." style="--x:30%;--y:45%;--z:2.6" loading="lazy" width="735" height="490">
+                    </article>
+                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
+                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--teal); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M2</div>
                         </div>
-                        <div class="card-body">
-                            <span class="tag">Star</span>
-                            <h2><a href="thesun.html">The Sun</a></h2>
-                            <p>The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>150 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>696,340 km</dd>
-                                </div>
-                            </dl>
+                        <div>
+                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">React Foundation</h3>
+                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Prototype rebuilt as React app with Vite: components, props, state, event handling, list rendering on mock data.</p>
                         </div>
-                    </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="images/jupiter.jpg" alt="A striped gas giant stitched in thread against a dark sky." style="--x:90%;--y:32%;--z:3.2" loading="lazy" width="735" height="490">
+                    </article>
+                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
+                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--teal); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M3</div>
                         </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="jupiter.html">Jupiter</a></h2>
-                            <p>The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>778 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>69,911 km</dd>
-                                </div>
-                            </dl>
+                        <div>
+                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Baseline Working Project</h3>
+                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Live API integration, search/filter/sort, routed detail views, persisted favourites, controlled form, tests, deployed.</p>
                         </div>
-                    </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="images/saturn.jpg" alt="A ringed, tan planet from a space collage." style="--x:76%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
+                    </article>
+                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;">
+                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--violet); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M4</div>
                         </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="saturn.html">Saturn</a></h2>
-                            <p>Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>1.43 billion km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>58,232 km</dd>
-                                </div>
-                            </dl>
+                        <div>
+                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Independent Concept & Video</h3>
+                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Research & integrate a novel concept (e.g., TanStack Query, Framer Motion, PWA), produce a 1–3 min demo video.</p>
                         </div>
-                    </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="images/galaxy.jpg" alt="A purple spiral galaxy." style="--x:78%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Galaxy</span>
-                            <h2><a href="galaxy.html">Andromeda Galaxy</a></h2>
-                            <p>The nearest large galaxy to ours, home to roughly a trillion stars.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>2.5 million light-years</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>About 110,000 light-years across</dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </li>
-                </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail" style="padding-block: 4rem; text-align: center; background: var(--deep);">
+            <div class="wrap">
+                <h2 style="margin-bottom: 1.5rem;">Ready to Explore?</h2>
+                <p style="color: var(--muted); max-width: 40ch; margin: 0 auto 2rem;">Browse our static prototype of the Explore page and detail views. The full React application with live NASA data is coming in Milestone 2.</p>
+                <a class="btn" href="pages/explore.html" style="font-size: 1.1rem; padding: .75rem 2rem;">View Prototype →</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer" id="about">
         <div class="wrap">
-            <p>This is just a prototype we created. It is not fully functioning.</p>
+            <p>Cosmic Explorer — CSCI 3230U Group Project Prototype · This is a static prototype for Milestone 1. Not fully functioning.</p>
         </div>
     </footer>
 </body>
