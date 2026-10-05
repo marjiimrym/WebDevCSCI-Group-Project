@@ -1,0 +1,56 @@
+[
+  {
+    "id": "moon",
+    "title": "The Moon",
+    "tag": "Moon",
+    "summary": "Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.",
+    "distance": 384400,
+    "radius": 1737,
+    "cover": "images/moon.jpg"
+  },
+  {
+    "id": "mars",
+    "title": "Mars",
+    "tag": "Planet",
+    "summary": "A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.",
+    "distance": 225000000,
+    "radius": 3390,
+    "cover": "images/mars.jpg"
+  },
+  {
+    "id": "sun",
+    "title": "The Sun",
+    "tag": "Star",
+    "summary": "The star at the center of our solar system, providing light and heat to sustain life on Earth.",
+    "distance": 150000000,
+    "radius": 696340,
+    "cover": "images/sun.jpg"
+  },
+  {
+    "id": "saturn",
+    "title": "Saturn",
+    "tag": "Planet",
+    "summary": "Famous for its stunning rings, Saturn is a gas giant with dozens of moons and a captivating atmosphere.",
+    "distance": 1427000000,
+    "radius": 58232,
+    "cover": "images/saturn.jpg"
+  },
+  {
+    "id": "jupiter",
+    "title": "Jupiter",
+    "tag": "Planet",
+    "summary": "The largest planet in our solar system, Jupiter is a gas giant with a powerful magnetic field and dozens of moons.",
+    "distance": 778500000,
+    "radius": 69911,
+    "cover": "images/jupiter.jpg"
+  },
+  {
+    "id": "galaxy",
+    "title": "Andromeda Galaxy",
+    "tag": "Galaxy",
+    "summary": "The nearest spiral galaxy to the Milky Way, Andromeda is on a collision course with our galaxy, expected to merge in about 4.5 billion years.",
+    "distance": 2.4e19,
+    "radius": 5.203e17,
+    "cover": "images/galaxy.jpg"
+  }
+]
