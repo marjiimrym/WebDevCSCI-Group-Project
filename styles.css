@@ -35,7 +35,7 @@ img {
     height: auto;
 }
 
-a {
+a{
     color: var(--teal);
     text-underline-offset: .2em;
 }
@@ -71,9 +71,7 @@ a:hover {
     margin-inline: auto;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3{
     font-family: var(--display);
     font-weight: 600;
     line-height: 1.1;
@@ -81,16 +79,16 @@ h3 {
     letter-spacing: -.01em;
 }
 
-h1 {
+h1{
     font-size: clamp(2.4rem, 6vw, 4.25rem);
 }
 
-h2 {
+h2{
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-p {
-    margin: 0 0 1rem;
+p{
+    margin: 1rem;
     max-width: 62ch;
 }
 
@@ -148,7 +146,7 @@ p {
     border-color: var(--ember);
 }
 
-/* hero with orbit rings */
+/* hero header */
 .hero {
     position: relative;
     overflow: hidden;
@@ -258,7 +256,7 @@ p {
     color: #1a1020;
 }
 
-/* results */
+/* results section  */
 .results {
     padding-block: 2.5rem 4rem;
 }
@@ -306,7 +304,7 @@ p {
     transform: scale(var(--z, 2.4));
     transform-origin: var(--x, 50%) var(--y, 50%);
 }
-
+ /*designs the card for each object  */
 .card-body {
     padding: 1.1rem 1.25rem 1.4rem;
     display: flex;
@@ -319,7 +317,7 @@ p {
     align-self: flex-start;
     font-size: .85rem;
     font-weight: 600;
-    color: #1a1020;
+    color: #060507;
     background: var(--violet);
     padding: .1rem .65rem;
     border-radius: 99px;
@@ -328,21 +326,6 @@ p {
 .card h2 a {
     color: var(--ink);
     text-decoration: none;
-}
-
-.card h2 a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-
-.card h2 a:focus-visible {
-    outline: none;
-}
-
-.card:has(h2 a:focus-visible) {
-    outline: 3px solid #ffd29e;
-    outline-offset: 3px;
 }
 
 .card p {
