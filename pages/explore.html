@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore the cosmos | Cosmic Explorer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta name="description" content="Learn and browse about planets and stars!.">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../index.html">Cosmic Explorer</a>
+            <nav aria-label="Main">
+                <ul class="nav">
+                    <li><a href="explore.html" aria-current="page">Explore</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="page-title">
+            <img src="../assets/images/openpage.jpg" alt="" width="728" height="408">
+            <div class="wrap">
+                <h1 id="page-title">Find your way around the cosmos</h1>
+                <p>From the Moon next door to a galaxy 2.5 million light-years away.</p>
+            </div>
+        </section>
+
+        <section class="tools" aria-label="Search and filter">
+            <div class="wrap">
+                <form action="explore.html" method="get" role="search">
+                    <div class="field">
+                        <label for="q">Search by name</label>
+                        <input id="q" name="q" type="search" placeholder="Saturn">
+                    </div>
+                    <div class="field">
+                        <label for="type">Type of object</label>
+                        <select id="type" name="type">
+                            <option>All types</option>
+                            <option>Planets</option>
+                            <option>Moons</option>
+                            <option>Stars</option>
+                            <option>Galaxies</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="sort">Sort by</label>
+                        <select id="sort" name="sort">
+                            <option>Distance from Earth</option>
+                            <option>Name (A to Z)</option>
+                            <option>Size</option>
+                        </select>
+                    </div>
+                    <button class="btn" type="submit">Apply filters</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="results" aria-labelledby="results-title">
+            <div class="wrap">
+                <h2 id="results-title" class="vh">Results</h2>
+                <p class="count">Showing 6 of 6 objects, based on distance from earth</p>
+                <ul class="grid">
+                    <li class="card">
+                        <div class="crop">
+                            <img class="fit" src="../assets/images/moon.jpg" alt="A moon in the sky." style="--x:45%;--y:45%;--z:1" loading="lazy" width="700" height="400">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Moon</span>
+                            <h2><a href="moon.html">The Moon</a></h2>
+                            <p>Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>384,400 km</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>1,737 km</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="crop">
+                            <img src="../assets/images/mars.jpg" alt="A reddish planet partly hidden by clouds, from a space collage." style="--x:27%;--y:79%;--z:4.5" loading="lazy" width="735" height="490">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Planet</span>
+                            <h2><a href="mars.html">Mars</a></h2>
+                            <p>A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>225 million km</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>3,390 km</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="crop">
+                            <img src="../assets/images/sun.jpg" alt="The sun." style="--x:30%;--y:45%;--z:2.6" loading="lazy" width="735" height="490">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Star</span>
+                            <h2><a href="thesun.html">The Sun</a></h2>
+                            <p>The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>150 million km</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>696,340 km</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="crop">
+                            <img src="../assets/images/jupiter.jpg" alt="A striped gas giant stitched in thread against a dark sky." style="--x:90%;--y:32%;--z:3.2" loading="lazy" width="735" height="490">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Planet</span>
+                            <h2><a href="jupiter.html">Jupiter</a></h2>
+                            <p>The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>778 million km</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>69,911 km</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="crop">
+                            <img src="../assets/images/saturn.jpg" alt="A ringed, tan planet from a space collage." style="--x:76%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Planet</span>
+                            <h2><a href="saturn.html">Saturn</a></h2>
+                            <p>Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>1.43 billion km</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>58,232 km</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="crop">
+                            <img src="../assets/images/galaxy.jpg" alt="A purple spiral galaxy." style="--x:78%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
+                        </div>
+                        <div class="card-body">
+                            <span class="tag">Galaxy</span>
+                            <h2><a href="galaxy.html">Andromeda Galaxy</a></h2>
+                            <p>The nearest large galaxy to ours, home to roughly a trillion stars.</p>
+                            <dl class="meta">
+                                <div>
+                                    <dt>Distance</dt>
+                                    <dd>2.5 million light-years</dd>
+                                </div>
+                                <div>
+                                    <dt>Radius</dt>
+                                    <dd>About 110,000 light-years across</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+        <div class="wrap">
+            <p>This is just a prototype we created. It is not fully functioning.</p>
+        </div>
+    </footer>
+</body>
+</html>
