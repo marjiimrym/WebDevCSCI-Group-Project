@@ -4,111 +4,165 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jupiter | Cosmic Explorer</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
     <meta name="description" content="Explore Jupiter - the largest planet in our solar system. Learn about its storms, moons, rings, and role as a cosmic shield.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <a class="skip" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="../index.html">Cosmic Explorer</a>
-            <nav aria-label="Main">
-                <ul class="nav">
-                    <li><a href="../index.html">Explore</a></li>
-                    <li><a href="#about">About</a></li>
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link is-active" href="explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="about.html">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="page-title">
-            <img src="../assets/images/jupiter.jpg" alt="Jupiter - a banded gas giant with the Great Red Spot" width="728" height="408">
-            <div class="wrap">
-                <h1 id="page-title">Jupiter</h1>
-                <p class="tag" style="background: var(--violet); color: #1a1020; display: inline-block; padding: .3rem .8rem; border-radius: 99px; font-size: .9rem; font-weight: 600; margin-bottom: 1rem;">Planet</p>
-                <p>The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
-            </div>
-        </section>
+        <article class="object type-planet" aria-labelledby="page-title">
+            <header class="object-hero">
+                <div class="sky" aria-hidden="true"></div>
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol role="list">
+                            <li><a href="explore.html">Explore</a></li>
+                            <li>Planets</li>
+                            <li><span aria-current="page">Jupiter</span></li>
+                        </ol>
+                    </nav>
+                    <div class="object-hero__grid">
+                        <div>
+                            <p class="category">Planet</p>
+                            <h1 id="page-title" class="object-title">Jupiter</h1>
+                            <p class="lede object-lede">The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
+                            <p class="object-index">Object 04 of 06</p>
+                        </div>
+                        <figure class="object-visual">
+                            <span class="object-visual__orbit" aria-hidden="true"></span>
+                            <img src="../assets/images/jupiter.jpg" alt="Jupiter - a banded gas giant with the Great Red Spot" width="733" height="783">
+                        </figure>
+                    </div>
+                </div>
+            </header>
 
-        <section class="detail" style="padding-block: 3rem;">
-            <div class="wrap">
-                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Overview</h2>
+            <section class="facts-panel" aria-labelledby="facts-title">
+                <div class="container">
+                    <h2 id="facts-title" class="facts-panel__title">Key facts</h2>
+                    <dl class="facts">
+                        <div class="fact"><dt>Distance from Earth</dt><dd>778 million km (avg)</dd></div>
+                        <div class="fact"><dt>Radius</dt><dd>69,911 km</dd></div>
+                        <div class="fact"><dt>Mass</dt><dd>1.90 × 10²⁷ kg (318× Earth)</dd></div>
+                        <div class="fact"><dt>Surface gravity</dt><dd>24.79 m/s² (2.5× Earth)</dd></div>
+                        <div class="fact"><dt>Orbital period</dt><dd>11.86 Earth years</dd></div>
+                        <div class="fact"><dt>Day length</dt><dd>9.9 hours</dd></div>
+                        <div class="fact"><dt>Moons</dt><dd>95+ confirmed</dd></div>
+                        <div class="fact"><dt>Composition</dt><dd>~90% H, ~10% He</dd></div>
+                    </dl>
+                </div>
+            </section>
+
+            <div class="container object-body">
+                <nav class="toc" aria-label="On this page">
+                    <p class="toc__title">On this page</p>
+                    <ol role="list">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#atmosphere">Atmosphere &amp; Great Red Spot</a></li>
+                        <li><a href="#galilean-moons">Galilean Moons</a></li>
+                        <li><a href="#exploration">Exploration</a></li>
+                    </ol>
+                </nav>
+
+                <div class="prose">
+                    <section id="overview">
+                        <h2>Overview</h2>
                         <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System — more than twice as massive as all other planets combined. A gas giant composed mostly of hydrogen and helium, it lacks a solid surface. Its rapid rotation (9.9 hours) creates powerful banded cloud patterns and the most intense magnetic field of any planet.</p>
                         <p>Jupiter acts as a "cosmic vacuum cleaner," its gravity deflecting or capturing comets and asteroids that might threaten the inner planets. It has a faint ring system and at least 95 known moons, including the four large Galilean moons.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Key Facts</h2>
-                        <dl class="meta" style="display: grid; grid-template-columns: repeat(2, minmax(10rem, 1fr)); gap: 1rem 2rem; padding-top: 0; font-size: 1rem;">
-                            <div>
-                                <dt>Distance from Earth</dt>
-                                <dd>778 million km (avg)</dd>
-                            </div>
-                            <div>
-                                <dt>Radius</dt>
-                                <dd>69,911 km</dd>
-                            </div>
-                            <div>
-                                <dt>Mass</dt>
-                                <dd>1.90 × 10²⁷ kg (318× Earth)</dd>
-                            </div>
-                            <div>
-                                <dt>Surface gravity</dt>
-                                <dd>24.79 m/s² (2.5× Earth)</dd>
-                            </div>
-                            <div>
-                                <dt>Orbital period</dt>
-                                <dd>11.86 Earth years</dd>
-                            </div>
-                            <div>
-                                <dt>Day length</dt>
-                                <dd>9.9 hours</dd>
-                            </div>
-                            <div>
-                                <dt>Moons</dt>
-                                <dd>95+ confirmed</dd>
-                            </div>
-                            <div>
-                                <dt>Composition</dt>
-                                <dd>~90% H, ~10% He</dd>
-                            </div>
-                        </dl>
-                    </article>
-
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Atmosphere & Great Red Spot</h2>
+                    <section id="atmosphere">
+                        <h2>Atmosphere &amp; Great Red Spot</h2>
                         <p>Jupiter's visible bands are ammonia clouds in different altitudes and temperatures. The <strong>Great Red Spot</strong> is an anticyclonic storm at least 350 years old, large enough to swallow Earth. It rotates counterclockwise every 6 days and has been shrinking over recent decades. Smaller storms appear and merge constantly.</p>
                         <p>Deep below the clouds, pressure and temperature rise dramatically. At ~20% of the radius, hydrogen becomes metallic — a fluid conductor generating the immense magnetic field. The core may be a dense mix of rock and metal under millions of atmospheres.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Galilean Moons</h2>
+                    <section id="galilean-moons">
+                        <h2>Galilean Moons</h2>
                         <p>Jupiter's four largest moons (discovered by Galileo in 1610) are worlds in their own right:</p>
-                        <ul style="margin: .5rem 0 1rem 1.5rem; line-height: 2;">
+                        <ul role="list">
                             <li><strong>Io</strong> — Most volcanically active body in Solar System, sulfur-covered, tidally heated</li>
                             <li><strong>Europa</strong> — Smooth ice crust over a global subsurface ocean, prime candidate for life</li>
                             <li><strong>Ganymede</strong> — Largest moon in Solar System (bigger than Mercury), has own magnetic field</li>
                             <li><strong>Callisto</strong> — Heavily cratered, ancient surface, likely subsurface ocean</li>
                         </ul>
                         <p>All four are locked in orbital resonances (Io:Europa:Ganymede = 1:2:4) that drive tidal heating.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Exploration</h2>
+                    <section id="exploration">
+                        <h2>Exploration</h2>
                         <p>Pioneer 10/11 (1970s), Voyager 1/2 (1979), Galileo (1995-2003), and Juno (2016-present) have studied Jupiter. Juno's polar orbits reveal chaotic cyclones at the poles, a "fuzzy" core, and deep atmospheric dynamics. <strong>Europa Clipper</strong> (launch 2024) and <strong>JUICE</strong> (ESA, en route) will explore the icy moons in the 2030s.</p>
-                    </article>
+                    </section>
                 </div>
             </div>
-        </section>
+
+            <nav class="object-nav" aria-label="More objects">
+                <div class="container object-nav__grid">
+                    <a class="object-nav__link object-nav__link--prev" href="mars.html">
+                        <span class="object-nav__dir"><span class="arrow" aria-hidden="true">←</span> Previous object</span>
+                        <span class="object-nav__name">Mars</span>
+                    </a>
+                    <a class="btn btn--ghost object-nav__back" href="explore.html">Back to Explore</a>
+                    <a class="object-nav__link object-nav__link--next" href="saturn.html">
+                        <span class="object-nav__dir">Next object <span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="object-nav__name">Saturn</span>
+                    </a>
+                </div>
+            </nav>
+        </article>
     </main>
 
-    <footer class="site-footer" id="about">
-        <div class="wrap">
-            <p>This is just a prototype we created. It is not fully functioning.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
         </div>
     </footer>
 </body>

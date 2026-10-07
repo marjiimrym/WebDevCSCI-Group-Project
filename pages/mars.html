@@ -4,105 +4,159 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mars | Cosmic Explorer</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
     <meta name="description" content="Explore Mars - the Red Planet. Learn about its geography, atmosphere, exploration history, and potential for human settlement.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <a class="skip" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="../index.html">Cosmic Explorer</a>
-            <nav aria-label="Main">
-                <ul class="nav">
-                    <li><a href="../index.html">Explore</a></li>
-                    <li><a href="#about">About</a></li>
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link is-active" href="explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="about.html">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="page-title">
-            <img src="../assets/images/mars.jpg" alt="Mars - a reddish planet with polar ice caps" width="728" height="408">
-            <div class="wrap">
-                <h1 id="page-title">Mars</h1>
-                <p class="tag" style="background: var(--violet); color: #1a1020; display: inline-block; padding: .3rem .8rem; border-radius: 99px; font-size: .9rem; font-weight: 600; margin-bottom: 1rem;">Planet</p>
-                <p>A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
-            </div>
-        </section>
+        <article class="object type-planet" aria-labelledby="page-title">
+            <header class="object-hero">
+                <div class="sky" aria-hidden="true"></div>
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol role="list">
+                            <li><a href="explore.html">Explore</a></li>
+                            <li>Planets</li>
+                            <li><span aria-current="page">Mars</span></li>
+                        </ol>
+                    </nav>
+                    <div class="object-hero__grid">
+                        <div>
+                            <p class="category">Planet</p>
+                            <h1 id="page-title" class="object-title">Mars</h1>
+                            <p class="lede object-lede">A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
+                            <p class="object-index">Object 03 of 06</p>
+                        </div>
+                        <figure class="object-visual">
+                            <span class="object-visual__orbit" aria-hidden="true"></span>
+                            <img src="../assets/images/mars.jpg" alt="Mars - a reddish planet with polar ice caps" width="733" height="783">
+                        </figure>
+                    </div>
+                </div>
+            </header>
 
-        <section class="detail" style="padding-block: 3rem;">
-            <div class="wrap">
-                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Overview</h2>
+            <section class="facts-panel" aria-labelledby="facts-title">
+                <div class="container">
+                    <h2 id="facts-title" class="facts-panel__title">Key facts</h2>
+                    <dl class="facts">
+                        <div class="fact"><dt>Distance from Earth</dt><dd>225 million km (avg)</dd></div>
+                        <div class="fact"><dt>Radius</dt><dd>3,390 km</dd></div>
+                        <div class="fact"><dt>Mass</dt><dd>6.42 × 10²³ kg</dd></div>
+                        <div class="fact"><dt>Surface gravity</dt><dd>3.71 m/s² (38% of Earth)</dd></div>
+                        <div class="fact"><dt>Orbital period</dt><dd>687 Earth days</dd></div>
+                        <div class="fact"><dt>Day length</dt><dd>24.6 hours</dd></div>
+                        <div class="fact"><dt>Moons</dt><dd>2 (Phobos, Deimos)</dd></div>
+                        <div class="fact"><dt>Atmosphere</dt><dd>95% CO₂, thin</dd></div>
+                    </dl>
+                </div>
+            </section>
+
+            <div class="container object-body">
+                <nav class="toc" aria-label="On this page">
+                    <p class="toc__title">On this page</p>
+                    <ol role="list">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#geography">Geography &amp; Climate</a></li>
+                        <li><a href="#exploration">Exploration</a></li>
+                        <li><a href="#moons">Moons</a></li>
+                    </ol>
+                </nav>
+
+                <div class="prose">
+                    <section id="overview">
+                        <h2>Overview</h2>
                         <p>Mars is the fourth planet from the Sun and the second-smallest in the Solar System. Known as the "Red Planet" due to iron oxide (rust) on its surface, Mars has a thin atmosphere composed mostly of carbon dioxide. It features the largest volcano (Olympus Mons), deepest canyon (Valles Marineris), and polar ice caps made of water and dry ice.</p>
                         <p>Mars has been a prime target for exploration due to its potential for past microbial life and future human settlement. Evidence suggests it once had liquid water on its surface billions of years ago.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Key Facts</h2>
-                        <dl class="meta" style="display: grid; grid-template-columns: repeat(2, minmax(10rem, 1fr)); gap: 1rem 2rem; padding-top: 0; font-size: 1rem;">
-                            <div>
-                                <dt>Distance from Earth</dt>
-                                <dd>225 million km (avg)</dd>
-                            </div>
-                            <div>
-                                <dt>Radius</dt>
-                                <dd>3,390 km</dd>
-                            </div>
-                            <div>
-                                <dt>Mass</dt>
-                                <dd>6.42 × 10²³ kg</dd>
-                            </div>
-                            <div>
-                                <dt>Surface gravity</dt>
-                                <dd>3.71 m/s² (38% of Earth)</dd>
-                            </div>
-                            <div>
-                                <dt>Orbital period</dt>
-                                <dd>687 Earth days</dd>
-                            </div>
-                            <div>
-                                <dt>Day length</dt>
-                                <dd>24.6 hours</dd>
-                            </div>
-                            <div>
-                                <dt>Moons</dt>
-                                <dd>2 (Phobos, Deimos)</dd>
-                            </div>
-                            <div>
-                                <dt>Atmosphere</dt>
-                                <dd>95% CO₂, thin</dd>
-                            </div>
-                        </dl>
-                    </article>
-
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Geography & Climate</h2>
+                    <section id="geography">
+                        <h2>Geography &amp; Climate</h2>
                         <p>Mars is a frozen desert with an average temperature of -60°C. The thin atmosphere (0.6% of Earth's pressure) cannot retain heat well. The northern hemisphere is smoother with younger plains, while the southern hemisphere is heavily cratered and older. Olympus Mons stands 21 km high — nearly three times the height of Mount Everest. Valles Marineris stretches over 4,000 km long and up to 7 km deep.</p>
                         <p>Seasonal dust storms can engulf the entire planet. The polar caps grow and shrink with seasons, composed of water ice and frozen CO₂. Subsurface ice exists at mid-latitudes.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Exploration</h2>
+                    <section id="exploration">
+                        <h2>Exploration</h2>
                         <p>Mars is the most explored planet beyond Earth. NASA's <strong>Mariner 4</strong> (1965) returned the first close-up photos. The <strong>Viking landers</strong> (1976) conducted the first surface experiments. Since the 1990s, orbiters (Mars Global Surveyor, Mars Reconnaissance Orbiter, MAVEN) and rovers (Sojourner, Spirit, Opportunity, Curiosity, Perseverance) have revolutionized our understanding.</p>
                         <p>Current missions search for signs of ancient life, study climate history, and test technologies for human exploration (like MOXIE producing oxygen from CO₂). Sample return missions are planned for the 2030s.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Moons</h2>
+                    <section id="moons">
+                        <h2>Moons</h2>
                         <p>Mars has two small, irregularly shaped moons: <strong>Phobos</strong> (22 km diameter) and <strong>Deimos</strong> (12 km). Both are likely captured asteroids. Phobos orbits just 6,000 km above Mars — closer than any other moon to its planet — and is gradually spiraling inward. In 30-50 million years, it may crash into Mars or break into a ring.</p>
-                    </article>
+                    </section>
                 </div>
             </div>
-        </section>
+
+            <nav class="object-nav" aria-label="More objects">
+                <div class="container object-nav__grid">
+                    <a class="object-nav__link object-nav__link--prev" href="thesun.html">
+                        <span class="object-nav__dir"><span class="arrow" aria-hidden="true">←</span> Previous object</span>
+                        <span class="object-nav__name">The Sun</span>
+                    </a>
+                    <a class="btn btn--ghost object-nav__back" href="explore.html">Back to Explore</a>
+                    <a class="object-nav__link object-nav__link--next" href="jupiter.html">
+                        <span class="object-nav__dir">Next object <span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="object-nav__name">Jupiter</span>
+                    </a>
+                </div>
+            </nav>
+        </article>
     </main>
 
-    <footer class="site-footer" id="about">
-        <div class="wrap">
-            <p>This is just a prototype we created. It is not fully functioning.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
         </div>
     </footer>
 </body>

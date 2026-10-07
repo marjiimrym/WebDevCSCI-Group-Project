@@ -3,179 +3,306 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cosmic Explorer — CSCI 3230U Group Project</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Cosmic Explorer — Explore the Universe</title>
     <meta name="description" content="Cosmic Explorer - A single-page web application for exploring astronomy and space discovery data. Built by Team Cosmic Explorer for CSCI 3230U.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <a class="skip" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="index.html">Cosmic Explorer</a>
-            <nav aria-label="Main">
-                <ul class="nav">
-                    <li><a href="pages/explore.html">Explore</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#milestones">Milestones</a></li>
+        <div class="container site-header__inner">
+            <a class="brand" href="index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link" href="pages/explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="pages/about.html">About</a></li>
+                    <li><a class="site-nav__link" href="pages/milestones.html">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="landing-title" style="text-align: center;">
-            <img src="assets/images/openpage.jpg" alt="Deep space starfield" width="728" height="408">
-            <div class="wrap" style="max-width: 48rem;">
-                <h1 id="landing-title" style="font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 1rem;">Cosmic Explorer</h1>
-                <p style="font-size: 1.35rem; color: var(--muted); margin-bottom: 2rem;">A single-page web application for exploring astronomy and space discovery data</p>
-                <p style="color: var(--ink); max-width: 40ch; margin: 0 auto 2rem;">Browse celestial objects from our solar system and beyond. Search, filter, and discover planets, moons, stars, and galaxies — powered by NASA's open APIs.</p>
-                <a class="btn" href="pages/explore.html" style="font-size: 1.1rem; padding: .75rem 2rem;">Launch Explorer →</a>
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero__media" src="assets/images/openpage.jpg" alt="" width="1200" height="675">
+            <div class="sky" aria-hidden="true"></div>
+            <div class="orbits" aria-hidden="true"><span class="orbits__body"></span></div>
+
+            <div class="container hero__inner">
+                <p class="eyebrow">
+                    <span>NASA Data <span class="eyebrow__sep" aria-hidden="true">•</span></span>
+                    <span>Space Discovery <span class="eyebrow__sep" aria-hidden="true">•</span></span>
+                    <span>Astronomy</span>
+                </p>
+                <h1 id="hero-title" class="hero__title">
+                    <span class="hero__line">Explore the</span>
+                    <span class="hero__line hero__line--accent">Universe.</span>
+                </h1>
+                <p class="lede hero__lede">Cosmic Explorer is your guide to the night sky. Discover planets, moons, stars, galaxies and other astronomical objects, each with a detailed profile of the facts that define it.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary btn--lg" href="pages/explore.html">Launch Explorer <span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="btn btn--ghost btn--lg" href="#discover">Discover More</a>
+                </div>
+            </div>
+
+            <div class="scroll-cue" aria-hidden="true">
+                <span>Scroll to explore</span>
+                <span class="scroll-cue__line"></span>
             </div>
         </section>
 
-        <section id="about" class="detail" style="padding-block: 4rem; background: var(--deep);">
-            <div class="wrap">
-                <h2 style="text-align: center; margin-bottom: 2.5rem;">About the Project</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Course</h3>
-                        <p style="color: var(--muted); margin: 0;">CSCI 3230U — Web Development (Winter 2026)</p>
+        <!-- 01 Explore the cosmos -->
+        <section id="discover" class="section" aria-labelledby="intro-title">
+            <div class="container intro">
+                <div>
+                    <p class="section-label"><span class="section-label__num">01</span>Explore the cosmos</p>
+                    <h2 id="intro-title" class="section-title">A field guide to the universe, built for the web.</h2>
+                </div>
+                <div class="intro__body">
+                    <p class="lede">Cosmic Explorer is a single-page web application for exploring astronomy and space discovery data.</p>
+                    <p class="text">Browse celestial objects from our solar system and beyond — planets, moons, stars and galaxies — then open any one of them for a full profile: a clear summary, key facts at a glance, and deeper sections on what makes it remarkable.</p>
+                    <dl class="stats">
+                        <div class="stat">
+                            <dt class="stat__label">Featured objects</dt>
+                            <dd class="stat__value">06</dd>
+                        </div>
+                        <div class="stat">
+                            <dt class="stat__label">NASA datasets</dt>
+                            <dd class="stat__value">04</dd>
+                        </div>
+                        <div class="stat">
+                            <dt class="stat__label">Project milestones</dt>
+                            <dd class="stat__value">05</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 Featured discoveries -->
+        <section class="section section--alt" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="section-label"><span class="section-label__num">02</span>Featured discoveries</p>
+                        <h2 id="featured-title" class="section-title">From our nearest neighbour to the nearest large galaxy.</h2>
+                    </div>
+                    <div class="section-head__aside">
+                        <p class="text">Six objects to start with — a star, a moon, three planets and a galaxy. Each opens into its own detailed page.</p>
+                        <a class="text-link" href="pages/explore.html">View all objects <span class="arrow" aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+
+                <div class="discoveries">
+                    <article class="card card--feature type-star">
+                        <div class="card__media">
+                            <img src="assets/images/sun.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Star</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/thesun.html">The Sun</a></h3>
+                            <p class="card__text">The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
                     </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Type</h3>
-                        <p style="color: var(--muted); margin: 0;">React Single-Page Application (SPA)</p>
+
+                    <article class="card card--feature type-moon">
+                        <div class="card__media">
+                            <img src="assets/images/moon.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Moon</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/moon.html">The Moon</a></h3>
+                            <p class="card__text">Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
                     </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Data Source</h3>
-                        <p style="color: var(--muted); margin: 0;">NASA Open APIs (APOD, NEO, Mars Rover, Earth imagery)</p>
+
+                    <article class="card type-planet">
+                        <div class="card__media">
+                            <img src="assets/images/mars.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Planet</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/mars.html">Mars</a></h3>
+                            <p class="card__text">A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
                     </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.3rem; margin-bottom: .75rem; color: var(--ember);">Status</h3>
-                        <p style="color: var(--muted); margin: 0;">M1 Static Prototype — Milestone 1 Complete</p>
+
+                    <article class="card type-planet">
+                        <div class="card__media">
+                            <img src="assets/images/jupiter.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Planet</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/jupiter.html">Jupiter</a></h3>
+                            <p class="card__text">The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
+                    </article>
+
+                    <article class="card type-planet">
+                        <div class="card__media">
+                            <img src="assets/images/saturn.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Planet</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/saturn.html">Saturn</a></h3>
+                            <p class="card__text">Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
+                    </article>
+
+                    <article class="card card--wide type-galaxy">
+                        <div class="card__media">
+                            <img src="assets/images/galaxy.jpg" alt="" width="733" height="783" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <p class="category">Galaxy</p>
+                            <h3 class="card__title"><a class="card__link" href="pages/galaxy.html">Andromeda Galaxy</a></h3>
+                            <p class="card__text">The nearest large galaxy to ours, home to roughly a trillion stars — and on a slow collision course with the Milky Way.</p>
+                            <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="detail" style="padding-block: 4rem;">
-            <div class="wrap">
-                <h2 style="text-align: center; margin-bottom: 2.5rem;">Core Features</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Search & Filter</h3>
-                        <p style="color: var(--muted); margin: 0;">Find objects by name, filter by type (planet, moon, star, galaxy), and sort by distance, size, or name.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Detail Pages</h3>
-                        <p style="color: var(--muted); margin: 0;">Each object has a dedicated page with rich data: specs, exploration history, surface features, and more.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Favourites</h3>
-                        <p style="color: var(--muted); margin: 0;">Save favourite objects locally — persisted in localStorage, accessible across sessions.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: .75rem;">Responsive & Accessible</h3>
-                        <p style="color: var(--muted); margin: 0;">Mobile-first design, WCAG AA contrast, semantic HTML, keyboard navigation, and screen-reader support.</p>
-                    </article>
+        <!-- 03 A universe to discover -->
+        <section class="section" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="section-label"><span class="section-label__num">03</span>A universe to discover</p>
+                        <h2 id="features-title" class="section-title">Four ways into the cosmos.</h2>
+                    </div>
+                    <div class="section-head__aside">
+                        <p class="text">Cosmic Explorer is designed around a simple loop: browse the collection, narrow it down, and go deep on the objects that catch your eye.</p>
+                    </div>
+                </div>
+
+                <ul class="features" role="list">
+                    <li class="feature">
+                        <span class="icon icon--orbit" aria-hidden="true"></span>
+                        <p class="feature__label">Discover</p>
+                        <h3 class="feature__title">Browse celestial objects.</h3>
+                        <p class="feature__text">Move through planets, moons, stars and galaxies in one consistent catalogue.</p>
+                    </li>
+                    <li class="feature">
+                        <span class="icon icon--search" aria-hidden="true"></span>
+                        <p class="feature__label">Search</p>
+                        <h3 class="feature__title">Find objects quickly.</h3>
+                        <p class="feature__text">Jump straight to the object you are looking for by name.</p>
+                    </li>
+                    <li class="feature">
+                        <span class="icon icon--filter" aria-hidden="true"></span>
+                        <p class="feature__label">Filter</p>
+                        <h3 class="feature__title">Narrow down discoveries.</h3>
+                        <p class="feature__text">Filter by type of object and sort by distance from Earth, name or size.</p>
+                    </li>
+                    <li class="feature">
+                        <span class="icon icon--planet" aria-hidden="true"></span>
+                        <p class="feature__label">Learn</p>
+                        <h3 class="feature__title">Explore detailed information.</h3>
+                        <p class="feature__text">Open any object for its key facts, structure and the science behind it.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 04 Powered by NASA data -->
+        <section class="section section--tight" aria-labelledby="nasa-title">
+            <div class="container">
+                <div class="nasa__panel">
+                    <div class="nasa__intro">
+                        <p class="section-label"><span class="section-label__num">04</span>Powered by NASA data</p>
+                        <h2 id="nasa-title" class="section-title">Built on open NASA data.</h2>
+                        <p class="text">Cosmic Explorer connects astronomy discovery with publicly available NASA data, drawn from NASA's Open API platform.</p>
+                        <a class="text-link" href="https://api.nasa.gov/" rel="external">api.nasa.gov <span class="arrow" aria-hidden="true">↗</span></a>
+                        <p class="nasa__note">Endpoints are being evaluated. Live data integration is planned for Milestone 3.</p>
+                    </div>
+
+                    <ul class="tiles" role="list">
+                        <li class="tile">
+                            <p class="tile__index">01</p>
+                            <h3 class="tile__title">APOD</h3>
+                            <p class="tile__text">Astronomy Picture of the Day — a daily image of the universe with a short explanation.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">02</p>
+                            <h3 class="tile__title">Near Earth Objects</h3>
+                            <p class="tile__text">Data on asteroids that pass close to Earth, including their approaches.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">03</p>
+                            <h3 class="tile__title">Mars Rover Photos</h3>
+                            <p class="tile__text">Imagery returned from the surface of Mars by NASA's rovers.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">04</p>
+                            <h3 class="tile__title">Earth Imagery</h3>
+                            <p class="tile__text">Satellite imagery of our home planet, seen from orbit.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="team" class="detail" style="padding-block: 4rem; background: var(--deep);">
-            <div class="wrap">
-                <h2 style="text-align: center; margin-bottom: 2.5rem;">Team Cosmic Explorer</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.5rem; max-width: 72rem; margin: 0 auto;">
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Maryam</h3>
-                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">Project Lead / Frontend</p>
-                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Coordinates project structure, builds main Explore page, implements reusable UI components.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Dhruv</h3>
-                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">API / Data & Search</p>
-                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Integrates NASA APIs, defines data structures, handles data mapping, implements search, filter, and sort.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Nithin</h3>
-                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">Object Details / Missions</p>
-                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Builds astronomical object detail pages, designs mission-related interfaces, creates detailed views.</p>
-                    </article>
-                    <article style="background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 2rem; text-align: center;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: .25rem; color: var(--ink);">Gamze</h3>
-                        <p style="color: var(--ember); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em;">UI / Accessibility</p>
-                        <p style="color: var(--muted); font-size: .95rem; margin: 0;">Develops responsive layouts, implements accessibility requirements, builds favourites and saved interfaces.</p>
-                    </article>
+        <!-- Closing call to action -->
+        <section class="section cta" aria-labelledby="cta-title">
+            <div class="container cta__inner">
+                <p class="section-label">Ready when you are</p>
+                <h2 id="cta-title" class="section-title">Ready to explore?</h2>
+                <p class="lede">Browse the prototype catalogue and open any object for its full profile. The React build arrives in Milestone 2, with live NASA data in Milestone 3.</p>
+                <div class="cta__actions">
+                    <a class="btn btn--primary btn--lg" href="pages/explore.html">Launch Explorer <span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="btn btn--ghost btn--lg" href="pages/milestones.html">View milestones</a>
                 </div>
-            </div>
-        </section>
-
-        <section id="milestones" class="detail" style="padding-block: 4rem;">
-            <div class="wrap">
-                <h2 style="text-align: center; margin-bottom: 2.5rem;">Project Milestones</h2>
-                <div style="max-width: 48rem; margin: 0 auto;">
-                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
-                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
-                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--ember); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M0</div>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Team & Topic</h3>
-                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Team formed, GitHub repo created, topic locked: Cosmic Explorer using NASA APIs.</p>
-                        </div>
-                    </article>
-                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
-                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
-                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--ember); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M1</div>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Proposal & Static Prototype</h3>
-                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Written proposal, wireframes, and static HTML/CSS prototype (this site) — semantic, responsive, accessible.</p>
-                        </div>
-                    </article>
-                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
-                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
-                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--teal); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M2</div>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">React Foundation</h3>
-                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Prototype rebuilt as React app with Vite: components, props, state, event handling, list rendering on mock data.</p>
-                        </div>
-                    </article>
-                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1rem;">
-                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
-                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--teal); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M3</div>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Baseline Working Project</h3>
-                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Live API integration, search/filter/sort, routed detail views, persisted favourites, controlled form, tests, deployed.</p>
-                        </div>
-                    </article>
-                    <article style="display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;">
-                        <div style="flex-shrink: 0; width: 4rem; text-align: center;">
-                            <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--violet); color: #1a1020; font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">M4</div>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 .5rem; color: var(--ink);">Independent Concept & Video</h3>
-                            <p style="color: var(--muted); margin: 0; font-size: .95rem;">Research & integrate a novel concept (e.g., TanStack Query, Framer Motion, PWA), produce a 1–3 min demo video.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="detail" style="padding-block: 4rem; text-align: center; background: var(--deep);">
-            <div class="wrap">
-                <h2 style="margin-bottom: 1.5rem;">Ready to Explore?</h2>
-                <p style="color: var(--muted); max-width: 40ch; margin: 0 auto 2rem;">Browse our static prototype of the Explore page and detail views. The full React application with live NASA data is coming in Milestone 2.</p>
-                <a class="btn" href="pages/explore.html" style="font-size: 1.1rem; padding: .75rem 2rem;">View Prototype →</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer" id="about">
-        <div class="wrap">
-            <p>Cosmic Explorer — CSCI 3230U Group Project Prototype · This is a static prototype for Milestone 1. Not fully functioning.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/explore.html">Explore</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
         </div>
     </footer>
 </body>
