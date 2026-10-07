@@ -4,105 +4,159 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Sun | Cosmic Explorer</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
     <meta name="description" content="Explore the Sun - our star. Learn about its structure, energy production, solar activity, and importance to life on Earth.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <a class="skip" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="../index.html">Cosmic Explorer</a>
-            <nav aria-label="Main">
-                <ul class="nav">
-                    <li><a href="../index.html">Explore</a></li>
-                    <li><a href="#about">About</a></li>
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link is-active" href="explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="about.html">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="page-title">
-            <img src="../assets/images/sun.jpg" alt="The Sun - a bright yellow star with solar prominences" width="728" height="408">
-            <div class="wrap">
-                <h1 id="page-title">The Sun</h1>
-                <p class="tag" style="background: var(--violet); color: #1a1020; display: inline-block; padding: .3rem .8rem; border-radius: 99px; font-size: .9rem; font-weight: 600; margin-bottom: 1rem;">Star</p>
-                <p>The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
-            </div>
-        </section>
+        <article class="object type-star" aria-labelledby="page-title">
+            <header class="object-hero">
+                <div class="sky" aria-hidden="true"></div>
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol role="list">
+                            <li><a href="explore.html">Explore</a></li>
+                            <li>Stars</li>
+                            <li><span aria-current="page">The Sun</span></li>
+                        </ol>
+                    </nav>
+                    <div class="object-hero__grid">
+                        <div>
+                            <p class="category">Star</p>
+                            <h1 id="page-title" class="object-title">The Sun</h1>
+                            <p class="lede object-lede">The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
+                            <p class="object-index">Object 02 of 06</p>
+                        </div>
+                        <figure class="object-visual">
+                            <span class="object-visual__orbit" aria-hidden="true"></span>
+                            <img src="../assets/images/sun.jpg" alt="The Sun - a bright yellow star with solar prominences" width="733" height="783">
+                        </figure>
+                    </div>
+                </div>
+            </header>
 
-        <section class="detail" style="padding-block: 3rem;">
-            <div class="wrap">
-                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Overview</h2>
+            <section class="facts-panel" aria-labelledby="facts-title">
+                <div class="container">
+                    <h2 id="facts-title" class="facts-panel__title">Key facts</h2>
+                    <dl class="facts">
+                        <div class="fact"><dt>Distance from Earth</dt><dd>150 million km (1 AU)</dd></div>
+                        <div class="fact"><dt>Radius</dt><dd>696,340 km</dd></div>
+                        <div class="fact"><dt>Mass</dt><dd>1.99 × 10³⁰ kg</dd></div>
+                        <div class="fact"><dt>Surface gravity</dt><dd>274 m/s² (28× Earth)</dd></div>
+                        <div class="fact"><dt>Surface temperature</dt><dd>5,500°C (photosphere)</dd></div>
+                        <div class="fact"><dt>Core temperature</dt><dd>~15 million °C</dd></div>
+                        <div class="fact"><dt>Spectral type</dt><dd>G2V</dd></div>
+                        <div class="fact"><dt>Age</dt><dd>~4.6 billion years</dd></div>
+                    </dl>
+                </div>
+            </section>
+
+            <div class="container object-body">
+                <nav class="toc" aria-label="On this page">
+                    <p class="toc__title">On this page</p>
+                    <ol role="list">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#structure">Structure &amp; Layers</a></li>
+                        <li><a href="#activity">Solar Activity</a></li>
+                        <li><a href="#future">Future Evolution</a></li>
+                    </ol>
+                </nav>
+
+                <div class="prose">
+                    <section id="overview">
+                        <h2>Overview</h2>
                         <p>The Sun is a G-type main-sequence star (G2V) at the center of our Solar System. It contains 99.86% of the system's mass and its gravity holds everything in orbit. The Sun is about 4.6 billion years old and roughly halfway through its main-sequence lifetime. It converts hydrogen into helium through nuclear fusion in its core, releasing enormous energy.</p>
                         <p>Every second, the Sun fuses about 600 million tons of hydrogen, releasing energy equivalent to billions of nuclear weapons. This energy radiates outward, taking thousands of years to reach the surface, then 8 minutes to reach Earth.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Key Facts</h2>
-                        <dl class="meta" style="display: grid; grid-template-columns: repeat(2, minmax(10rem, 1fr)); gap: 1rem 2rem; padding-top: 0; font-size: 1rem;">
-                            <div>
-                                <dt>Distance from Earth</dt>
-                                <dd>150 million km (1 AU)</dd>
-                            </div>
-                            <div>
-                                <dt>Radius</dt>
-                                <dd>696,340 km</dd>
-                            </div>
-                            <div>
-                                <dt>Mass</dt>
-                                <dd>1.99 × 10³⁰ kg</dd>
-                            </div>
-                            <div>
-                                <dt>Surface gravity</dt>
-                                <dd>274 m/s² (28× Earth)</dd>
-                            </div>
-                            <div>
-                                <dt>Surface temperature</dt>
-                                <dd>5,500°C (photosphere)</dd>
-                            </div>
-                            <div>
-                                <dt>Core temperature</dt>
-                                <dd>~15 million °C</dd>
-                            </div>
-                            <div>
-                                <dt>Spectral type</dt>
-                                <dd>G2V</dd>
-                            </div>
-                            <div>
-                                <dt>Age</dt>
-                                <dd>~4.6 billion years</dd>
-                            </div>
-                        </dl>
-                    </article>
-
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Structure & Layers</h2>
+                    <section id="structure">
+                        <h2>Structure &amp; Layers</h2>
                         <p>The Sun's interior has distinct layers: the <strong>core</strong> (fusion zone, ~25% of radius), the <strong>radiative zone</strong> (energy moves by radiation), and the <strong>convective zone</strong> (energy moves by rising hot plasma). The visible surface is the <strong>photosphere</strong> (where light escapes).</p>
                         <p>Above the photosphere lie the <strong>chromosphere</strong> (reddish, seen during eclipses) and the <strong>corona</strong> (million-degree outer atmosphere, source of solar wind). The corona's extreme heat remains a scientific mystery — magnetic fields likely play a key role.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Solar Activity</h2>
+                    <section id="activity">
+                        <h2>Solar Activity</h2>
                         <p>The Sun follows an ~11-year <strong>solar cycle</strong> of magnetic activity. At solar maximum: numerous <strong>sunspots</strong> (cooler magnetic regions), <strong>solar flares</strong> (sudden energy releases), and <strong>coronal mass ejections</strong> (CMEs — massive plasma eruptions). These events drive <strong>space weather</strong>, affecting satellites, power grids, and creating auroras.</p>
                         <p>The solar wind — a constant stream of charged particles — shapes planetary magnetospheres and blows comet tails. Earth's magnetic field protects us from most effects.</p>
-                    </article>
+                    </section>
 
-                    <article>
-                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Future Evolution</h2>
+                    <section id="future">
+                        <h2>Future Evolution</h2>
                         <p>In ~5 billion years, the Sun will exhaust its core hydrogen and expand into a <strong>red giant</strong>, potentially engulfing Mercury, Venus, and possibly Earth. It will then shed its outer layers as a <strong>planetary nebula</strong>, leaving a <strong>white dwarf</strong> — a dense, Earth-sized remnant that will cool over trillions of years.</p>
-                    </article>
+                    </section>
                 </div>
             </div>
-        </section>
+
+            <nav class="object-nav" aria-label="More objects">
+                <div class="container object-nav__grid">
+                    <a class="object-nav__link object-nav__link--prev" href="moon.html">
+                        <span class="object-nav__dir"><span class="arrow" aria-hidden="true">←</span> Previous object</span>
+                        <span class="object-nav__name">The Moon</span>
+                    </a>
+                    <a class="btn btn--ghost object-nav__back" href="explore.html">Back to Explore</a>
+                    <a class="object-nav__link object-nav__link--next" href="mars.html">
+                        <span class="object-nav__dir">Next object <span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="object-nav__name">Mars</span>
+                    </a>
+                </div>
+            </nav>
+        </article>
     </main>
 
-    <footer class="site-footer" id="about">
-        <div class="wrap">
-            <p>This is just a prototype we created. It is not fully functioning.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
         </div>
     </footer>
 </body>

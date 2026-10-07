@@ -3,197 +3,240 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore the cosmos | Cosmic Explorer</title>
+    <title>Explore the Cosmos | Cosmic Explorer</title>
+    <meta name="description" content="Browse planets, moons, stars and galaxies with Cosmic Explorer.">
+    <meta name="theme-color" content="#080914">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <meta name="description" content="Learn and browse about planets and stars!.">
 </head>
 <body>
-    <a class="skip" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="../index.html">Cosmic Explorer</a>
-            <nav aria-label="Main">
-                <ul class="nav">
-                    <li><a href="explore.html" aria-current="page">Explore</a></li>
-                    <li><a href="#about">About</a></li>
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link" href="explore.html" aria-current="page">Explore</a></li>
+                    <li><a class="site-nav__link" href="about.html">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="page-title">
-            <img src="../assets/images/openpage.jpg" alt="" width="728" height="408">
-            <div class="wrap">
-                <h1 id="page-title">Find your way around the cosmos</h1>
-                <p>From the Moon next door to a galaxy 2.5 million light-years away.</p>
+        <section class="page-hero page-hero--explore" aria-labelledby="page-title">
+            <img class="page-hero__media" src="../assets/images/openpage.jpg" alt="" width="1200" height="675">
+            <div class="sky" aria-hidden="true"></div>
+            <div class="container">
+                <p class="eyebrow">Explore</p>
+                <h1 id="page-title" class="page-hero__title">Explore the Cosmos</h1>
+                <p class="lede page-hero__lede">Browse planets, moons, stars and galaxies — from the Moon next door to a galaxy 2.5 million light-years away.</p>
             </div>
         </section>
 
-        <section class="tools" aria-label="Search and filter">
-            <div class="wrap">
-                <form action="explore.html" method="get" role="search">
-                    <div class="field">
-                        <label for="q">Search by name</label>
-                        <input id="q" name="q" type="search" placeholder="Saturn">
+        <!--
+            Search / filter / sort are visual only in this static prototype.
+            Field names (q, type, sort) are the planned state keys for the React build.
+        -->
+        <div class="container toolbar-wrap">
+            <form class="toolbar" action="explore.html" method="get" role="search" aria-label="Search, filter and sort objects">
+                <div class="field toolbar__search">
+                    <label class="field__label" for="q">Search</label>
+                    <div class="search">
+                        <input class="input" id="q" name="q" type="search" placeholder="Search by name, e.g. Saturn" autocomplete="off">
                     </div>
-                    <div class="field">
-                        <label for="type">Type of object</label>
-                        <select id="type" name="type">
-                            <option>All types</option>
-                            <option>Planets</option>
-                            <option>Moons</option>
-                            <option>Stars</option>
-                            <option>Galaxies</option>
-                        </select>
+                </div>
+
+                <fieldset class="field toolbar__filter">
+                    <legend class="field__label">Type of object</legend>
+                    <div class="chips">
+                        <label class="chip">
+                            <input type="radio" name="type" value="all" checked>
+                            <span class="chip__face">All <span class="chip__count">6</span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="type" value="planet">
+                            <span class="chip__face">Planets <span class="chip__count">3</span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="type" value="moon">
+                            <span class="chip__face">Moons <span class="chip__count">1</span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="type" value="star">
+                            <span class="chip__face">Stars <span class="chip__count">1</span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="type" value="galaxy">
+                            <span class="chip__face">Galaxies <span class="chip__count">1</span></span>
+                        </label>
                     </div>
-                    <div class="field">
-                        <label for="sort">Sort by</label>
-                        <select id="sort" name="sort">
-                            <option>Distance from Earth</option>
-                            <option>Name (A to Z)</option>
-                            <option>Size</option>
-                        </select>
-                    </div>
-                    <button class="btn" type="submit">Apply filters</button>
-                </form>
-            </div>
-        </section>
+                </fieldset>
+
+                <div class="field toolbar__sort">
+                    <label class="field__label" for="sort">Sort by</label>
+                    <select class="select" id="sort" name="sort">
+                        <option value="distance" selected>Distance from Earth</option>
+                        <option value="name">Name (A to Z)</option>
+                        <option value="size">Size</option>
+                    </select>
+                </div>
+            </form>
+        </div>
 
         <section class="results" aria-labelledby="results-title">
-            <div class="wrap">
-                <h2 id="results-title" class="vh">Results</h2>
-                <p class="count">Showing 6 of 6 objects, based on distance from earth</p>
-                <ul class="grid">
-                    <li class="card">
-                        <div class="crop">
-                            <img class="fit" src="../assets/images/moon.jpg" alt="A moon in the sky." style="--x:45%;--y:45%;--z:1" loading="lazy" width="700" height="400">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Moon</span>
-                            <h2><a href="moon.html">The Moon</a></h2>
-                            <p>Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>384,400 km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>1,737 km</dd>
-                                </div>
-                            </dl>
-                        </div>
+            <div class="container">
+                <div class="results__bar">
+                    <h2 id="results-title" class="results__count">Showing <strong>6</strong> of 6 objects · sorted by distance from Earth</h2>
+                    <p class="notice">Preview — search, filter and sort become interactive in the React build</p>
+                </div>
+
+                <ul class="card-grid" role="list">
+                    <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/moon.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="moon.html">The Moon</a></h3>
+                                <p class="card__text">Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>384,400 km</dd></div>
+                                    <div><dt>Radius</dt><dd>1,737 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="../assets/images/mars.jpg" alt="A reddish planet partly hidden by clouds, from a space collage." style="--x:27%;--y:79%;--z:4.5" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="mars.html">Mars</a></h2>
-                            <p>A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>225 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>3,390 km</dd>
-                                </div>
-                            </dl>
-                        </div>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/sun.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="thesun.html">The Sun</a></h3>
+                                <p class="card__text">The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>150 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>696,340 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="../assets/images/sun.jpg" alt="The sun." style="--x:30%;--y:45%;--z:2.6" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Star</span>
-                            <h2><a href="thesun.html">The Sun</a></h2>
-                            <p>The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>150 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>696,340 km</dd>
-                                </div>
-                            </dl>
-                        </div>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/mars.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="mars.html">Mars</a></h3>
+                                <p class="card__text">A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>225 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>3,390 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="../assets/images/jupiter.jpg" alt="A striped gas giant stitched in thread against a dark sky." style="--x:90%;--y:32%;--z:3.2" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="jupiter.html">Jupiter</a></h2>
-                            <p>The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>778 million km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>69,911 km</dd>
-                                </div>
-                            </dl>
-                        </div>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/jupiter.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="jupiter.html">Jupiter</a></h3>
+                                <p class="card__text">The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>778 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>69,911 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="../assets/images/saturn.jpg" alt="A ringed, tan planet from a space collage." style="--x:76%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Planet</span>
-                            <h2><a href="saturn.html">Saturn</a></h2>
-                            <p>Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>1.43 billion km</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>58,232 km</dd>
-                                </div>
-                            </dl>
-                        </div>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/saturn.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="saturn.html">Saturn</a></h3>
+                                <p class="card__text">Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>1.43 billion km</dd></div>
+                                    <div><dt>Radius</dt><dd>58,232 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
-                    <li class="card">
-                        <div class="crop">
-                            <img src="../assets/images/galaxy.jpg" alt="A purple spiral galaxy." style="--x:78%;--y:18%;--z:3.4" loading="lazy" width="735" height="490">
-                        </div>
-                        <div class="card-body">
-                            <span class="tag">Galaxy</span>
-                            <h2><a href="galaxy.html">Andromeda Galaxy</a></h2>
-                            <p>The nearest large galaxy to ours, home to roughly a trillion stars.</p>
-                            <dl class="meta">
-                                <div>
-                                    <dt>Distance</dt>
-                                    <dd>2.5 million light-years</dd>
-                                </div>
-                                <div>
-                                    <dt>Radius</dt>
-                                    <dd>About 110,000 light-years across</dd>
-                                </div>
-                            </dl>
-                        </div>
+                    <li>
+                        <article class="card type-galaxy">
+                            <div class="card__media">
+                                <img src="../assets/images/galaxy.jpg" alt="" width="733" height="783" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Galaxy</p>
+                                <h3 class="card__title"><a class="card__link" href="galaxy.html">Andromeda Galaxy</a></h3>
+                                <p class="card__text">The nearest large galaxy to ours, home to roughly a trillion stars.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>2.5 million light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>~110,000 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer" id="about">
-        <div class="wrap">
-            <p>This is just a prototype we created. It is not fully functioning.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
         </div>
     </footer>
 </body>

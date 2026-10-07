@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Cosmic Explorer</title>
+    <meta name="description" content="About Cosmic Explorer - what it is, why it was built, its data sources, technology and team. A CSCI 3230U Web Development group project.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link" href="explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="about.html" aria-current="page">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="sky" aria-hidden="true"></div>
+            <div class="orbits" aria-hidden="true"><span class="orbits__body"></span></div>
+            <div class="container">
+                <p class="eyebrow">About</p>
+                <h1 id="page-title" class="page-hero__title">About Cosmic Explorer</h1>
+                <p class="lede page-hero__lede">A single-page web application for exploring astronomy and space discovery data — designed, built and tested in stages across the term.</p>
+            </div>
+        </section>
+
+        <!-- At a glance -->
+        <section class="section section--tight" aria-labelledby="glance-title">
+            <div class="container">
+                <h2 id="glance-title" class="facts-panel__title">Project at a glance</h2>
+                <dl class="facts">
+                    <div class="fact"><dt>Course</dt><dd>CSCI 3230U — Web Development</dd></div>
+                    <div class="fact"><dt>Term</dt><dd>Winter 2026</dd></div>
+                    <div class="fact"><dt>Type</dt><dd>React single-page application</dd></div>
+                    <div class="fact"><dt>Current stage</dt><dd>M1 — Static prototype</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- 01 What is it -->
+        <section class="section section--tight" aria-labelledby="what-title">
+            <div class="container split">
+                <div class="split__head">
+                    <p class="section-label"><span class="section-label__num">01</span>The product</p>
+                    <h2 id="what-title" class="section-title">What is Cosmic Explorer?</h2>
+                </div>
+                <div class="split__body">
+                    <p class="lede">Cosmic Explorer is a single-page web application for exploring astronomy and space discovery data.</p>
+                    <p class="text">Browse celestial objects from our solar system and beyond. Search, filter, and discover planets, moons, stars, and galaxies — powered by NASA's open APIs.</p>
+                    <ul class="tiles" role="list">
+                        <li class="tile">
+                            <p class="tile__index">Search &amp; Filter</p>
+                            <h3 class="tile__title">Find anything</h3>
+                            <p class="tile__text">Find objects by name, filter by type (planet, moon, star, galaxy), and sort by distance, size, or name.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">Detail Pages</p>
+                            <h3 class="tile__title">Go deeper</h3>
+                            <p class="tile__text">Each object has a dedicated page with rich data: specs, exploration history, surface features, and more.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">Favourites</p>
+                            <h3 class="tile__title">Keep what you find</h3>
+                            <p class="tile__text">Save favourite objects locally — persisted in localStorage, accessible across sessions.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">Responsive &amp; Accessible</p>
+                            <h3 class="tile__title">Built for everyone</h3>
+                            <p class="tile__text">Mobile-first design, WCAG AA contrast, semantic HTML, keyboard navigation, and screen-reader support.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 Why -->
+        <section class="section section--tight section--alt" aria-labelledby="why-title">
+            <div class="container split">
+                <div class="split__head">
+                    <p class="section-label"><span class="section-label__num">02</span>The reason</p>
+                    <h2 id="why-title" class="section-title">Why was it built?</h2>
+                </div>
+                <div class="split__body">
+                    <p class="lede">Cosmic Explorer is the group project for CSCI 3230U — Web Development.</p>
+                    <p class="text">The course asks each team to design and build a single-page application that browses and acts on a collection of items drawn from a web service: a searchable, filterable collection of cards, each with a detail page, favourites, and data loaded from an API.</p>
+                    <p class="text">Our team applied that brief to astronomy. Planets, moons, stars and galaxies form the collection; NASA's public API platform is the data source. The work is delivered in five graded milestones, so the product grows from a static prototype into a deployed application.</p>
+                    <a class="text-link" href="milestones.html">See the milestones <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 Data sources -->
+        <section class="section section--tight" aria-labelledby="data-title">
+            <div class="container split">
+                <div class="split__head">
+                    <p class="section-label"><span class="section-label__num">03</span>Data sources</p>
+                    <h2 id="data-title" class="section-title">Powered by NASA Open APIs.</h2>
+                </div>
+                <div class="split__body">
+                    <p class="text">The primary data source for Cosmic Explorer is NASA's public API platform at <a class="text-link" href="https://api.nasa.gov/" rel="external">api.nasa.gov</a>. Potential endpoints and datasets include:</p>
+                    <ul class="tiles" role="list">
+                        <li class="tile">
+                            <p class="tile__index">01</p>
+                            <h3 class="tile__title">APOD</h3>
+                            <p class="tile__text">Astronomy Picture of the Day.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">02</p>
+                            <h3 class="tile__title">Near Earth Objects</h3>
+                            <p class="tile__text">Near Earth Object Web Service.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">03</p>
+                            <h3 class="tile__title">Mars Rover Photos</h3>
+                            <p class="tile__text">Imagery from NASA's Mars rovers.</p>
+                        </li>
+                        <li class="tile">
+                            <p class="tile__index">04</p>
+                            <h3 class="tile__title">Earth Imagery</h3>
+                            <p class="tile__text">Earth imagery and related datasets.</p>
+                        </li>
+                    </ul>
+                    <p class="nasa__note">The team will finalize the specific endpoints after evaluating available data for search, filtering, and detailed object views.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 Technology -->
+        <section class="section section--tight section--alt" aria-labelledby="tech-title">
+            <div class="container split">
+                <div class="split__head">
+                    <p class="section-label"><span class="section-label__num">04</span>Technology</p>
+                    <h2 id="tech-title" class="section-title">From static prototype to React app.</h2>
+                </div>
+                <div class="split__body">
+                    <div class="tech">
+                        <div class="tech__panel">
+                            <p class="status status--current">Now</p>
+                            <h3 class="tech__title">Static prototype</h3>
+                            <ul class="tech__list" role="list">
+                                <li>HTML5 — semantic, accessible markup <span>M1</span></li>
+                                <li>CSS3 — custom properties, Grid, Flexbox <span>M1</span></li>
+                                <li>Responsive from 375px to wide desktop <span>M1</span></li>
+                            </ul>
+                        </div>
+                        <div class="tech__panel tech__panel--next">
+                            <p class="status status--upcoming">Next</p>
+                            <h3 class="tech__title">React application</h3>
+                            <ul class="tech__list" role="list">
+                                <li>React + Vite components and state <span>M2</span></li>
+                                <li>Live NASA API with loading and error states <span>M3</span></li>
+                                <li>Client-side routing for detail views <span>M3</span></li>
+                                <li>Favourites persisted in localStorage <span>M3</span></li>
+                                <li>Automated tests and public deployment <span>M3</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 Team -->
+        <section class="section" aria-labelledby="team-title">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="section-label"><span class="section-label__num">05</span>The team</p>
+                        <h2 id="team-title" class="section-title">Team Cosmic Explorer</h2>
+                    </div>
+                    <div class="section-head__aside">
+                        <p class="text">Each member owns a vertical slice of the product, built on a shared app shell.</p>
+                    </div>
+                </div>
+                <ul class="team" role="list">
+                    <li class="member">
+                        <span class="member__avatar" aria-hidden="true">M</span>
+                        <h3 class="member__name">Maryam</h3>
+                        <p class="member__role">Project Lead / Frontend</p>
+                        <p class="member__text">Coordinates project structure, builds main Explore page, implements reusable UI components.</p>
+                    </li>
+                    <li class="member">
+                        <span class="member__avatar" aria-hidden="true">D</span>
+                        <h3 class="member__name">Dhruv</h3>
+                        <p class="member__role">API / Data &amp; Search</p>
+                        <p class="member__text">Integrates NASA APIs, defines data structures, handles data mapping, implements search, filter, and sort.</p>
+                    </li>
+                    <li class="member">
+                        <span class="member__avatar" aria-hidden="true">N</span>
+                        <h3 class="member__name">Nithin</h3>
+                        <p class="member__role">Object Details / Missions</p>
+                        <p class="member__text">Builds astronomical object detail pages, designs mission-related interfaces, creates detailed views.</p>
+                    </li>
+                    <li class="member">
+                        <span class="member__avatar" aria-hidden="true">G</span>
+                        <h3 class="member__name">Gamze</h3>
+                        <p class="member__role">UI / Accessibility</p>
+                        <p class="member__text">Develops responsive layouts, implements accessibility requirements, builds favourites and saved interfaces.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
