@@ -52,6 +52,7 @@
     --type-planet: #8fb0ff;
     --type-moon: #d9d4c7;
     --type-galaxy: #b7a4ff;
+    --type-nebula: #ff9ecf;
 
     /* Fonts — named webfonts first, then high-quality system fallbacks */
     --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -359,6 +360,7 @@ strong {
 .type-planet { --type: var(--type-planet); }
 .type-moon   { --type: var(--type-moon); }
 .type-galaxy { --type: var(--type-galaxy); }
+.type-nebula { --type: var(--type-nebula); }
 
 /* ---- Buttons ---- */
 

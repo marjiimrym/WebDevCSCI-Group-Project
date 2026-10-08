@@ -49,8 +49,188 @@
     "title": "Andromeda Galaxy",
     "tag": "Galaxy",
     "summary": "The nearest spiral galaxy to the Milky Way, Andromeda is on a collision course with our galaxy, expected to merge in about 4.5 billion years.",
-    "distance": 2.4e19,
-    "radius": 5.203e17,
+    "distance": 2.4e+19,
+    "radius": 5.203e+17,
     "cover": "images/galaxy.jpg"
+  },
+  {
+    "id": "mercury",
+    "title": "Mercury",
+    "tag": "Planet",
+    "summary": "The smallest planet and the closest to the Sun, a cratered world of rock with no atmosphere to soften its swings from scorching to freezing.",
+    "distance": 77000000,
+    "radius": 2440,
+    "cover": "images/mercury.svg"
+  },
+  {
+    "id": "venus",
+    "title": "Venus",
+    "tag": "Planet",
+    "summary": "Earth's near-twin in size, wrapped in a thick carbon dioxide atmosphere that traps heat until its surface glows at 464°C.",
+    "distance": 38000000,
+    "radius": 6052,
+    "cover": "images/venus.svg"
+  },
+  {
+    "id": "earth",
+    "title": "Earth",
+    "tag": "Planet",
+    "summary": "The only world known to harbour life, with liquid water oceans covering 71 percent of its surface and a magnetic field that shields it.",
+    "distance": 0,
+    "radius": 6371,
+    "cover": "images/earth.svg"
+  },
+  {
+    "id": "uranus",
+    "title": "Uranus",
+    "tag": "Planet",
+    "summary": "An ice giant tipped onto its side, rolling around the Sun with a 98-degree tilt that gives it seasons lasting 21 years each.",
+    "distance": 2871000000.0,
+    "radius": 25362,
+    "cover": "images/uranus.svg"
+  },
+  {
+    "id": "neptune",
+    "title": "Neptune",
+    "tag": "Planet",
+    "summary": "The farthest planet from the Sun, a deep-blue ice giant driven by the fastest winds measured on any planet.",
+    "distance": 4495000000.0,
+    "radius": 24622,
+    "cover": "images/neptune.svg"
+  },
+  {
+    "id": "titan",
+    "title": "Titan",
+    "tag": "Moon",
+    "summary": "Saturn's largest moon and the only moon with a thick atmosphere, where rivers and lakes are filled with liquid methane.",
+    "distance": 1428000000,
+    "radius": 2575,
+    "cover": "images/titan.svg"
+  },
+  {
+    "id": "europa",
+    "title": "Europa",
+    "tag": "Moon",
+    "summary": "An icy Jovian moon hiding a global saltwater ocean beneath its shell — a leading candidate for life beyond Earth.",
+    "distance": 779000000,
+    "radius": 1561,
+    "cover": "images/europa.svg"
+  },
+  {
+    "id": "io",
+    "title": "Io",
+    "tag": "Moon",
+    "summary": "The most volcanically active world in the solar system, kept molten by the tidal grip of Jupiter and its sibling moons.",
+    "distance": 780000000,
+    "radius": 1822,
+    "cover": "images/io.svg"
+  },
+  {
+    "id": "ganymede",
+    "title": "Ganymede",
+    "tag": "Moon",
+    "summary": "The largest moon in the solar system — bigger than the planet Mercury — and the only moon with its own magnetic field.",
+    "distance": 781000000,
+    "radius": 2634,
+    "cover": "images/ganymede.svg"
+  },
+  {
+    "id": "triton",
+    "title": "Triton",
+    "tag": "Moon",
+    "summary": "Neptune's largest moon orbits backwards, and its frozen surface erupts geysers of nitrogen — a captured Kuiper Belt world.",
+    "distance": 4495400000,
+    "radius": 1353,
+    "cover": "images/triton.svg"
+  },
+  {
+    "id": "sirius",
+    "title": "Sirius",
+    "tag": "Star",
+    "summary": "The brightest star in Earth's night sky, a blue-white star twice the Sun's mass with a faint white dwarf companion.",
+    "distance": 81400000000000.0,
+    "radius": 830000,
+    "cover": "images/sirius.svg"
+  },
+  {
+    "id": "rigel",
+    "title": "Rigel",
+    "tag": "Star",
+    "summary": "A blue supergiant marking the foot of Orion, shining roughly 120,000 times brighter than the Sun.",
+    "distance": 8140000000000000.0,
+    "radius": 54900000.0,
+    "cover": "images/rigel.svg"
+  },
+  {
+    "id": "betelgeuse",
+    "title": "Betelgeuse",
+    "tag": "Star",
+    "summary": "A red supergiant on the edge of stellar death, so vast it would swallow the orbit of Jupiter if placed at our Sun.",
+    "distance": 6070000000000000.0,
+    "radius": 532000000.0,
+    "cover": "images/betelgeuse.svg"
+  },
+  {
+    "id": "proxima-centauri",
+    "title": "Proxima Centauri",
+    "tag": "Star",
+    "summary": "The closest star to the Sun, a cool red dwarf with at least one Earth-sized planet in its habitable zone.",
+    "distance": 40100000000000.0,
+    "radius": 107000,
+    "cover": "images/proxima-centauri.svg"
+  },
+  {
+    "id": "vega",
+    "title": "Vega",
+    "tag": "Star",
+    "summary": "The fifth-brightest star in the sky and a calibration standard for astronomers, 25 light-years away in Lyra.",
+    "distance": 237000000000000.0,
+    "radius": 1642000,
+    "cover": "images/vega.svg"
+  },
+  {
+    "id": "milky-way",
+    "title": "Milky Way Galaxy",
+    "tag": "Galaxy",
+    "summary": "Our home galaxy: a barred spiral of 100 to 400 billion stars, with a supermassive black hole at its centre.",
+    "distance": 2.46e+17,
+    "radius": 5e+17,
+    "cover": "images/milky-way.svg"
+  },
+  {
+    "id": "triangulum",
+    "title": "Triangulum Galaxy",
+    "tag": "Galaxy",
+    "summary": "The third-largest galaxy in our Local Group and the most distant object visible to the naked eye, 2.7 million light-years away.",
+    "distance": 2.58e+19,
+    "radius": 2.84e+17,
+    "cover": "images/triangulum.svg"
+  },
+  {
+    "id": "whirlpool",
+    "title": "Whirlpool Galaxy",
+    "tag": "Galaxy",
+    "summary": "A grand-design spiral 31 million light-years away, caught mid-interaction with a smaller companion galaxy.",
+    "distance": 2.18e+20,
+    "radius": 3.64e+17,
+    "cover": "images/whirlpool.svg"
+  },
+  {
+    "id": "crab-nebula",
+    "title": "Crab Nebula",
+    "tag": "Nebula",
+    "summary": "The shredded remains of a supernova that Chinese astronomers recorded in 1054, now powered by a spinning neutron star.",
+    "distance": 6.15e+16,
+    "radius": 52000000000000.0,
+    "cover": "images/crab-nebula.svg"
+  },
+  {
+    "id": "orion-nebula",
+    "title": "Orion Nebula",
+    "tag": "Nebula",
+    "summary": "A stellar nursery 1,344 light-years away, and the brightest region of star formation visible to the naked eye.",
+    "distance": 1.27e+16,
+    "radius": 114000000000000.0,
+    "cover": "images/orion-nebula.svg"
   }
 ]
