@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Explore the Cosmos | Cosmic Explorer</title>
-    <meta name="description" content="Browse planets, moons, stars and galaxies with Cosmic Explorer.">
+    <meta name="description" content="Browse planets, moons, stars, galaxies and nebulae with Cosmic Explorer.">
     <meta name="theme-color" content="#080914">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -34,7 +34,7 @@
             <div class="container">
                 <p class="eyebrow">Explore</p>
                 <h1 id="page-title" class="page-hero__title">Explore the Cosmos</h1>
-                <p class="lede page-hero__lede">Browse planets, moons, stars and galaxies — from the Moon next door to a galaxy 2.5 million light-years away.</p>
+                <p class="lede page-hero__lede">Browse planets, moons, stars, galaxies and nebulae — from your own backyard to a galaxy 23 million light-years away.</p>
             </div>
         </section>
 
@@ -53,26 +53,30 @@
 
                 <fieldset class="field toolbar__filter">
                     <legend class="field__label">Type of object</legend>
-                    <div class="chips">
+                                        <div class="chips">
                         <label class="chip">
                             <input type="radio" name="type" value="all" checked>
-                            <span class="chip__face">All <span class="chip__count">6</span></span>
+                            <span class="chip__face">All <span class="chip__count">26</span></span>
                         </label>
                         <label class="chip">
                             <input type="radio" name="type" value="planet">
-                            <span class="chip__face">Planets <span class="chip__count">3</span></span>
+                            <span class="chip__face">Planets <span class="chip__count">8</span></span>
                         </label>
                         <label class="chip">
                             <input type="radio" name="type" value="moon">
-                            <span class="chip__face">Moons <span class="chip__count">1</span></span>
+                            <span class="chip__face">Moons <span class="chip__count">6</span></span>
                         </label>
                         <label class="chip">
                             <input type="radio" name="type" value="star">
-                            <span class="chip__face">Stars <span class="chip__count">1</span></span>
+                            <span class="chip__face">Stars <span class="chip__count">6</span></span>
                         </label>
                         <label class="chip">
                             <input type="radio" name="type" value="galaxy">
-                            <span class="chip__face">Galaxies <span class="chip__count">1</span></span>
+                            <span class="chip__face">Galaxies <span class="chip__count">4</span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="type" value="nebula">
+                            <span class="chip__face">Nebulae <span class="chip__count">2</span></span>
                         </label>
                     </div>
                 </fieldset>
@@ -91,11 +95,28 @@
         <section class="results" aria-labelledby="results-title">
             <div class="container">
                 <div class="results__bar">
-                    <h2 id="results-title" class="results__count">Showing <strong>6</strong> of 6 objects · sorted by distance from Earth</h2>
+                    <h2 id="results-title" class="results__count">Showing <strong>26</strong> of 26 objects · sorted by distance from Earth</h2>
                     <p class="notice">Preview — search, filter and sort become interactive in the React build</p>
                 </div>
 
                 <ul class="card-grid" role="list">
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/earth.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="earth.html">Earth</a></h3>
+                                <p class="card__text">Our home — the only planet known to host life, with oceans covering 71 percent of its surface.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>0 km</dd></div>
+                                    <div><dt>Radius</dt><dd>6,371 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
                     <li>
                         <article class="card type-moon">
                             <div class="card__media">
@@ -108,6 +129,40 @@
                                 <dl class="card__meta">
                                     <div><dt>Distance</dt><dd>384,400 km</dd></div>
                                     <div><dt>Radius</dt><dd>1,737 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/venus.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="venus.html">Venus</a></h3>
+                                <p class="card__text">Earth's near-twin with a runaway greenhouse that makes it the hottest planet of all.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>38 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>6,052 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/mercury.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="mercury.html">Mercury</a></h3>
+                                <p class="card__text">A cratered, airless world with the wildest temperature swings in the solar system.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>77 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>2,440 km</dd></div>
                                 </dl>
                                 <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
                             </div>
@@ -165,6 +220,57 @@
                         </article>
                     </li>
                     <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/europa.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="europa.html">Europa</a></h3>
+                                <p class="card__text">An icy shell over a global ocean that may hold twice as much water as Earth.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>779 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>1,561 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/io.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="io.html">Io</a></h3>
+                                <p class="card__text">The most volcanically active world known, kept molten by Jupiter's gravity.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>780 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>1,822 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/ganymede.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="ganymede.html">Ganymede</a></h3>
+                                <p class="card__text">The solar system's largest moon — bigger than Mercury — with a magnetic field of its own.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>781 million km</dd></div>
+                                    <div><dt>Radius</dt><dd>2,634 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
                         <article class="card type-planet">
                             <div class="card__media">
                                 <img src="../assets/images/saturn.jpg" alt="" width="733" height="783" loading="lazy">
@@ -182,6 +288,210 @@
                         </article>
                     </li>
                     <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/titan.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="titan.html">Titan</a></h3>
+                                <p class="card__text">Saturn's largest moon, with a thick atmosphere and lakes of liquid methane.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>1.43 billion km</dd></div>
+                                    <div><dt>Radius</dt><dd>2,575 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/uranus.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="uranus.html">Uranus</a></h3>
+                                <p class="card__text">An ice giant knocked onto its side, giving each pole a 42-year day and a 42-year night.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>2.87 billion km</dd></div>
+                                    <div><dt>Radius</dt><dd>25,362 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-planet">
+                            <div class="card__media">
+                                <img src="../assets/images/neptune.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Planet</p>
+                                <h3 class="card__title"><a class="card__link" href="neptune.html">Neptune</a></h3>
+                                <p class="card__text">A distant blue world where winds race faster than any other planet's — up to 2,100 km/h.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>4.5 billion km</dd></div>
+                                    <div><dt>Radius</dt><dd>24,622 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-moon">
+                            <div class="card__media">
+                                <img src="../assets/images/triton.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Moon</p>
+                                <h3 class="card__title"><a class="card__link" href="triton.html">Triton</a></h3>
+                                <p class="card__text">A captured Kuiper Belt moon that orbits backwards and erupts geysers of nitrogen.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>4.5 billion km</dd></div>
+                                    <div><dt>Radius</dt><dd>1,353 km</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/proxima-centauri.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="proxima-centauri.html">Proxima Centauri</a></h3>
+                                <p class="card__text">The closest star to the Sun, with an Earth-sized world in its habitable zone.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>4.24 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>0.15 × Sun</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/sirius.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="sirius.html">Sirius</a></h3>
+                                <p class="card__text">The brightest star in our night sky, paired with a faint white dwarf called the Pup.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>8.6 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>1.19 × Sun</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/vega.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="vega.html">Vega</a></h3>
+                                <p class="card__text">The bright standard star that defines the brightness scale for every other star.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>25 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>2.36 × Sun</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/betelgeuse.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="betelgeuse.html">Betelgeuse</a></h3>
+                                <p class="card__text">A red supergiant so large it would swallow Jupiter's orbit if it replaced our Sun.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>642 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>764 × Sun</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-star">
+                            <div class="card__media">
+                                <img src="../assets/images/rigel.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Star</p>
+                                <h3 class="card__title"><a class="card__link" href="rigel.html">Rigel</a></h3>
+                                <p class="card__text">A blue supergiant at Orion's foot, shining roughly 120,000 times brighter than the Sun.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>860 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>78.9 × Sun</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-nebula">
+                            <div class="card__media">
+                                <img src="../assets/images/orion-nebula.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Nebula</p>
+                                <h3 class="card__title"><a class="card__link" href="orion-nebula.html">Orion Nebula</a></h3>
+                                <p class="card__text">A naked-eye stellar nursery where hundreds of newborn stars are being forged.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>1,344 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>12 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-nebula">
+                            <div class="card__media">
+                                <img src="../assets/images/crab-nebula.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Nebula</p>
+                                <h3 class="card__title"><a class="card__link" href="crab-nebula.html">Crab Nebula</a></h3>
+                                <p class="card__text">The wreckage of a supernova seen in 1054, still glowing around a spinning neutron star.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>6,500 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>5.5 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-galaxy">
+                            <div class="card__media">
+                                <img src="../assets/images/milky-way.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Galaxy</p>
+                                <h3 class="card__title"><a class="card__link" href="milky-way.html">Milky Way Galaxy</a></h3>
+                                <p class="card__text">Our home galaxy: a barred spiral of hundreds of billions of stars with a black hole at its heart.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>26,000 light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>52,850 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
                         <article class="card type-galaxy">
                             <div class="card__media">
                                 <img src="../assets/images/galaxy.jpg" alt="" width="733" height="783" loading="lazy">
@@ -193,6 +503,40 @@
                                 <dl class="card__meta">
                                     <div><dt>Distance</dt><dd>2.5 million light-years</dd></div>
                                     <div><dt>Radius</dt><dd>~110,000 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-galaxy">
+                            <div class="card__media">
+                                <img src="../assets/images/triangulum.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Galaxy</p>
+                                <h3 class="card__title"><a class="card__link" href="triangulum.html">Triangulum Galaxy</a></h3>
+                                <p class="card__text">The third-largest galaxy in our Local Group and one of the farthest objects visible unaided.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>2.73 million light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>30,000 light-years</dd></div>
+                                </dl>
+                                <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card type-galaxy">
+                            <div class="card__media">
+                                <img src="../assets/images/whirlpool.svg" alt="" width="800" height="800" loading="lazy">
+                            </div>
+                            <div class="card__body">
+                                <p class="category">Galaxy</p>
+                                <h3 class="card__title"><a class="card__link" href="whirlpool.html">Whirlpool Galaxy</a></h3>
+                                <p class="card__text">A textbook spiral galaxy caught mid-collision with a smaller companion, 23 million light-years away.</p>
+                                <dl class="card__meta">
+                                    <div><dt>Distance</dt><dd>23 million light-years</dd></div>
+                                    <div><dt>Radius</dt><dd>38,000 light-years</dd></div>
                                 </dl>
                                 <span class="card__cta" aria-hidden="true">Explore <span class="arrow">→</span></span>
                             </div>
