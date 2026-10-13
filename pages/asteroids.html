@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Near-Earth Asteroids | Cosmic Explorer</title>
+    <meta name="description" content="Search and filter the asteroids passing close to Earth in the coming weeks, using NASA's Near Earth Object Web Service.">
+    <meta name="theme-color" content="#080914">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- AI-assisted - see AI-USAGE.md #3 -->
+    <script type="module" src="../assets/js/asteroids.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">Cosmic Explorer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link" href="explore.html">Explore</a></li>
+                    <li><a class="site-nav__link" href="asteroids.html" aria-current="page">Asteroids</a></li>
+                    <li><a class="site-nav__link" href="about.html">About</a></li>
+                    <li><a class="site-nav__link" href="milestones.html">Milestones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero page-hero--explore" aria-labelledby="page-title">
+            <img class="page-hero__media" src="../assets/images/openpage.jpg" alt="" width="1200" height="675">
+            <div class="sky" aria-hidden="true"></div>
+            <div class="container">
+                <p class="eyebrow">Near-Earth objects</p>
+                <h1 id="page-title" class="page-hero__title">Near-Earth Asteroids</h1>
+                <p class="lede page-hero__lede">Every asteroid NASA tracks passing close to Earth in the coming weeks. Search by name, show only the potentially hazardous ones, and sort by date, distance, size or speed.</p>
+            </div>
+        </section>
+
+        <div class="container toolbar-wrap">
+            <form class="toolbar" id="asteroid-filters" role="search" aria-label="Search, filter and sort asteroids">
+                <div class="field toolbar__search">
+                    <label class="field__label" for="q">Search</label>
+                    <div class="search">
+                        <input class="input" id="q" name="q" type="search" placeholder="Search by name, e.g. 2010 DO" autocomplete="off">
+                    </div>
+                </div>
+
+                <fieldset class="field toolbar__filter">
+                    <legend class="field__label">Hazard</legend>
+                    <div class="chips">
+                        <label class="chip">
+                            <input type="radio" name="hazard" value="all" checked>
+                            <span class="chip__face">All <span class="chip__count" data-count="all"></span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="hazard" value="yes">
+                            <span class="chip__face">Potentially hazardous <span class="chip__count" data-count="yes"></span></span>
+                        </label>
+                        <label class="chip">
+                            <input type="radio" name="hazard" value="no">
+                            <span class="chip__face">Not hazardous <span class="chip__count" data-count="no"></span></span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="field toolbar__sort">
+                    <label class="field__label" for="sort">Sort by</label>
+                    <select class="select" id="sort" name="sort">
+                        <option value="date" selected>Soonest approach</option>
+                        <option value="distance">Closest pass</option>
+                        <option value="size">Largest first</option>
+                        <option value="speed">Fastest first</option>
+                        <option value="name">Name (A to Z)</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <section class="results" aria-labelledby="results-title">
+            <div class="container">
+                <div class="results__bar">
+                    <h2 id="results-title" class="results__count" aria-live="polite">Loading asteroids…</h2>
+                    <p class="notice">"Potentially hazardous" is NASA's label for large asteroids whose orbits pass near Earth's, not a prediction of impact</p>
+                </div>
+
+                <ul class="card-grid" id="asteroid-grid" role="list"></ul>
+                <p class="results__status" id="results-status" hidden></p>
+            </div>
+        </section>
+
+        <template id="asteroid-card">
+            <li>
+                <article class="card">
+                    <div class="card__body">
+                        <p class="category" data-slot="category"></p>
+                        <h3 class="card__title"><a class="card__link" data-slot="name" rel="external"></a></h3>
+                        <dl class="card__meta">
+                            <div><dt>Closest approach</dt><dd data-slot="date"></dd></div>
+                            <div><dt>Miss distance</dt><dd data-slot="distance"></dd></div>
+                            <div><dt>Diameter</dt><dd data-slot="size"></dd></div>
+                            <div><dt>Speed</dt><dd data-slot="speed"></dd></div>
+                        </dl>
+                        <span class="card__cta" aria-hidden="true">NASA JPL data <span class="arrow">→</span></span>
+                    </div>
+                </article>
+            </li>
+        </template>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="../index.html">
+                        <span class="brand__mark" aria-hidden="true"></span>
+                        <span class="brand__name">Cosmic Explorer</span>
+                    </a>
+                    <p class="footer__tagline">Exploring the universe, one discovery at a time.</p>
+                </div>
+                <nav class="footer__col" aria-label="Footer">
+                    <h2 class="footer__heading">Navigate</h2>
+                    <ul class="footer__list" role="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="asteroids.html">Asteroids</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Course</h2>
+                    <p>CSCI 3230U — Web Development</p>
+                    <p>Winter 2026 · Group project</p>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__heading">Data</h2>
+                    <p>Data source: <a href="https://api.nasa.gov/" rel="external">NASA Open APIs</a></p>
+                    <p>Not affiliated with or endorsed by NASA.</p>
+                </div>
+            </div>
+            <div class="footer__base">
+                <p>© 2026 Team Cosmic Explorer</p>
+                <p>Static prototype — not fully functional.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

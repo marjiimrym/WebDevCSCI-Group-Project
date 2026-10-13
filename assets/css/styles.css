@@ -53,6 +53,8 @@
     --type-moon: #d9d4c7;
     --type-galaxy: #b7a4ff;
     --type-nebula: #ff9ecf;
+    --type-asteroid: #c8b59a;
+    --type-hazard: #ff7a6b;
 
     /* Fonts — named webfonts first, then high-quality system fallbacks */
     --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -361,6 +363,8 @@ strong {
 .type-moon   { --type: var(--type-moon); }
 .type-galaxy { --type: var(--type-galaxy); }
 .type-nebula { --type: var(--type-nebula); }
+.type-asteroid { --type: var(--type-asteroid); }
+.type-hazard  { --type: var(--type-hazard); }
 
 /* ---- Buttons ---- */
 
@@ -1778,6 +1782,13 @@ fieldset.field > legend {
     gap: 1.5rem;
 }
 
+/* Loading / empty / error message under the results bar */
+.results__status {
+    padding-block: 3rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
 
 /* =========================================================================
    11. DETAIL PAGES
@@ -2622,6 +2633,12 @@ fieldset.field > legend {
 }
 
 @media (max-width: 480px) {
+    /* Four nav links have to fit a 320px screen */
+    .site-nav__link {
+        padding: 0 0.25rem;
+        font-size: 0.875rem;
+    }
+
     .hero__actions,
     .cta__actions {
         flex-direction: column;
