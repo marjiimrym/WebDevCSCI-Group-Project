@@ -1,0 +1,8 @@
+<!-- AI-assisted - see AI-USAGE.md #5. Matches the existing orbital brand mark. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs><radialGradient id="sun" cx="35%" cy="30%"><stop stop-color="#ffe2b8"/><stop offset=".6" stop-color="#ff9f43"/><stop offset="1" stop-color="#c2561a"/></radialGradient></defs>
+  <rect width="48" height="48" rx="12" fill="#070b12"/>
+  <circle cx="24" cy="25" r="17" fill="none" stroke="#b3a895"/>
+  <circle cx="24" cy="25" r="9" fill="url(#sun)"/>
+  <circle cx="24" cy="8" r="3" fill="#eeede7"/>
+</svg>

@@ -1,4 +1,4 @@
-// AI-assisted - see AI-USAGE.md #4
+// AI-assisted - see AI-USAGE.md #4 and #5
 import { readdirSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
 
@@ -6,7 +6,7 @@ test('React homepage keeps its links, images, and keyboard skip link', async ({ 
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
-  await expect(page.locator('#root h1')).toHaveText('Explore theUniverse.');
+  await expect(page.locator('#root h1')).toHaveText('Explore the Universe.');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
   await page.keyboard.press('Enter');
@@ -60,5 +60,6 @@ test('homepage fits a mobile viewport', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#root h1')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.getByRole('button', { name: 'Open navigation' }).click();
   await expect(page.getByRole('navigation', { name: 'Main', exact: true })).toBeVisible();
 });

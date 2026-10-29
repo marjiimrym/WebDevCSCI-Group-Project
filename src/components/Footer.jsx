@@ -1,4 +1,4 @@
-// AI-assisted - see AI-USAGE.md #4
+// AI-assisted - see AI-USAGE.md #4 and #5
 
 export default function Footer() {
   return (
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className="footer__base">
                 <p>© 2026 Team Cosmic Explorer</p>
-                <p>Static prototype — not fully functional.</p>
+                    <p>Stay curious. Look up.</p>
             </div>
         </div>
     </footer>
