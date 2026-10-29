@@ -39,7 +39,8 @@ function render(asteroids, range) {
 async function main() {
   let asteroids;
   try {
-    const res = await fetch("../data/asteroids.json");
+    // AI-assisted - see AI-USAGE.md #4. Let Vite include the fixture in the build.
+    const res = await fetch(new URL("../../data/asteroids.json", import.meta.url));
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     asteroids = await res.json();
   } catch {
