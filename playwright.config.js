@@ -1,0 +1,16 @@
+// AI-assisted - see AI-USAGE.md #4
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests/browser',
+  use: {
+    baseURL: 'http://127.0.0.1:4173',
+    // Set PLAYWRIGHT_CHANNEL=msedge to use an installed Microsoft Edge browser.
+    channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
+  },
+  webServer: {
+    command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',
+    url: 'http://127.0.0.1:4173',
+    reuseExistingServer: false,
+  },
+});

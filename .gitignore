@@ -2,3 +2,9 @@ graphify-out
 .impeccable
 .env
 .playwright-mcp
+node_modules/
+dist/
+test-results/
+playwright-report/
+.env.*
+!.env.example

@@ -9,7 +9,24 @@ Migrate incrementally to **React + Vite + React Router**, preserving the current
 - Shared styling in `assets/css/styles.css`.
 - Asteroid sample data in `data/asteroids.json`.
 - Reusable asteroid filtering logic in `assets/js/asteroid-filters.js`, with existing tests.
-- No React or npm setup yet.
+- React + Vite homepage and npm scripts are now in place.
+
+## Implementation status — 2026-10-29
+
+- **Step 1 complete:** React renders the homepage with the original stylesheet;
+  development, build, preview, lint, and test scripts are available.
+- Images use `assets/images/`. Broken Mars, Saturn, and Andromeda references in
+  the homepage, legacy profiles, and catalogue data have been corrected.
+- Header and Footer are extracted as components in preparation for step 2.
+  React Router, AppLayout, and page conversions remain to be implemented.
+- Vite temporarily builds all legacy HTML pages alongside the React homepage.
+  The asteroid JSON is bundled as an asset so the existing feature keeps working.
+- **Verified:** lint, production build, all five asteroid logic tests, and four
+  Playwright checks in Edge (homepage navigation/images/skip link, all legacy
+  page links/assets, asteroid filtering, and mobile overflow). Desktop and mobile
+  homepage screenshots were also inspected.
+- **Next:** finish step 2, then migrate the catalogue and Explore interactions
+  to reach the first reviewable milestone below.
 
 ## 1. Set up the React foundation
 
@@ -106,4 +123,4 @@ Each feature owner should include tests for their feature.
 
 **Home → Explore → Object Detail working in React with local data and the current styling.**
 
-This document is a migration plan; implementation is separate.
+The first step is implemented; subsequent steps remain planned unless noted above.
