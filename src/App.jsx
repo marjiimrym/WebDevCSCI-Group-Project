@@ -1,6 +1,8 @@
+
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ExplorePage from './pages/ExplorePage.jsx';
+import FavouritesPage from './pages/FavouritesPage.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ObjectDetailPage from './pages/ObjectDetailPage.jsx';
 import { useState } from 'react';
@@ -38,6 +40,16 @@ export default function App() {
         <Route
           path="/objects/:id"
           element={<ObjectDetailPage />}
+        />
+
+        <Route
+          path="/favourites"
+          element={
+            <FavouritesPage
+              favouriteIds={favouriteIds}
+              onToggleFavourite={toggleFavourite}
+            />
+          }
         />
       </Routes>
 
