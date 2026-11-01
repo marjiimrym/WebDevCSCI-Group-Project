@@ -6,7 +6,7 @@ Cosmic Explorer
 
 ## Project
 
-Cosmic Explorer is a single-page web application for exploring astronomy and space discovery data.
+Cosmic Explorer is a web application with a React-based interface and legacy HTML pages being migrated gradually.
 
 ## Run locally
 
@@ -17,37 +17,38 @@ npm ci
 npm run dev
 ```
 
-Open the URL printed by Vite. The homepage now renders in React with the existing
-stylesheet. Explore, object profiles, Asteroids, About, and Milestones remain HTML
-pages during this first migration step. Vite includes those pages in production
-builds so existing links continue to work. No NASA key is needed to browse the
-saved asteroid sample.
+Open the URL printed by Vite. The homepage now renders in React with the existing stylesheet. Explore and object detail pages are implemented in React using React Router.
+
+Asteroids, About, and Milestones remain legacy HTML pages. Vite includes those pages in production builds so existing links continue to work. No NASA key is needed to browse the saved asteroid sample.
 
 ```sh
 npm run lint
-npm test
 npm run build
 npm run preview
 ```
 
-The production output is in `dist/`. Serve it over HTTP, including its `pages/`
-and `assets/` directories. Do not open the app through `file://`.
+The production output is in `dist/`. Serve it over HTTP, including its `pages/` and `assets/` directories. Do not open the app through `file://`.
 
-Browser regression checks cover the production homepage, navigation, images,
-mobile overflow, keyboard skip link, and the existing asteroid feature:
+Browser regression checks cover the production homepage, navigation, images, mobile overflow, keyboard skip link, and the existing asteroid feature:
 
 ```sh
 npx playwright install chromium
 npm run test:e2e
 ```
 
-Alternatively, use an installed Edge browser. In PowerShell, set
-`$env:PLAYWRIGHT_CHANNEL = 'msedge'` before running `npm run test:e2e`.
+Alternatively, use an installed Edge browser. In PowerShell, set `$env:PLAYWRIGHT_CHANNEL = 'msedge'` before running `npm run test:e2e`.
 
 See [the migration plan](docs/REACT_MIGRATION_PLAN.md) for progress and next steps.
-All image sources live in `assets/images/`; React imports images so Vite can
-generate their production URLs. Catalogue `cover` values are repository-relative
-paths into the same directory.
+
+All image sources live in `assets/images/`. The current React pages reference images using `/assets/...` URLs. Catalogue `cover` values are repository-relative paths into the same directory.
+
+## React Features
+
+- React Router for object detail pages
+- Local catalogue data from `data/objects.json`
+- Favourite state and reusable `FavouriteButton` component
+- Object detail pages with facts and sections, including Mars
+- Responsive layouts and accessibility support
 
 ## Team Members & Roles
 
@@ -75,7 +76,7 @@ paths into the same directory.
 * Design mission-related interfaces
 * Create detailed object and mission views
 
-### Member 5 - UI / Accessibility Gamze
+### Member 5 - UI / Accessibility - Gamze
 
 * Develop responsive layouts
 * Implement accessibility requirements
@@ -83,17 +84,31 @@ paths into the same directory.
 
 ## API
 
-### NASA Open APIs
+[https://api.nasa.gov/](https://api.nasa.gov/)
 
-https://api.nasa.gov/
+NASA's public API platform provides access to astronomy and space-related datasets.
 
-The primary data source for Cosmic Explorer will be NASA's public API platform.
+[https://exoplanetarchive.ipac.caltech.edu/](https://exoplanetarchive.ipac.caltech.edu/)
 
-Potential endpoints and datasets include:
+
+The project includes a NASA Exoplanet Archive TAP API data script.
+The script retrieves selected exoplanet records and saves them locally
+in `public/data/exoplanets.json`.
+
+To download or refresh the exoplanet data, run:
+
+```sh
+node scripts/downloadPlanets.mjs
+```
+
+The React application also uses local catalogue data from
+`data/objects.json`.
+
+Potential additional endpoints and datasets include:
 
 * Astronomy Picture of the Day
 * Near Earth Object Web Service
 * Mars Rover Photos
 * Earth imagery and related datasets
 
-The team will finalize the specific endpoints after evaluating available data for search, filtering, and detailed object views.
+The team will evaluate additional endpoints as development continues.
