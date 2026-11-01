@@ -1,6 +1,6 @@
 
-// AI-assisted - see AI-USAGE.md #4
-import { Link } from 'react-router-dom';
+ // AI-assisted - see AI-USAGE.md #4
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -14,10 +14,14 @@ export default function Header() {
         <nav className="site-nav" aria-label="Main">
           <ul className="site-nav__list" role="list">
             <li>
-              <Link className="site-nav__link" to="/">Explore</Link>
+              <NavLink className="site-nav__link" to="/" end>
+                Explore
+              </NavLink>
             </li>
             <li>
-              <Link className="site-nav__link" to="/favourites">Favourites</Link>
+              <NavLink className="site-nav__link" to="/favourites">
+                Favourites
+              </NavLink>
             </li>
             <li>
               <a className="site-nav__link" href="/pages/asteroids.html">
