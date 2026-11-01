@@ -6,7 +6,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ObjectDetailPage from './pages/ObjectDetailPage.jsx';
 import { useState } from 'react';
 
+//added for route table
+import HomePage from './pages/HomePage.jsx';
+import FavouritesPage from './pages/FavouritesPage.jsx';
+import AsteroidsPage from './pages/AsteroidsPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
+
 export default function App() {
+
   const [favouriteIds, setFavouriteIds] = useState([]);
 
   function toggleFavourite(id) {
@@ -32,21 +41,29 @@ export default function App() {
               />
             }
           />
+          <Route path="/objects/:id" element={<ObjectDetailPage />}/>
           <Route
-            path="/objects/:id"
-            element={<ObjectDetailPage />}
+            path = "favourites"
+            element ={<FavouritesPage
+            favouriteIds={favouriteIds}
+            onToggleFavourite={toggleFavourite}
           />
+        }
+      />
+      <Route
+        path = "astroids" 
+        element = {<AsteroidsPage/>} />
+      <Route 
+        path="about" 
+        element={<AboutPage />} />
+      <Route 
+        path="contact"
+        element={<ContactPage />} />
+      <Route 
+        path="*" 
+        element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
-
-
-
-
-
-
-
-
-
   );
 }

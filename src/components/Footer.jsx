@@ -1,4 +1,5 @@
 // AI-assisted - see AI-USAGE.md #4
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -6,10 +7,10 @@ export default function Footer() {
         <div className="container">
             <div className="footer__grid">
                 <div className="footer__brand">
-                    <a className="brand" href="index.html">
+                    <Link className="brand" to="/">
                         <span className="brand__mark" aria-hidden="true"></span>
                         <span className="brand__name">Cosmic Explorer</span>
-                    </a>
+                    </Link>
                     <p className="footer__tagline">Exploring the universe, one discovery at a time.</p>
                 </div>
                 <nav className="footer__col" aria-label="Footer">
