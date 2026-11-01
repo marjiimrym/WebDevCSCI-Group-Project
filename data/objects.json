@@ -15,8 +15,32 @@
     "summary": "A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.",
     "distance": 225000000,
     "radius": 3390,
-    "cover": "assets/images/mars.webp"
+    "cover": "assets/images/mars.webp",
+    "facts": [
+      "Mars is about half the size of Earth.",
+      "The Red Planet has a thin atmosphere.",
+      "Mars has the largest volcano in the solar system."
+    ],
+    "sections": [
+      {
+         "title": "Overview", 
+        "content": "Mars is the fourth planet from the Sun and is often called the 'Red Planet' due to its reddish appearance. It has a thin atmosphere and surface features reminiscent of both Earth and the Moon." 
+      },
+      { 
+        "title": "Geography",
+         "content": "Mars has a diverse geology, including the largest volcano in the solar system, Olympus Mons, and a vast canyon system, Valles Marineris. The planet's surface is covered with iron oxide dust, giving it its characteristic red color." 
+      },
+      {
+        "title": "Exploration",
+        "content": "Mars has been explored by numerous spacecraft, including rovers and orbiters. NASA's Perseverance rover is currently studying the planet's geology and searching for signs of past life."
+      },
+      {
+        "title": "Moons",
+        "content": "Mars has two small moons, Phobos and Deimos, which are thought to be captured asteroids."
+      }
+    ]
   },
+
   {
     "id": "sun",
     "title": "The Sun",
