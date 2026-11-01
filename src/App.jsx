@@ -1,5 +1,6 @@
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import Layout from './components/Layout.jsx';
 import ExplorePage from './pages/ExplorePage.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ObjectDetailPage from './pages/ObjectDetailPage.jsx';
@@ -17,31 +18,35 @@ export default function App() {
   }
 
   return (
+
+    //changing this section so that Header and Footer and gone from App.jsx
     <BrowserRouter>
-      <a className="skip-link" href="#main">
-        Skip to main content
-      </a>
-
-      <Header />
-
       <Routes>
-        <Route
-          path="/"
-          element={
-            <ExplorePage
-              favouriteIds={favouriteIds}
-              onToggleFavourite={toggleFavourite}
-            />
-          }
-        />
-
-        <Route
-          path="/objects/:id"
-          element={<ObjectDetailPage />}
-        />
+        <Route element={<Layout />}>
+          <Route
+            path="/"
+            element={
+              <ExplorePage
+                favouriteIds={favouriteIds}
+                onToggleFavourite={toggleFavourite}
+              />
+            }
+          />
+          <Route
+            path="/objects/:id"
+            element={<ObjectDetailPage />}
+          />
+        </Route>
       </Routes>
-
-      <Footer />
     </BrowserRouter>
+
+
+
+
+
+
+
+
+
   );
 }
