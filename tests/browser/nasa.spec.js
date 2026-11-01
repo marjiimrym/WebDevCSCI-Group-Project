@@ -10,7 +10,8 @@ test('live asteroids preserve filters and show update information', async ({ pag
   await page.route('**/api/asteroids', (route) => { calls++; return route.fulfill({ json: { data: responses.asteroids, meta } }); });
   await page.goto('/asteroids');
   await expect(page.getByText(/Last successful update:/)).toBeVisible();
-  await page.getByRole('radio', { name: 'Potentially hazardous' }).check();
+  await page.getByRole('radio', { name: 'Potentially hazardous' }).click();
+  await expect(page.getByRole('radio', { name: 'Potentially hazardous' })).toBeChecked();
   await page.getByLabel('Sort by').selectOption('distance');
   await page.getByRole('searchbox').fill('no match');
   await expect(page.locator('#results-status')).toBeVisible();
@@ -62,7 +63,9 @@ test('image search uses explicit submission, empty results, and does not alter f
   await page.getByRole('button', { name: 'Search NASA images' }).click();
   await expect(page.getByText('No NASA images match. Try a different search.')).toBeVisible();
   await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: 'Favourites' }).click();
-  await expect(page.locator('.card__title')).toHaveText('Mars');
+  await expect(page).toHaveURL(/\/favourites$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'Favourites' })).toBeVisible();
+  await expect(page.locator('.card-grid .card__title')).toHaveText('Mars');
 });
 test('new content fits mobile screens and is keyboard accessible', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 844 });

@@ -86,7 +86,8 @@ test('every legacy URL redirects to its React route', async ({ page }) => {
 
 test('catalogue controls survive detail navigation, back and refresh', async ({ page }) => {
   await page.goto('/explore');
-  await page.getByRole('radio', { name: 'Planets' }).check();
+  await page.getByRole('radio', { name: 'Planets' }).click();
+  await expect(page.getByRole('radio', { name: 'Planets' })).toBeChecked();
   await expect(page.locator('.card-grid .card')).toHaveCount(8);
   await page.getByLabel('Sort by').selectOption('name');
   await expect(page.locator('.card__title').first()).toHaveText('Earth');
@@ -122,7 +123,8 @@ test('favourites survive navigation across all React pages', async ({ page }) =>
 test('asteroid search, hazard filtering and sort are functional', async ({ page }) => {
   await page.goto('/asteroids');
   await expect(page.locator('#asteroid-grid .card').first()).toBeVisible();
-  await page.getByRole('radio', { name: 'Potentially hazardous' }).check();
+  await page.getByRole('radio', { name: 'Potentially hazardous' }).click();
+  await expect(page.getByRole('radio', { name: 'Potentially hazardous' })).toBeChecked();
   expect(await page.locator('#asteroid-grid .card').count()).toBeGreaterThan(0);
   await expect(page.locator('#asteroid-grid .type-asteroid')).toHaveCount(0);
   await page.getByLabel('Sort by').selectOption('name');

@@ -2588,7 +2588,7 @@ fieldset.field > legend {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 641px) {
     :root {
         --header-h: 6.25rem;
     }
