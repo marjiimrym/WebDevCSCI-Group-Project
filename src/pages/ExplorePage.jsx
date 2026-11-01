@@ -2,6 +2,8 @@ import { useSearchParams } from 'react-router-dom';
 import objects from '../../data/objects.json';
 import heroImage from '../../assets/images/openpage.jpg';
 import ObjectCard from '../components/ObjectCard.jsx';
+// AI-assisted - see AI-USAGE.md #5.
+import NasaImageSearch from '../components/NasaImageSearch.jsx';
 
 const categories = [['all', 'All'], ['planet', 'Planets'], ['moon', 'Moons'], ['star', 'Stars'], ['galaxy', 'Galaxies'], ['nebula', 'Nebulae']];
 const sorts = { distance: 'Distance from Earth', name: 'Name (A to Z)', size: 'Size' };
@@ -82,6 +84,7 @@ export default function ExplorePage({ favouriteIds, onToggleFavourite }) {
           {results.length === 0 && <p className="results__status">No objects match. Try a different name or filter.</p>}
         </div>
       </section>
+      <NasaImageSearch />
     </main>
   );
 }

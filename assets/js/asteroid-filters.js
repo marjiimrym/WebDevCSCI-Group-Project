@@ -2,11 +2,14 @@
 // Search, filter and sort for the asteroid list. No DOM code here, so it can be
 // tested in Node and moved into the React build as-is.
 
+// AI-assisted - see AI-USAGE.md #5. Missing live measurements sort last.
+const numeric = (key, direction = 1) => (a, b) => a[key] == null ? (b[key] == null ? 0 : 1)
+  : b[key] == null ? -1 : direction * (a[key] - b[key]);
 const sorters = {
   date: (a, b) => a.approachDate.localeCompare(b.approachDate),
-  distance: (a, b) => a.missDistanceKm - b.missDistanceKm,
-  size: (a, b) => b.diameterMaxM - a.diameterMaxM,
-  speed: (a, b) => b.velocityKph - a.velocityKph,
+  distance: numeric('missDistanceKm'),
+  size: numeric('diameterMaxM', -1),
+  speed: numeric('velocityKph', -1),
   name: (a, b) => a.name.localeCompare(b.name, "en", { numeric: true }),
 };
 

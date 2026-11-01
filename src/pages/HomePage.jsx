@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+// AI-assisted - see AI-USAGE.md #5.
+import NasaHighlights from '../components/NasaHighlights.jsx';
 // AI-assisted - see AI-USAGE.md #4
 import heroImage from '../../assets/images/openpage.jpg';
 import sunImage from '../../assets/images/sun.jpg';
@@ -209,7 +211,7 @@ export default function HomePage() {
                         <h2 id="nasa-title" className="section-title">Built on open NASA data.</h2>
                         <p className="text">Cosmic Explorer connects astronomy discovery with publicly available NASA data, drawn from NASA's Open API platform.</p>
                         <a className="text-link" href="https://api.nasa.gov/" rel="external">api.nasa.gov <span className="arrow" aria-hidden="true">↗</span></a>
-                        <p className="nasa__note">Endpoints are being evaluated. Live data integration is planned for Milestone 3.</p>
+                        <p className="nasa__note">NASA data updates automatically. Each live section shows its last successful update and identifies cached or sample data.</p>
                     </div>
 
                     <ul className="tiles" role="list">
@@ -225,25 +227,27 @@ export default function HomePage() {
                         </li>
                         <li className="tile">
                             <p className="tile__index">03</p>
-                            <h3 className="tile__title">Mars Rover Photos</h3>
-                            <p className="tile__text">Imagery returned from the surface of Mars by NASA's rovers.</p>
+                            <h3 className="tile__title">NASA Image Library</h3>
+                            <p className="tile__text">Search space photography and mission imagery on the Explore page.</p>
                         </li>
                         <li className="tile">
                             <p className="tile__index">04</p>
-                            <h3 className="tile__title">Earth Imagery</h3>
-                            <p className="tile__text">Satellite imagery of our home planet, seen from orbit.</p>
+                            <h3 className="tile__title">Space Weather</h3>
+                            <p className="tile__text">Recent solar flare observations from NASA DONKI.</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <NasaHighlights />
+
         {/* Closing call to action */}
         <section className="section cta" aria-labelledby="cta-title">
             <div className="container cta__inner">
                 <p className="section-label">Ready when you are</p>
                 <h2 id="cta-title" className="section-title">Ready to explore?</h2>
-                <p className="lede">Browse the prototype catalogue and open any object for its full profile. Live NASA data integration is planned for Milestone 3.</p>
+                <p className="lede">Browse the catalogue, search NASA imagery, or explore the latest near-Earth asteroid approaches.</p>
                 <div className="cta__actions">
                     <Link className="btn btn--primary btn--lg" to="/explore">Launch Explorer <span className="arrow" aria-hidden="true">→</span></Link>
                     <Link className="btn btn--ghost btn--lg" to="/milestones">View milestones</Link>

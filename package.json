@@ -7,7 +7,10 @@
     "node": "^22.13.0 || >=24"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently --kill-others -n api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node --watch server/index.js",
+    "dev:web": "vite",
+    "start": "node server/index.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -15,14 +18,21 @@
     "test:e2e": "npm run build && playwright test"
   },
   "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.2",
+    "helmet": "^8.3.0",
+    "html-to-text": "^10.0.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-router-dom": "^7.18.5"
+    "react-router-dom": "^7.18.5",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.56.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
     "eslint": "^10.13.0",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-react-refresh": "^0.4.24",
