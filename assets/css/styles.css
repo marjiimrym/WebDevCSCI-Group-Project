@@ -1535,6 +1535,10 @@ strong {
     padding-bottom: clamp(5.5rem, 10vw, 8rem);
 }
 
+.explore-title {
+    margin-bottom: 2rem;
+}
+
 /* Floating control panel overlapping the hero */
 .toolbar-wrap {
     position: relative;
@@ -2140,6 +2144,34 @@ fieldset.field > legend {
 }
 
 
+/* Detail page section spacing */
+.detail-section {
+  margin-top: 2.5rem;
+}
+
+/* Space below section headings */
+.detail-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Detail page facts list */
+.detail-facts {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.detail-facts li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-facts li::marker {
+  color: var(--accent);
+}
+
 /* =========================================================================
    12. TIMELINE
    ========================================================================= */
@@ -2716,4 +2748,61 @@ fieldset.field > legend {
     .card:hover .card__media img {
         transform: none;
     }
+}
+.favourite-button {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.favourite-button:hover,
+.favourite-button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+/* =========================================
+   Object Detail Page
+   ========================================= */
+
+.detail-section {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-section h2 {
+  margin-bottom: 1rem;
+  font-size: var(--fs-h3);
+  color: var(--text-primary);
+}
+
+.detail-section p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+.detail-facts {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.detail-facts li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-facts li::marker {
+  color: var(--accent);
 }
