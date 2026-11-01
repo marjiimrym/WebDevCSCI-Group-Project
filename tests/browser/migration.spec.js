@@ -1,11 +1,14 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
+// AI-assisted - see AI-USAGE.md #5.
+import { mockNasa } from './nasa-mocks.js';
 
 const objects = JSON.parse(readFileSync('data/objects.json', 'utf8'));
 const legacyRoutes = JSON.parse(readFileSync('src/data/legacyRoutes.json', 'utf8'));
 const errors = new WeakMap();
 
 test.beforeEach(async ({ page }) => {
+  await mockNasa(page);
   const messages = [];
   errors.set(page, messages);
   page.on('pageerror', (error) => messages.push(error.message));

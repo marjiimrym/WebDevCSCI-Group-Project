@@ -1,5 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
-import asteroids from '../../data/asteroids.json';
+// AI-assisted - see AI-USAGE.md #5.
+import useNasa from '../hooks/useNasa.js';
+import DataStatus from '../components/DataStatus.jsx';
 import { filterAsteroids } from '../../assets/js/asteroid-filters.js';
 import heroImage from '../../assets/images/openpage.jpg';
 
@@ -7,17 +9,16 @@ const num = new Intl.NumberFormat('en-CA');
 const formatDate = (iso) => new Date(iso).toLocaleDateString('en-CA', {
   year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
 });
-const formatKm = (km) => km >= 1e6 ? `${(km / 1e6).toFixed(1)} million km` : `${num.format(km)} km`;
-const hazardous = asteroids.filter((asteroid) => asteroid.hazardous).length;
-const hazards = [
-  ['all', 'All', asteroids.length],
-  ['yes', 'Potentially hazardous', hazardous],
-  ['no', 'Not hazardous', asteroids.length - hazardous],
-];
+const formatKm = (km) => km === null ? 'Unavailable' : km >= 1e6 ? `${(km / 1e6).toFixed(1)} million km` : `${num.format(km)} km`;
+const formatNumber = (value) => value === null ? 'Unavailable' : num.format(value);
 const sorts = { date: 'Soonest approach', distance: 'Closest pass', size: 'Largest first', speed: 'Fastest first', name: 'Name (A to Z)' };
-const dates = asteroids.map((asteroid) => asteroid.approachDate).sort();
 
 export default function AsteroidsPage() {
+  const resource = useNasa('asteroids');
+  const asteroids = resource.data;
+  const hazardous = asteroids.filter((asteroid) => asteroid.hazardous).length;
+  const hazards = [['all', 'All', asteroids.length], ['yes', 'Potentially hazardous', hazardous], ['no', 'Not hazardous', asteroids.length - hazardous]];
+  const dates = asteroids.map((asteroid) => asteroid.approachDate).sort();
   const [params, setParams] = useSearchParams();
   const q = params.get('q') ?? '';
   const hazard = ['all', 'yes', 'no'].includes(params.get('hazard')) ? params.get('hazard') : 'all';
@@ -40,11 +41,12 @@ export default function AsteroidsPage() {
         <div className="container">
           <p className="eyebrow">Near-Earth objects</p>
           <h1 id="page-title" className="page-hero__title">Near-Earth Asteroids</h1>
-          <p className="lede page-hero__lede">Explore a saved sample of asteroids NASA tracks passing close to Earth. Search by name, show only the potentially hazardous ones, and sort by date, distance, size or speed.</p>
+          <p className="lede page-hero__lede">Explore asteroids NASA tracks passing close to Earth. Search by name, show only the potentially hazardous ones, and sort by date, distance, size or speed.</p>
         </div>
       </section>
 
       <div className="container toolbar-wrap">
+        <DataStatus resource={resource} />
         <form className="toolbar" id="asteroid-filters" role="search" aria-label="Search, filter and sort asteroids" onSubmit={(event) => event.preventDefault()}>
           <div className="field toolbar__search">
             <label className="field__label" htmlFor="q">Search</label>
@@ -91,8 +93,8 @@ export default function AsteroidsPage() {
                     <dl className="card__meta">
                       <div><dt>Closest approach</dt><dd>{formatDate(asteroid.approachDate)}</dd></div>
                       <div><dt>Miss distance</dt><dd>{formatKm(asteroid.missDistanceKm)}</dd></div>
-                      <div><dt>Diameter</dt><dd>{num.format(asteroid.diameterMinM)}–{num.format(asteroid.diameterMaxM)} m</dd></div>
-                      <div><dt>Speed</dt><dd>{num.format(asteroid.velocityKph)} km/h</dd></div>
+                      <div><dt>Diameter</dt><dd>{asteroid.diameterMinM === null || asteroid.diameterMaxM === null ? 'Unavailable' : `${num.format(asteroid.diameterMinM)}–${num.format(asteroid.diameterMaxM)} m`}</dd></div>
+                      <div><dt>Speed</dt><dd>{formatNumber(asteroid.velocityKph)}{asteroid.velocityKph !== null && ' km/h'}</dd></div>
                     </dl>
                     <span className="card__cta" aria-hidden="true">NASA JPL data <span className="arrow">→</span></span>
                   </div>
@@ -100,7 +102,7 @@ export default function AsteroidsPage() {
               </li>
             ))}
           </ul>
-          <p className="results__status" id="results-status" hidden={results.length > 0}>No asteroids match. Try a different name or filter.</p>
+          <p className="results__status" id="results-status" hidden={results.length > 0}>{asteroids.length ? 'No asteroids match. Try a different name or filter.' : resource.loading ? 'Loading asteroid approaches…' : 'No asteroid approaches reported for this period.'}</p>
         </div>
       </section>
     </main>
