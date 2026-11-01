@@ -28,13 +28,13 @@ const query = `
     dec
     FROM pscomppars
     WHERE
-    hostname LIKE 'TRAPPIST-1%'
-    OR hostname LIKE 'Kepler-22%'
-    OR hostname LIKE 'Proxima Cen%'
-    OR hostname LIKE 'Kepler-186%'
-    OR hostname LIKE 'Kepler-452%'
-    OR hostname LIKE 'TOI-700%'
-    OR hostname LIKE '51 Peg%'
+    hostname = 'TRAPPIST-1'
+    OR hostname = 'Kepler-22'
+    OR hostname = 'Proxima Cen'
+    OR hostname = 'Kepler-186'
+    OR hostname = 'Kepler-452'
+    OR hostname = 'TOI-700'
+    OR hostname = '51 Peg'
     ORDER BY hostname, pl_name
     `;
 
@@ -64,18 +64,22 @@ async function downloadPlanets() {
 
   const rawData = await response.json();
 
+
   const planets = rawData.map((p) => ({
     id: p.pl_name
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, ""),
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, ""),
+
+    title: p.pl_name,
 
     discovery: {
       year: p.disc_year,
       method: p.discoverymethod,
       facility: p.disc_facility
     },
+
 
     radius: {
       value: p.pl_rade,
