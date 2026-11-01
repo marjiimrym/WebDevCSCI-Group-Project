@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // AI-assisted - see AI-USAGE.md #4
 import heroImage from '../../assets/images/openpage.jpg';
 import sunImage from '../../assets/images/sun.jpg';
@@ -28,7 +29,7 @@ export default function HomePage() {
                 </h1>
                 <p className="lede hero__lede">Cosmic Explorer is your guide to the night sky. Discover planets, moons, stars, galaxies, nebulae and other astronomical objects, each with a detailed profile of the facts that define it.</p>
                 <div className="hero__actions">
-                    <a className="btn btn--primary btn--lg" href="pages/explore.html">Launch Explorer <span className="arrow" aria-hidden="true">→</span></a>
+                    <Link className="btn btn--primary btn--lg" to="/explore">Launch Explorer <span className="arrow" aria-hidden="true">→</span></Link>
                     <a className="btn btn--ghost btn--lg" href="#discover">Discover More</a>
                 </div>
             </div>
@@ -77,7 +78,7 @@ export default function HomePage() {
                     </div>
                     <div className="section-head__aside">
                         <p className="text">Twenty-six objects to explore — planets, moons, stars, galaxies and nebulae, from the Moon next door to a galaxy 23 million light-years away. Six are featured below; each opens into its own detailed page.</p>
-                        <a className="text-link" href="pages/explore.html">View all objects <span className="arrow" aria-hidden="true">→</span></a>
+                        <Link className="text-link" to="/explore">View all objects <span className="arrow" aria-hidden="true">→</span></Link>
                     </div>
                 </div>
 
@@ -88,7 +89,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Star</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/thesun.html">The Sun</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/sun">The Sun</Link></h3>
                             <p className="card__text">The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -100,7 +101,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Moon</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/moon.html">The Moon</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/moon">The Moon</Link></h3>
                             <p className="card__text">Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -112,7 +113,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Planet</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/mars.html">Mars</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/mars">Mars</Link></h3>
                             <p className="card__text">A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -124,7 +125,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Planet</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/jupiter.html">Jupiter</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/jupiter">Jupiter</Link></h3>
                             <p className="card__text">The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -136,7 +137,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Planet</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/saturn.html">Saturn</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/saturn">Saturn</Link></h3>
                             <p className="card__text">Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -148,7 +149,7 @@ export default function HomePage() {
                         </div>
                         <div className="card__body">
                             <p className="category">Galaxy</p>
-                            <h3 className="card__title"><a className="card__link" href="pages/galaxy.html">Andromeda Galaxy</a></h3>
+                            <h3 className="card__title"><Link className="card__link" to="/objects/galaxy">Andromeda Galaxy</Link></h3>
                             <p className="card__text">The nearest large galaxy to ours, home to roughly a trillion stars — and on a slow collision course with the Milky Way.</p>
                             <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
                         </div>
@@ -244,8 +245,8 @@ export default function HomePage() {
                 <h2 id="cta-title" className="section-title">Ready to explore?</h2>
                 <p className="lede">Browse the prototype catalogue and open any object for its full profile. Live NASA data integration is planned for Milestone 3.</p>
                 <div className="cta__actions">
-                    <a className="btn btn--primary btn--lg" href="pages/explore.html">Launch Explorer <span className="arrow" aria-hidden="true">→</span></a>
-                    <a className="btn btn--ghost btn--lg" href="pages/milestones.html">View milestones</a>
+                    <Link className="btn btn--primary btn--lg" to="/explore">Launch Explorer <span className="arrow" aria-hidden="true">→</span></Link>
+                    <Link className="btn btn--ghost btn--lg" to="/milestones">View milestones</Link>
                 </div>
             </div>
         </section>

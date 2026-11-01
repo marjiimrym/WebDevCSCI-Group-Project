@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // AI-assisted - see AI-USAGE.md #4
 
 export default function Footer() {
@@ -6,20 +7,21 @@ export default function Footer() {
         <div className="container">
             <div className="footer__grid">
                 <div className="footer__brand">
-                    <a className="brand" href="index.html">
+                    <Link className="brand" to="/">
                         <span className="brand__mark" aria-hidden="true"></span>
                         <span className="brand__name">Cosmic Explorer</span>
-                    </a>
+                    </Link>
                     <p className="footer__tagline">Exploring the universe, one discovery at a time.</p>
                 </div>
                 <nav className="footer__col" aria-label="Footer">
                     <h2 className="footer__heading">Navigate</h2>
                     <ul className="footer__list" role="list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/explore.html">Explore</a></li>
-                        <li><a href="pages/asteroids.html">Asteroids</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                        <li><a href="pages/milestones.html">Milestones</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/explore">Explore</Link></li>
+                        <li><Link to="/favourites">Favourites</Link></li>
+                        <li><Link to="/asteroids">Asteroids</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/milestones">Milestones</Link></li>
                     </ul>
                 </nav>
                 <div className="footer__col">
@@ -35,7 +37,7 @@ export default function Footer() {
             </div>
             <div className="footer__base">
                 <p>© 2026 Team Cosmic Explorer</p>
-                <p>Static prototype — not fully functional.</p>
+                <p>Discover the cosmos with our local catalogue.</p>
             </div>
         </div>
     </footer>

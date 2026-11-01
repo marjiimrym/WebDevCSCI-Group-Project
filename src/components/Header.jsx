@@ -1,8 +1,9 @@
 
  // AI-assisted - see AI-USAGE.md #4
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Header() {
+  const { pathname } = useLocation();
   return (
     <header className="site-header">
       <div className="container site-header__inner">
@@ -14,7 +15,7 @@ export default function Header() {
         <nav className="site-nav" aria-label="Main">
           <ul className="site-nav__list" role="list">
             <li>
-              <NavLink className="site-nav__link" to="/" end>
+              <NavLink className={`site-nav__link${pathname.startsWith('/objects/') ? ' is-active' : ''}`} to="/explore">
                 Explore
               </NavLink>
             </li>
@@ -24,19 +25,19 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <a className="site-nav__link" href="/pages/asteroids.html">
+              <NavLink className="site-nav__link" to="/asteroids">
                 Asteroids
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="site-nav__link" href="/pages/about.html">
+              <NavLink className="site-nav__link" to="/about">
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="site-nav__link" href="/pages/milestones.html">
+              <NavLink className="site-nav__link" to="/milestones">
                 Milestones
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>

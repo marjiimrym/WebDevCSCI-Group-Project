@@ -6,7 +6,7 @@ Cosmic Explorer
 
 ## Project
 
-Cosmic Explorer is a web application with a React-based interface and legacy HTML pages being migrated gradually.
+Cosmic Explorer is a React single-page application for exploring astronomy and space discovery data. All pages render from JSX using React Router.
 
 ## Run locally
 
@@ -17,9 +17,9 @@ npm ci
 npm run dev
 ```
 
-Open the URL printed by Vite. The homepage now renders in React with the existing stylesheet. Explore and object detail pages are implemented in React using React Router.
+Open the URL printed by Vite. The landing page is at `/`, and the catalogue is at `/explore`.
 
-Asteroids, About, and Milestones remain legacy HTML pages. Vite includes those pages in production builds so existing links continue to work. No NASA key is needed to browse the saved asteroid sample.
+The routes are `/`, `/explore`, `/objects/:id`, `/favourites`, `/asteroids`, `/about`, and `/milestones`. All 26 object profiles retain their original facts, images, sections, and previous/next links. Old `/pages/*.html` URLs redirect to the matching React routes, including `/pages/thesun.html` → `/objects/sun`. Unknown URLs show a recovery page. No NASA key is needed to browse the saved asteroid sample.
 
 ```sh
 npm run lint
@@ -27,9 +27,11 @@ npm run build
 npm run preview
 ```
 
-The production output is in `dist/`. Serve it over HTTP, including its `pages/` and `assets/` directories. Do not open the app through `file://`.
+The production output is in `dist/`. Serve it over HTTP at the domain root. Configure your host to serve `index.html` for routes that do not match a static file, so direct links and page refreshes work. `public/_redirects` provides that fallback for hosts supporting this format (such as Netlify); other hosts need the equivalent SPA rewrite. Vite's development and preview servers already provide it. Do not open the app through `file://` or a static Live Server without route fallback.
 
-Browser regression checks cover the production homepage, navigation, images, mobile overflow, keyboard skip link, and the existing asteroid feature:
+`index.html` is the required Vite entry shell; all page content lives in `src/pages/*.jsx` and `src/pages/objects/*.jsx`.
+
+Browser regression checks cover the production landing page, every profile, legacy redirects, direct links and refreshes, navigation/back, images, mobile overflow, keyboard skip link, favourites, and both catalogues' filters:
 
 ```sh
 npx playwright install chromium
@@ -40,14 +42,15 @@ Alternatively, use an installed Edge browser. In PowerShell, set `$env:PLAYWRIGH
 
 See [the migration plan](docs/REACT_MIGRATION_PLAN.md) for progress and next steps.
 
-All image sources live in `assets/images/`. The current React pages reference images using `/assets/...` URLs. Catalogue `cover` values are repository-relative paths into the same directory.
+All image sources live in `assets/images/`. React imports them through Vite so the production build includes the correct asset URLs. Catalogue `cover` values are resolved by `src/data/images.js`.
 
 ## React Features
 
-- React Router for object detail pages
+- React Router for every page, with legacy URL redirects and a not-found page
 - Local catalogue data from `data/objects.json`
 - Favourite state and reusable `FavouriteButton` component
-- Object detail pages with facts and sections, including Mars
+- All 26 object detail pages with full facts and sections
+- Search, filters, and sorting for objects and asteroids, stored in URL parameters
 - Responsive layouts and accessibility support
 
 ## Team Members & Roles

@@ -2532,6 +2532,10 @@ fieldset.field > legend {
 }
 
 @media (max-width: 768px) {
+    .site-header__inner {
+        gap: 0.5rem;
+    }
+
     .object-hero__grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -2665,7 +2669,7 @@ fieldset.field > legend {
 }
 
 @media (max-width: 480px) {
-    /* Four nav links have to fit a 320px screen */
+    /* Keep the five navigation links readable on narrow screens. */
     .site-nav__link {
         padding: 0 0.25rem;
         font-size: 0.875rem;
@@ -2726,6 +2730,18 @@ fieldset.field > legend {
 /* =========================================================================
    15. REDUCED MOTION
    ========================================================================= */
+
+@media (max-width: 360px) {
+    :root {
+        --header-h: 9rem;
+    }
+
+    .site-nav__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-inline: 0;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
     html {

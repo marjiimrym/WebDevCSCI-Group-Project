@@ -5,28 +5,30 @@ Migrate incrementally to **React + Vite + React Router**, preserving the current
 ## Current foundations
 
 - 26 objects in `data/objects.json`.
-- Detailed HTML profiles in `pages/`.
+- Detailed JSX profiles in `src/pages/objects/`.
 - Shared styling in `assets/css/styles.css`.
 - Asteroid sample data in `data/asteroids.json`.
 - Reusable asteroid filtering logic in `assets/js/asteroid-filters.js`, with existing tests.
 - React + Vite homepage and npm scripts are now in place.
 
-## Implementation status — 2026-10-29
+## Implementation status — 2026-10-31
 
-- **Step 1 complete:** React renders the homepage with the original stylesheet;
-  development, build, preview, lint, and test scripts are available.
-- Images use `assets/images/`. Broken Mars, Saturn, and Andromeda references in
-  the homepage, legacy profiles, and catalogue data have been corrected.
-- Header and Footer are extracted as components in preparation for step 2.
-  React Router, AppLayout, and page conversions remain to be implemented.
-- Vite temporarily builds all legacy HTML pages alongside the React homepage.
-  The asteroid JSON is bundled as an asset so the existing feature keeps working.
-- **Verified:** lint, production build, all five asteroid logic tests, and four
-  Playwright checks in Edge (homepage navigation/images/skip link, all legacy
-  page links/assets, asteroid filtering, and mobile overflow). Desktop and mobile
-  homepage screenshots were also inspected.
-- **Next:** finish step 2, then migrate the catalogue and Explore interactions
-  to reach the first reviewable milestone below.
+- The original landing page is restored at `/`; Explore lives at `/explore`.
+- Every page renders in React with shared Header/Footer, page metadata, section
+  anchors, and a not-found page. All 26 full profiles are preserved as JSX.
+- Legacy HTML URLs redirect to canonical routes, preserving query strings and
+  fragments. Only Vite's root `index.html` remains; old page files and the
+  imperative asteroid rendering script have been removed.
+- Explore and Asteroids have controlled search/filter/sort inputs backed by URL
+  parameters. Asteroids imports the saved JSON and reuses the tested filter logic.
+- Explore and Favourites share ObjectCard. Favourite state survives client-side
+  navigation; persistence across reloads remains future work.
+- Vite imports all images for production. Hosting requires an SPA fallback;
+  `public/_redirects` supports compatible hosts, and README explains other hosts.
+- Browser coverage checks profiles, redirects, images, navigation, filters,
+  favourites, accessibility, and narrow screens against the production build.
+- **Next:** optionally consolidate repeated profile structure into structured
+  data, persist favourites, and implement the planned live API features.
 
 ## 1. Set up the React foundation
 
@@ -123,4 +125,6 @@ Each feature owner should include tests for their feature.
 
 **Home → Explore → Object Detail working in React with local data and the current styling.**
 
-The first step is implemented; subsequent steps remain planned unless noted above.
+The React page conversion and local-data navigation are implemented. The roadmap
+above also includes optional refactoring and later live-data features; see the
+current implementation status for the remaining work.

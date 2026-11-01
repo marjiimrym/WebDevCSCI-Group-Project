@@ -1,0 +1,122 @@
+{
+  "/about": {
+    "title": "About | Cosmic Explorer",
+    "description": "About Cosmic Explorer - what it is, why it was built, its data sources, technology and team. A CSCI 3230U Web Development group project."
+  },
+  "/asteroids": {
+    "title": "Near-Earth Asteroids | Cosmic Explorer",
+    "description": "Search and filter the asteroids passing close to Earth in the coming weeks, using NASA's Near Earth Object Web Service."
+  },
+  "/objects/betelgeuse": {
+    "title": "Betelgeuse | Cosmic Explorer",
+    "description": "A red supergiant on the edge of stellar death, so vast it would swallow the orbit of Jupiter if placed at our Sun."
+  },
+  "/objects/crab-nebula": {
+    "title": "Crab Nebula | Cosmic Explorer",
+    "description": "The shredded remains of a supernova that Chinese astronomers recorded in 1054, now powered by a spinning neutron star."
+  },
+  "/objects/earth": {
+    "title": "Earth | Cosmic Explorer",
+    "description": "The only world known to harbour life, with liquid water oceans covering 71 percent of its surface and a magnetic field that shields it."
+  },
+  "/objects/europa": {
+    "title": "Europa | Cosmic Explorer",
+    "description": "An icy Jovian moon hiding a global saltwater ocean beneath its shell — a leading candidate for life beyond Earth."
+  },
+  "/explore": {
+    "title": "Explore the Cosmos | Cosmic Explorer",
+    "description": "Browse planets, moons, stars, galaxies and nebulae with Cosmic Explorer."
+  },
+  "/objects/galaxy": {
+    "title": "Andromeda Galaxy | Cosmic Explorer",
+    "description": "Explore the Andromeda Galaxy (M31) - our nearest large galactic neighbor. Learn about its structure, collision course with the Milky Way, and stellar populations."
+  },
+  "/objects/ganymede": {
+    "title": "Ganymede | Cosmic Explorer",
+    "description": "The largest moon in the solar system — bigger than the planet Mercury — and the only moon with its own magnetic field."
+  },
+  "/objects/io": {
+    "title": "Io | Cosmic Explorer",
+    "description": "The most volcanically active world in the solar system, kept molten by the tidal grip of Jupiter and its sibling moons."
+  },
+  "/objects/jupiter": {
+    "title": "Jupiter | Cosmic Explorer",
+    "description": "Explore Jupiter - the largest planet in our solar system. Learn about its storms, moons, rings, and role as a cosmic shield."
+  },
+  "/objects/mars": {
+    "title": "Mars | Cosmic Explorer",
+    "description": "Explore Mars - the Red Planet. Learn about its geography, atmosphere, exploration history, and potential for human settlement."
+  },
+  "/objects/mercury": {
+    "title": "Mercury | Cosmic Explorer",
+    "description": "The smallest planet and the closest to the Sun, a cratered world of rock with no atmosphere to soften its swings from scorching to freezing."
+  },
+  "/milestones": {
+    "title": "Milestones | Cosmic Explorer",
+    "description": "The five project milestones for Cosmic Explorer, from team and topic to a deployed React application and demo video."
+  },
+  "/objects/milky-way": {
+    "title": "Milky Way Galaxy | Cosmic Explorer",
+    "description": "Our home galaxy: a barred spiral of 100 to 400 billion stars, with a supermassive black hole at its centre."
+  },
+  "/objects/moon": {
+    "title": "The Moon | Cosmic Explorer",
+    "description": "Earth's only natural satellite. Learn about its formation, phases, exploration history, and effects on Earth."
+  },
+  "/objects/neptune": {
+    "title": "Neptune | Cosmic Explorer",
+    "description": "The farthest planet from the Sun, a deep-blue ice giant driven by the fastest winds measured on any planet."
+  },
+  "/objects/orion-nebula": {
+    "title": "Orion Nebula | Cosmic Explorer",
+    "description": "A stellar nursery 1,344 light-years away, and the brightest region of star formation visible to the naked eye."
+  },
+  "/objects/proxima-centauri": {
+    "title": "Proxima Centauri | Cosmic Explorer",
+    "description": "The closest star to the Sun, a cool red dwarf with at least one Earth-sized planet in its habitable zone."
+  },
+  "/objects/rigel": {
+    "title": "Rigel | Cosmic Explorer",
+    "description": "A blue supergiant marking the foot of Orion, shining roughly 120,000 times brighter than the Sun."
+  },
+  "/objects/saturn": {
+    "title": "Saturn | Cosmic Explorer",
+    "description": "Explore Saturn - the ringed planet. Learn about its spectacular rings, moons (including Titan and Enceladus), and unique features."
+  },
+  "/objects/sirius": {
+    "title": "Sirius | Cosmic Explorer",
+    "description": "The brightest star in Earth's night sky, a blue-white star twice the Sun's mass with a faint white dwarf companion."
+  },
+  "/objects/sun": {
+    "title": "The Sun | Cosmic Explorer",
+    "description": "Explore the Sun - our star. Learn about its structure, energy production, solar activity, and importance to life on Earth."
+  },
+  "/objects/titan": {
+    "title": "Titan | Cosmic Explorer",
+    "description": "Saturn's largest moon and the only moon with a thick atmosphere, where rivers and lakes are filled with liquid methane."
+  },
+  "/objects/triangulum": {
+    "title": "Triangulum Galaxy | Cosmic Explorer",
+    "description": "The third-largest galaxy in our Local Group and the most distant object visible to the naked eye, 2.7 million light-years away."
+  },
+  "/objects/triton": {
+    "title": "Triton | Cosmic Explorer",
+    "description": "Neptune's largest moon orbits backwards, and its frozen surface erupts geysers of nitrogen — a captured Kuiper Belt world."
+  },
+  "/objects/uranus": {
+    "title": "Uranus | Cosmic Explorer",
+    "description": "An ice giant tipped onto its side, rolling around the Sun with a 98-degree tilt that gives it seasons lasting 21 years each."
+  },
+  "/objects/vega": {
+    "title": "Vega | Cosmic Explorer",
+    "description": "The fifth-brightest star in the sky and a calibration standard for astronomers, 25 light-years away in Lyra."
+  },
+  "/objects/venus": {
+    "title": "Venus | Cosmic Explorer",
+    "description": "Earth's near-twin in size, wrapped in a thick carbon dioxide atmosphere that traps heat until its surface glows at 464°C."
+  },
+  "/objects/whirlpool": {
+    "title": "Whirlpool Galaxy | Cosmic Explorer",
+    "description": "A grand-design spiral 31 million light-years away, caught mid-interaction with a smaller companion galaxy."
+  }
+}
