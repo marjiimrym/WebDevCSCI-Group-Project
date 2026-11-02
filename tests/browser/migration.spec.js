@@ -108,11 +108,12 @@ test('catalogue controls survive detail navigation, back and refresh', async ({ 
 test('favourites survive navigation across all React pages', async ({ page }) => {
   await page.goto('/explore');
   await page.getByRole('button', { name: 'Favourite Mars', exact: true }).click();
-  for (const route of ['About', 'Milestones', 'Asteroids', 'Favourites']) {
+  for (const [route, path] of [['About', '/about'], ['Milestones', '/milestones'], ['Asteroids', '/asteroids'], ['Favourites', '/favourites']]) {
     await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: route, exact: true }).click();
+    await expect(page).toHaveURL(new RegExp(`${path}$`));
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   }
-  await expect(page.locator('.card__title')).toHaveText('Mars');
+  await expect(page.locator('.card-grid .card__title')).toHaveText(['Mars']);
   await page.getByRole('link', { name: 'Mars', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Mars');
   await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: 'Favourites' }).click();
