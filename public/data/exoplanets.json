@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "51-peg-b",
+    "title": "51 Peg b",
+    "discovery": {
+      "year": 1995,
+      "method": "Radial Velocity",
+      "facility": "Haute-Provence Observatory"
+    },
+    "radius": {
+      "value": 14.1,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 193.87532827,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 4.2307966,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.052,
+      "unit": "AU"
+    },
+    "eccentricity": 0.0063,
+    "equilibriumTemperature": {
+      "value": 1328.93,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 506.1775,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 15.4614,
+      "lightYears": 50.43
+    },
+    "star": {
+      "name": "51 Peg",
+      "temperature": {
+        "value": 5761,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 1.19,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 1.07,
+        "unit": "Solar masses"
+      },
+      "spectralType": "G5V"
+    },
+    "system": {
+      "numberOfPlanets": 1,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 344.3675399,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 20.7690958,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-186-b",
+    "title": "Kepler-186 b",
+    "discovery": {
+      "year": 2014,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.07,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.24,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 3.8867907,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0343,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 571,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 37.372,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 177.594,
+      "lightYears": 579.23
+    },
+    "star": {
+      "name": "Kepler-186",
+      "temperature": {
+        "value": 3788,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.472,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.478,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M1"
+    },
+    "system": {
+      "numberOfPlanets": 5,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 298.652736,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 43.9549884,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-186-c",
+    "title": "Kepler-186 c",
+    "discovery": {
+      "year": 2014,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.25,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 2.1,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 7.267302,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0451,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 464,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 13.98,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 177.594,
+      "lightYears": 579.23
+    },
+    "star": {
+      "name": "Kepler-186",
+      "temperature": {
+        "value": 3788,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.472,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.478,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M1"
+    },
+    "system": {
+      "numberOfPlanets": 5,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 298.652736,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 43.9549884,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-186-d",
+    "title": "Kepler-186 d",
+    "discovery": {
+      "year": 2014,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.4,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 2.54,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 13.342996,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0781,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 379,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 7.204,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 177.594,
+      "lightYears": 579.23
+    },
+    "star": {
+      "name": "Kepler-186",
+      "temperature": {
+        "value": 3788,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.472,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.478,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M1"
+    },
+    "system": {
+      "numberOfPlanets": 5,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 298.652736,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 43.9549884,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-186-e",
+    "title": "Kepler-186 e",
+    "discovery": {
+      "year": 2014,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.27,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 2.15,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 22.407704,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.11,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 319,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 3.608,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 177.594,
+      "lightYears": 579.23
+    },
+    "star": {
+      "name": "Kepler-186",
+      "temperature": {
+        "value": 3788,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.472,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.478,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M1"
+    },
+    "system": {
+      "numberOfPlanets": 5,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 298.652736,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 43.9549884,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-186-f",
+    "title": "Kepler-186 f",
+    "discovery": {
+      "year": 2014,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.17,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.71,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 129.9441,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.432,
+      "unit": "AU"
+    },
+    "eccentricity": 0.04,
+    "equilibriumTemperature": {
+      "value": 177,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.3,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 177.594,
+      "lightYears": 579.23
+    },
+    "star": {
+      "name": "Kepler-186",
+      "temperature": {
+        "value": 3755,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.523,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.544,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M1"
+    },
+    "system": {
+      "numberOfPlanets": 5,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 298.652736,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 43.9549884,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-22-b",
+    "title": "Kepler-22 b",
+    "discovery": {
+      "year": 2011,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 2.1,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 9.1,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 289.863876,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.812,
+      "unit": "AU"
+    },
+    "eccentricity": 0.72,
+    "equilibriumTemperature": {
+      "value": 279,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 1.013,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 194.642,
+      "lightYears": 634.84
+    },
+    "star": {
+      "name": "Kepler-22",
+      "temperature": {
+        "value": 5596,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.869,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.857,
+        "unit": "Solar masses"
+      },
+      "spectralType": "G5 V"
+    },
+    "system": {
+      "numberOfPlanets": 1,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 289.2172051,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 47.8841427,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "kepler-452-b",
+    "title": "Kepler-452 b",
+    "discovery": {
+      "year": 2015,
+      "method": "Transit",
+      "facility": "Kepler"
+    },
+    "radius": {
+      "value": 1.63,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 3.29,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 384.843,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 1.046,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 265,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 1.1,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 551.727,
+      "lightYears": 1799.49
+    },
+    "star": {
+      "name": "Kepler-452",
+      "temperature": {
+        "value": 5757,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 1.11,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 1.037,
+        "unit": "Solar masses"
+      },
+      "spectralType": "G2"
+    },
+    "system": {
+      "numberOfPlanets": 1,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 296.003752,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": 44.2775861,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "proxima-cen-b",
+    "title": "Proxima Cen b",
+    "discovery": {
+      "year": 2016,
+      "method": "Radial Velocity",
+      "facility": "European Southern Observatory"
+    },
+    "radius": {
+      "value": 1.02,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.055,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 11.18465,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.04848,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 218,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.641,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 1.30119,
+      "lightYears": 4.24
+    },
+    "star": {
+      "name": "Proxima Cen",
+      "temperature": {
+        "value": 2900,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.141,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.1221,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M5.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 2,
+      "numberOfStars": 3
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 217.3934657,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -62.6761821,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "proxima-cen-d",
+    "title": "Proxima Cen d",
+    "discovery": {
+      "year": 2025,
+      "method": "Radial Velocity",
+      "facility": "La Silla Observatory"
+    },
+    "radius": {
+      "value": 0.692,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.26,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 5.12338,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.02881,
+      "unit": "AU"
+    },
+    "eccentricity": 0,
+    "equilibriumTemperature": {
+      "value": 282,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 1.814,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 1.30119,
+      "lightYears": 4.24
+    },
+    "star": {
+      "name": "Proxima Cen",
+      "temperature": {
+        "value": 2900,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.141,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.1221,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M5.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 2,
+      "numberOfStars": 3
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 217.3934657,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -62.6761821,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "toi-700-b",
+    "title": "TOI-700 b",
+    "discovery": {
+      "year": 2020,
+      "method": "Transit",
+      "facility": "Transiting Exoplanet Survey Satellite (TESS)"
+    },
+    "radius": {
+      "value": 0.963,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.849,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 9.97722,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0678,
+      "unit": "AU"
+    },
+    "eccentricity": 0.032,
+    "equilibriumTemperature": {
+      "value": 417,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 4.98,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 31.1265,
+      "lightYears": 101.52
+    },
+    "star": {
+      "name": "TOI-700",
+      "temperature": {
+        "value": 3459,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.4104,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.417,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M2.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 4,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 97.0957165,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -65.5786149,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "toi-700-c",
+    "title": "TOI-700 c",
+    "discovery": {
+      "year": 2020,
+      "method": "Transit",
+      "facility": "Transiting Exoplanet Survey Satellite (TESS)"
+    },
+    "radius": {
+      "value": 2.535,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 6.96,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 16.0511039,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0931,
+      "unit": "AU"
+    },
+    "eccentricity": 0.033,
+    "equilibriumTemperature": {
+      "value": 356,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 2.64,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 31.1265,
+      "lightYears": 101.52
+    },
+    "star": {
+      "name": "TOI-700",
+      "temperature": {
+        "value": 3459,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.4104,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.417,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M2.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 4,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 97.0957165,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -65.5786149,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "toi-700-d",
+    "title": "TOI-700 d",
+    "discovery": {
+      "year": 2020,
+      "method": "Transit",
+      "facility": "Transiting Exoplanet Survey Satellite (TESS)"
+    },
+    "radius": {
+      "value": 1.145,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.58,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 37.423457,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.1642,
+      "unit": "AU"
+    },
+    "eccentricity": 0.042,
+    "equilibriumTemperature": {
+      "value": 268.8,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.85,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 31.1265,
+      "lightYears": 101.52
+    },
+    "star": {
+      "name": "TOI-700",
+      "temperature": {
+        "value": 3459,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.4104,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.417,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M2.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 4,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 97.0957165,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -65.5786149,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "toi-700-e",
+    "title": "TOI-700 e",
+    "discovery": {
+      "year": 2023,
+      "method": "Transit",
+      "facility": "Transiting Exoplanet Survey Satellite (TESS)"
+    },
+    "radius": {
+      "value": 0.919,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.718,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 27.810124,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.1336,
+      "unit": "AU"
+    },
+    "eccentricity": 0.059,
+    "equilibriumTemperature": {
+      "value": 272.9,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 1.27,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 31.1265,
+      "lightYears": 101.52
+    },
+    "star": {
+      "name": "TOI-700",
+      "temperature": {
+        "value": 3459,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.4104,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.417,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M2.5 V"
+    },
+    "system": {
+      "numberOfPlanets": 4,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 97.0957165,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -65.5786149,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-b",
+    "title": "TRAPPIST-1 b",
+    "discovery": {
+      "year": 2016,
+      "method": "Transit",
+      "facility": "La Silla Observatory"
+    },
+    "radius": {
+      "value": 1.116,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.374,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 1.510826,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.01154,
+      "unit": "AU"
+    },
+    "eccentricity": 0.00622,
+    "equilibriumTemperature": {
+      "value": 397.6,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 4.153,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-c",
+    "title": "TRAPPIST-1 c",
+    "discovery": {
+      "year": 2016,
+      "method": "Transit",
+      "facility": "La Silla Observatory"
+    },
+    "radius": {
+      "value": 1.097,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.308,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 2.421937,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.0158,
+      "unit": "AU"
+    },
+    "eccentricity": 0.00654,
+    "equilibriumTemperature": {
+      "value": 339.7,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 2.214,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-d",
+    "title": "TRAPPIST-1 d",
+    "discovery": {
+      "year": 2016,
+      "method": "Transit",
+      "facility": "La Silla Observatory"
+    },
+    "radius": {
+      "value": 0.788,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.388,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 4.049219,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.02227,
+      "unit": "AU"
+    },
+    "eccentricity": 0.00837,
+    "equilibriumTemperature": {
+      "value": 286.2,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 1.115,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-e",
+    "title": "TRAPPIST-1 e",
+    "discovery": {
+      "year": 2017,
+      "method": "Transit",
+      "facility": "Multiple Observatories"
+    },
+    "radius": {
+      "value": 0.92,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.692,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 6.101013,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.02925,
+      "unit": "AU"
+    },
+    "eccentricity": 0.0051,
+    "equilibriumTemperature": {
+      "value": 249.7,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.646,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-f",
+    "title": "TRAPPIST-1 f",
+    "discovery": {
+      "year": 2017,
+      "method": "Transit",
+      "facility": "Multiple Observatories"
+    },
+    "radius": {
+      "value": 1.045,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.039,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 9.20754,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.03849,
+      "unit": "AU"
+    },
+    "eccentricity": 0.01007,
+    "equilibriumTemperature": {
+      "value": 217.7,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.373,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-g",
+    "title": "TRAPPIST-1 g",
+    "discovery": {
+      "year": 2017,
+      "method": "Transit",
+      "facility": "Multiple Observatories"
+    },
+    "radius": {
+      "value": 1.129,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 1.321,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 12.352446,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.04683,
+      "unit": "AU"
+    },
+    "eccentricity": 0.00208,
+    "equilibriumTemperature": {
+      "value": 197.3,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.252,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  },
+  {
+    "id": "trappist-1-h",
+    "title": "TRAPPIST-1 h",
+    "discovery": {
+      "year": 2017,
+      "method": "Transit",
+      "facility": "Multiple Observatories"
+    },
+    "radius": {
+      "value": 0.755,
+      "unit": "Earth radii"
+    },
+    "mass": {
+      "value": 0.326,
+      "unit": "Earth masses"
+    },
+    "orbitalPeriod": {
+      "value": 18.772866,
+      "unit": "days"
+    },
+    "orbitalDistance": {
+      "value": 0.06189,
+      "unit": "AU"
+    },
+    "eccentricity": 0.00567,
+    "equilibriumTemperature": {
+      "value": 171.7,
+      "unit": "K"
+    },
+    "insolationFlux": {
+      "value": 0.144,
+      "unit": "Earth flux"
+    },
+    "distance": {
+      "parsecs": 12.42988881,
+      "lightYears": 40.54
+    },
+    "star": {
+      "name": "TRAPPIST-1",
+      "temperature": {
+        "value": 2566,
+        "unit": "K"
+      },
+      "radius": {
+        "value": 0.1192,
+        "unit": "Solar radii"
+      },
+      "mass": {
+        "value": 0.0898,
+        "unit": "Solar masses"
+      },
+      "spectralType": "M8.0 V"
+    },
+    "system": {
+      "numberOfPlanets": 7,
+      "numberOfStars": 1
+    },
+    "coordinates": {
+      "rightAscension": {
+        "value": 346.6263919,
+        "unit": "degrees"
+      },
+      "declination": {
+        "value": -5.0434618,
+        "unit": "degrees"
+      }
+    }
+  }
+]

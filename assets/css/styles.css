@@ -52,6 +52,9 @@
     --type-planet: #8fb0ff;
     --type-moon: #d9d4c7;
     --type-galaxy: #b7a4ff;
+    --type-nebula: #ff9ecf;
+    --type-asteroid: #c8b59a;
+    --type-hazard: #ff7a6b;
 
     /* Fonts — named webfonts first, then high-quality system fallbacks */
     --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -149,11 +152,35 @@ legend {
 
 body {
     min-height: 100vh;
-    background: var(--bg-primary);
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     font: 400 var(--fs-body) / 1.65 var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+.page-transition > main > *:not(.page-bg) {
+        animation: page-in 0.5s var(--ease) both;
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
 }
 
 ::selection {
@@ -359,6 +386,9 @@ strong {
 .type-planet { --type: var(--type-planet); }
 .type-moon   { --type: var(--type-moon); }
 .type-galaxy { --type: var(--type-galaxy); }
+.type-nebula { --type: var(--type-nebula); }
+.type-asteroid { --type: var(--type-asteroid); }
+.type-hazard  { --type: var(--type-hazard); }
 
 /* ---- Buttons ---- */
 
@@ -1529,10 +1559,15 @@ strong {
     padding-bottom: clamp(5.5rem, 10vw, 8rem);
 }
 
+.explore-title {
+    margin-bottom: 2rem;
+}
+
 /* Floating control panel overlapping the hero */
 .toolbar-wrap {
-    position: relative;
-    z-index: 2;
+    position: sticky;
+    top: calc(var(--header-h) + 0.75rem);
+    z-index: 20;
     margin-top: calc(-1 * clamp(2.75rem, 5vw, 3.75rem));
 }
 
@@ -1543,12 +1578,20 @@ strong {
     align-items: end;
     gap: 1.25rem 1.5rem;
     padding: 1.25rem 1.5rem 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid rgba(255, 255, 255, 0.22);
     border-radius: var(--radius-lg);
-    background: rgba(21, 24, 45, 0.86);
-    box-shadow: var(--shadow-lift);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.14) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.09) 100%
+    );
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.1);
+    backdrop-filter: blur(18px) saturate(140%) brightness(1.1);
 }
 
 .toolbar__search { grid-area: search; }
@@ -1587,7 +1630,7 @@ fieldset.field > legend {
     padding: 0 1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--bg-primary);
+    background-color: rgba(255, 255, 255, 0.04);
     color: var(--text-primary);
     font-size: var(--fs-sm);
     -webkit-appearance: none;
@@ -1677,9 +1720,13 @@ fieldset.field > legend {
 
 .chip input {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     opacity: 0;
+    cursor: pointer;
 }
 
 .chip__face {
@@ -1690,7 +1737,7 @@ fieldset.field > legend {
     padding: 0 1rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: var(--bg-primary);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--text-secondary);
     font-size: var(--fs-sm);
     white-space: nowrap;
@@ -1712,13 +1759,14 @@ fieldset.field > legend {
 }
 
 .chip input:checked + .chip__face {
-    border-color: var(--accent-line);
-    background: var(--accent-soft);
-    color: var(--text-primary);
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 600;
 }
 
 .chip input:checked + .chip__face .chip__count {
-    color: var(--accent-light);
+    color: rgba(8, 9, 20, 0.7);
 }
 
 .chip input:focus-visible + .chip__face {
@@ -1774,6 +1822,13 @@ fieldset.field > legend {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
+}
+
+/* Loading / empty / error message under the results bar */
+.results__status {
+    padding-block: 3rem;
+    text-align: center;
+    color: var(--text-secondary);
 }
 
 
@@ -2126,6 +2181,34 @@ fieldset.field > legend {
     transform: translateX(4px);
 }
 
+
+/* Detail page section spacing */
+.detail-section {
+  margin-top: 2.5rem;
+}
+
+/* Space below section headings */
+.detail-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Detail page facts list */
+.detail-facts {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.detail-facts li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-facts li::marker {
+  color: var(--accent);
+}
 
 /* =========================================================================
    12. TIMELINE
@@ -2487,6 +2570,10 @@ fieldset.field > legend {
 }
 
 @media (max-width: 768px) {
+    .site-header__inner {
+        gap: 0.5rem;
+    }
+
     .object-hero__grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -2535,7 +2622,7 @@ fieldset.field > legend {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 641px) {
     :root {
         --header-h: 6.25rem;
     }
@@ -2620,6 +2707,12 @@ fieldset.field > legend {
 }
 
 @media (max-width: 480px) {
+    /* Keep the five navigation links readable on narrow screens. */
+    .site-nav__link {
+        padding: 0 0.25rem;
+        font-size: 0.875rem;
+    }
+
     .hero__actions,
     .cta__actions {
         flex-direction: column;
@@ -2676,6 +2769,18 @@ fieldset.field > legend {
    15. REDUCED MOTION
    ========================================================================= */
 
+@media (max-width: 360px) {
+    :root {
+        --header-h: 9rem;
+    }
+
+    .site-nav__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-inline: 0;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -2697,4 +2802,61 @@ fieldset.field > legend {
     .card:hover .card__media img {
         transform: none;
     }
+}
+.favourite-button {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.favourite-button:hover,
+.favourite-button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+/* =========================================
+   Object Detail Page
+   ========================================= */
+
+.detail-section {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-section h2 {
+  margin-bottom: 1rem;
+  font-size: var(--fs-h3);
+  color: var(--text-primary);
+}
+
+.detail-section p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+.detail-facts {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.detail-facts li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-facts li::marker {
+  color: var(--accent);
 }

@@ -1,0 +1,398 @@
+{
+  "data/objects.json": {
+    "mtime": 1791478028.2616181,
+    "seen": 1791485511.4351304,
+    "ast_hash": "b0eec92b0ba5ffb8e88aab30c1fec4e4",
+    "semantic_hash": "b0eec92b0ba5ffb8e88aab30c1fec4e4"
+  },
+  "docs/sample-response.json": {
+    "mtime": 1791412340.0274217,
+    "seen": 1791485511.4351468,
+    "ast_hash": "206c40a3eb94b615df9785cd2518de6a",
+    "semantic_hash": "206c40a3eb94b615df9785cd2518de6a"
+  },
+  "docs/testing.py": {
+    "mtime": 1791207912.9528582,
+    "seen": 1791485511.4351535,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "README.md": {
+    "mtime": 1791207912.940387,
+    "seen": 1791485511.4351575,
+    "ast_hash": "8853099522454e2772822f4108825026",
+    "semantic_hash": "8853099522454e2772822f4108825026"
+  },
+  "docs/AI-USAGE-template.md": {
+    "mtime": 1791207912.938388,
+    "seen": 1791485511.4351616,
+    "ast_hash": "c564e4bba08ae9e4d0919572e9c40cd9",
+    "semantic_hash": "c564e4bba08ae9e4d0919572e9c40cd9"
+  },
+  "docs/Cosmic_Explorer_NASA_API_Research.md": {
+    "mtime": 1791474237.0175989,
+    "seen": 1791485511.4351645,
+    "ast_hash": "5333d4ee826e9f5ccf5bfa09d991fcae",
+    "semantic_hash": "5333d4ee826e9f5ccf5bfa09d991fcae"
+  },
+  "docs/Cosmic_Explorer_PRD.md": {
+    "mtime": 1791473507.5884006,
+    "seen": 1791485511.4351678,
+    "ast_hash": "7cd7871b7ea3a1c44b2f2dd92a3d513c",
+    "semantic_hash": "7cd7871b7ea3a1c44b2f2dd92a3d513c"
+  },
+  "docs/PROJECT_REQUIREMENTS.md": {
+    "mtime": 1791207912.939387,
+    "seen": 1791485511.4351704,
+    "ast_hash": "5535f66de11e8535299f64df84fa2781",
+    "semantic_hash": "5535f66de11e8535299f64df84fa2781"
+  },
+  "docs/ai-policy.md": {
+    "mtime": 1791207912.9416354,
+    "seen": 1791485511.435173,
+    "ast_hash": "84a09990ce6a60153f3bdd52e59ccb21",
+    "semantic_hash": "84a09990ce6a60153f3bdd52e59ccb21"
+  },
+  "index.html": {
+    "mtime": 1791478473.1637962,
+    "seen": 1791485511.435176,
+    "ast_hash": "56d60b2f43b1112461a147acc959a49a",
+    "semantic_hash": "56d60b2f43b1112461a147acc959a49a"
+  },
+  "pages/about.html": {
+    "mtime": 1791478331.4089618,
+    "seen": 1791485511.4351785,
+    "ast_hash": "dd14193d4f0233e15664a8853d9b7055",
+    "semantic_hash": "dd14193d4f0233e15664a8853d9b7055"
+  },
+  "pages/betelgeuse.html": {
+    "mtime": 1791478153.4071996,
+    "seen": 1791485511.4351819,
+    "ast_hash": "308affeaf22ce693fed8749122e8d06c",
+    "semantic_hash": "308affeaf22ce693fed8749122e8d06c"
+  },
+  "pages/crab-nebula.html": {
+    "mtime": 1791478153.4102044,
+    "seen": 1791485511.435185,
+    "ast_hash": "67539974adc5c18187c30b188409da62",
+    "semantic_hash": "67539974adc5c18187c30b188409da62"
+  },
+  "pages/earth.html": {
+    "mtime": 1791478153.4122052,
+    "seen": 1791485511.4351878,
+    "ast_hash": "7bb00a45012dd5671e22b4ba086dec1c",
+    "semantic_hash": "7bb00a45012dd5671e22b4ba086dec1c"
+  },
+  "pages/europa.html": {
+    "mtime": 1791478153.4152076,
+    "seen": 1791485511.4351902,
+    "ast_hash": "47ac6ed13dfacd3f6f448aa60cbdc3a8",
+    "semantic_hash": "47ac6ed13dfacd3f6f448aa60cbdc3a8"
+  },
+  "pages/explore.html": {
+    "mtime": 1791478567.9403636,
+    "seen": 1791485511.435193,
+    "ast_hash": "413d6f2ad1324f470db8365c598a114b",
+    "semantic_hash": "413d6f2ad1324f470db8365c598a114b"
+  },
+  "pages/galaxy.html": {
+    "mtime": 1791478028.6768548,
+    "seen": 1791485511.435196,
+    "ast_hash": "afc20346109f1f295031d4d743d910c1",
+    "semantic_hash": "afc20346109f1f295031d4d743d910c1"
+  },
+  "pages/ganymede.html": {
+    "mtime": 1791478153.4202037,
+    "seen": 1791485511.435199,
+    "ast_hash": "59bee861b8eb5b6d5ea8d17143d52692",
+    "semantic_hash": "59bee861b8eb5b6d5ea8d17143d52692"
+  },
+  "pages/io.html": {
+    "mtime": 1791478153.4237201,
+    "seen": 1791485511.435202,
+    "ast_hash": "67a43c421091a4bb7e983350e22d1e4d",
+    "semantic_hash": "67a43c421091a4bb7e983350e22d1e4d"
+  },
+  "pages/jupiter.html": {
+    "mtime": 1791478028.5510542,
+    "seen": 1791485511.4352043,
+    "ast_hash": "4e4e99e8dfba3de356cccc05e6933352",
+    "semantic_hash": "4e4e99e8dfba3de356cccc05e6933352"
+  },
+  "pages/mars.html": {
+    "mtime": 1791478028.5500512,
+    "seen": 1791485511.4352071,
+    "ast_hash": "e4d85d6e8b2f51836aa4e50090363b82",
+    "semantic_hash": "e4d85d6e8b2f51836aa4e50090363b82"
+  },
+  "pages/mercury.html": {
+    "mtime": 1791478153.4277384,
+    "seen": 1791485511.4352098,
+    "ast_hash": "2879758a85754fad585241b46a138590",
+    "semantic_hash": "2879758a85754fad585241b46a138590"
+  },
+  "pages/milestones.html": {
+    "mtime": 1791414471.9381132,
+    "seen": 1791485511.4352136,
+    "ast_hash": "d62b9ff6ab89d644584faa1be1101ce3",
+    "semantic_hash": "d62b9ff6ab89d644584faa1be1101ce3"
+  },
+  "pages/milky-way.html": {
+    "mtime": 1791478153.4317431,
+    "seen": 1791485511.4352162,
+    "ast_hash": "98473c2d133510fe9fb42b9d80fa7e53",
+    "semantic_hash": "98473c2d133510fe9fb42b9d80fa7e53"
+  },
+  "pages/moon.html": {
+    "mtime": 1791478028.5315216,
+    "seen": 1791485511.4352186,
+    "ast_hash": "e0afa76f68d2a496c52c870d64af3877",
+    "semantic_hash": "e0afa76f68d2a496c52c870d64af3877"
+  },
+  "pages/neptune.html": {
+    "mtime": 1791478153.435276,
+    "seen": 1791485511.4352212,
+    "ast_hash": "ddb57b54dffbe69434f962105751f0b8",
+    "semantic_hash": "ddb57b54dffbe69434f962105751f0b8"
+  },
+  "pages/orion-nebula.html": {
+    "mtime": 1791478153.4382737,
+    "seen": 1791485511.435224,
+    "ast_hash": "ee407261d6ee83685ef29687b0397f3d",
+    "semantic_hash": "ee407261d6ee83685ef29687b0397f3d"
+  },
+  "pages/proxima-centauri.html": {
+    "mtime": 1791478153.4412706,
+    "seen": 1791485511.435227,
+    "ast_hash": "91fe794cb3cf4174d71261f1b85323a0",
+    "semantic_hash": "91fe794cb3cf4174d71261f1b85323a0"
+  },
+  "pages/rigel.html": {
+    "mtime": 1791478153.4446287,
+    "seen": 1791485511.4352298,
+    "ast_hash": "2993c67b4cd402c1d03be299916286bb",
+    "semantic_hash": "2993c67b4cd402c1d03be299916286bb"
+  },
+  "pages/saturn.html": {
+    "mtime": 1791478028.5730543,
+    "seen": 1791485511.4352324,
+    "ast_hash": "72d141b2a84d0dc8c613004fcb4969a3",
+    "semantic_hash": "72d141b2a84d0dc8c613004fcb4969a3"
+  },
+  "pages/sirius.html": {
+    "mtime": 1791478153.4486258,
+    "seen": 1791485511.435235,
+    "ast_hash": "3c3bca2db48fbe5220c8c313a621948a",
+    "semantic_hash": "3c3bca2db48fbe5220c8c313a621948a"
+  },
+  "pages/thesun.html": {
+    "mtime": 1791478028.5485325,
+    "seen": 1791485511.4352374,
+    "ast_hash": "616a72a4b6c8d26419744b26f2a22bf6",
+    "semantic_hash": "616a72a4b6c8d26419744b26f2a22bf6"
+  },
+  "pages/titan.html": {
+    "mtime": 1791478153.4526303,
+    "seen": 1791485511.4352403,
+    "ast_hash": "6c9d1da9d45786623233a168fc629388",
+    "semantic_hash": "6c9d1da9d45786623233a168fc629388"
+  },
+  "pages/triangulum.html": {
+    "mtime": 1791478153.4564288,
+    "seen": 1791485511.435243,
+    "ast_hash": "df84cecc2d57d363eab9d633d95afc8e",
+    "semantic_hash": "df84cecc2d57d363eab9d633d95afc8e"
+  },
+  "pages/triton.html": {
+    "mtime": 1791478153.45996,
+    "seen": 1791485511.4352453,
+    "ast_hash": "4f7b65d93f63f92c1a3e66ad7ba0967a",
+    "semantic_hash": "4f7b65d93f63f92c1a3e66ad7ba0967a"
+  },
+  "pages/uranus.html": {
+    "mtime": 1791478153.46297,
+    "seen": 1791485511.4352481,
+    "ast_hash": "87777a1a31e4fe3701ed3d1b207abd61",
+    "semantic_hash": "87777a1a31e4fe3701ed3d1b207abd61"
+  },
+  "pages/vega.html": {
+    "mtime": 1791478153.4651957,
+    "seen": 1791485511.4352508,
+    "ast_hash": "6e4f1639d66836b32784ddd186755c8b",
+    "semantic_hash": "6e4f1639d66836b32784ddd186755c8b"
+  },
+  "pages/venus.html": {
+    "mtime": 1791478153.4682126,
+    "seen": 1791485511.4352536,
+    "ast_hash": "5b53b99a852ba24f6d6ba245e189de70",
+    "semantic_hash": "5b53b99a852ba24f6d6ba245e189de70"
+  },
+  "pages/whirlpool.html": {
+    "mtime": 1791478153.472211,
+    "seen": 1791485511.435256,
+    "ast_hash": "7cf68c53467e0e5b57932379fcfe0cb5",
+    "semantic_hash": "7cf68c53467e0e5b57932379fcfe0cb5"
+  },
+  "assets/images/betelgeuse.svg": {
+    "mtime": 1791477060.1273818,
+    "seen": 1791485511.4352586,
+    "ast_hash": "bbfa443a2f5db7cccf3429d8942249cc",
+    "semantic_hash": "bbfa443a2f5db7cccf3429d8942249cc"
+  },
+  "assets/images/crab-nebula.svg": {
+    "mtime": 1791477060.1343813,
+    "seen": 1791485511.435261,
+    "ast_hash": "c23c7f4b149458c832be6cfdc367901e",
+    "semantic_hash": "c23c7f4b149458c832be6cfdc367901e"
+  },
+  "assets/images/earth.svg": {
+    "mtime": 1791477060.1203809,
+    "seen": 1791485511.4352632,
+    "ast_hash": "937a410b77c3292758713b350f7ed50e",
+    "semantic_hash": "937a410b77c3292758713b350f7ed50e"
+  },
+  "assets/images/europa.svg": {
+    "mtime": 1791477060.1233814,
+    "seen": 1791485511.4352658,
+    "ast_hash": "d77d2bb49638c7e6792d65a061ca607b",
+    "semantic_hash": "d77d2bb49638c7e6792d65a061ca607b"
+  },
+  "assets/images/galaxy.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.4352705,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/ganymede.svg": {
+    "mtime": 1791477060.1243804,
+    "seen": 1791485511.4352732,
+    "ast_hash": "845cf3b792c074af3015eaa7dbd7c897",
+    "semantic_hash": "845cf3b792c074af3015eaa7dbd7c897"
+  },
+  "assets/images/io.svg": {
+    "mtime": 1791477060.1243804,
+    "seen": 1791485511.4352758,
+    "ast_hash": "ef3609c6306cf5b9f7f602a26bf6b47b",
+    "semantic_hash": "ef3609c6306cf5b9f7f602a26bf6b47b"
+  },
+  "assets/images/jupiter.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.4352787,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/mars.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.435281,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/mercury.svg": {
+    "mtime": 1791477060.117376,
+    "seen": 1791485511.4352837,
+    "ast_hash": "f96b1db26b921013f6887243206ff40d",
+    "semantic_hash": "f96b1db26b921013f6887243206ff40d"
+  },
+  "assets/images/milky-way.svg": {
+    "mtime": 1791477060.132383,
+    "seen": 1791485511.435286,
+    "ast_hash": "decdcf629af5eb634d44fa1089013e36",
+    "semantic_hash": "decdcf629af5eb634d44fa1089013e36"
+  },
+  "assets/images/moon.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.435289,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/neptune.svg": {
+    "mtime": 1791477060.121382,
+    "seen": 1791485511.4352913,
+    "ast_hash": "2b73bddbefd3d348a53da14f50a20249",
+    "semantic_hash": "2b73bddbefd3d348a53da14f50a20249"
+  },
+  "assets/images/openpage.jpg": {
+    "mtime": 1791207912.9497654,
+    "seen": 1791485511.4352942,
+    "ast_hash": "53fe96cf158459e542b38a4945e8f69f",
+    "semantic_hash": "53fe96cf158459e542b38a4945e8f69f"
+  },
+  "assets/images/orion-nebula.svg": {
+    "mtime": 1791477060.135381,
+    "seen": 1791485511.4352968,
+    "ast_hash": "47a7424d962df454cc7ef98bed4e8a6c",
+    "semantic_hash": "47a7424d962df454cc7ef98bed4e8a6c"
+  },
+  "assets/images/proxima-centauri.svg": {
+    "mtime": 1791477060.1303823,
+    "seen": 1791485511.4352994,
+    "ast_hash": "a5c6816cafc9b5e84d8277c48439426c",
+    "semantic_hash": "a5c6816cafc9b5e84d8277c48439426c"
+  },
+  "assets/images/rigel.svg": {
+    "mtime": 1791477060.126382,
+    "seen": 1791485511.4353018,
+    "ast_hash": "9f75162469b433a82deea50abf481584",
+    "semantic_hash": "9f75162469b433a82deea50abf481584"
+  },
+  "assets/images/saturn.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.4353044,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/sirius.svg": {
+    "mtime": 1791477060.125381,
+    "seen": 1791485511.4353075,
+    "ast_hash": "046856831d6e518fd9e2fa49c5b7868f",
+    "semantic_hash": "046856831d6e518fd9e2fa49c5b7868f"
+  },
+  "assets/images/sun.jpg": {
+    "mtime": 1791207912.9451954,
+    "seen": 1791485511.4353101,
+    "ast_hash": "8526f487585bd8e7b6c7346791832640",
+    "semantic_hash": "8526f487585bd8e7b6c7346791832640"
+  },
+  "assets/images/titan.svg": {
+    "mtime": 1791477060.122383,
+    "seen": 1791485511.4353123,
+    "ast_hash": "abc7de90ecf0580144084d8f1db4005c",
+    "semantic_hash": "abc7de90ecf0580144084d8f1db4005c"
+  },
+  "assets/images/triangulum.svg": {
+    "mtime": 1791477060.132383,
+    "seen": 1791485511.4353147,
+    "ast_hash": "add2ad80377a1525bf7f1c3bfe04d593",
+    "semantic_hash": "add2ad80377a1525bf7f1c3bfe04d593"
+  },
+  "assets/images/triton.svg": {
+    "mtime": 1791477060.125381,
+    "seen": 1791485511.4353173,
+    "ast_hash": "3c2f60a7b6fb448c952ce77441ba8950",
+    "semantic_hash": "3c2f60a7b6fb448c952ce77441ba8950"
+  },
+  "assets/images/uranus.svg": {
+    "mtime": 1791477060.121382,
+    "seen": 1791485511.43532,
+    "ast_hash": "6c50bf2a676885956461400bc583984e",
+    "semantic_hash": "6c50bf2a676885956461400bc583984e"
+  },
+  "assets/images/vega.svg": {
+    "mtime": 1791477060.1313796,
+    "seen": 1791485511.435322,
+    "ast_hash": "d3d1373965356c6da3b9c746c919bd38",
+    "semantic_hash": "d3d1373965356c6da3b9c746c919bd38"
+  },
+  "assets/images/venus.svg": {
+    "mtime": 1791477060.1193774,
+    "seen": 1791485511.435325,
+    "ast_hash": "e5a65df8027fcb413aa2f4a620b2e60a",
+    "semantic_hash": "e5a65df8027fcb413aa2f4a620b2e60a"
+  },
+  "assets/images/whirlpool.svg": {
+    "mtime": 1791477060.1333816,
+    "seen": 1791485511.4353275,
+    "ast_hash": "ff7a5dcbe345bbe4d156be3142cce8c9",
+    "semantic_hash": "ff7a5dcbe345bbe4d156be3142cce8c9"
+  }
+}
