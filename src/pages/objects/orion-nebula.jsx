@@ -24,7 +24,8 @@ export default function OrionNebulaPage() {
                         </div>
                         <figure className="object-visual">
                             <span className="object-visual__orbit" aria-hidden="true"></span>
-                            <img src={image0} width="800" height="800" alt="Illustration of the Orion Nebula, a glowing pink and violet cloud of gas against black space" />
+                            {/* Keep the profile available while the large image loads and decodes. */}
+                            <img src={image0} loading="lazy" decoding="async" width="800" height="800" alt="Illustration of the Orion Nebula, a glowing pink and violet cloud of gas against black space" />
                         </figure>
                     </div>
                 </div>
