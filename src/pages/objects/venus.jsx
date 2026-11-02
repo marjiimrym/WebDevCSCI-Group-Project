@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/venus.svg';
+import image0 from '../../../assets/images/venus.png';
 
 export default function VenusPage() {
   return (

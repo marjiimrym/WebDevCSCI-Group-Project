@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/mercury.svg';
+import image0 from '../../../assets/images/mercury.png';
 
 export default function MercuryPage() {
   return (

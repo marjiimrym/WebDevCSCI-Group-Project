@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/neptune.svg';
+import image0 from '../../../assets/images/neptune.png';
 
 export default function NeptunePage() {
   return (

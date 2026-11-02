@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/rigel.svg';
+import image0 from '../../../assets/images/rigel.png';
 
 export default function RigelPage() {
   return (

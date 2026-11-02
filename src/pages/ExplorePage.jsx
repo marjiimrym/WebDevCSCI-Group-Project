@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import objects from '../../data/objects.json';
 import heroImage from '../../assets/images/openpage.jpg';
 import ObjectCard from '../components/ObjectCard.jsx';
+import bgImage from '../../assets/images/background.jpg';
 // AI-assisted - see AI-USAGE.md #5.
 import NasaImageSearch from '../components/NasaImageSearch.jsx';
 
@@ -33,12 +34,19 @@ export default function ExplorePage({ favouriteIds, onToggleFavourite }) {
 
   return (
     <main id="main" tabIndex={-1}>
+    <div
+      className="page-bg"
+      aria-hidden="true"
+      style={{
+        backgroundImage: `linear-gradient(rgba(8, 9, 20, 0.72), rgba(8, 9, 20, 0.9)), url(${bgImage})`,
+      }}
+    />
       <section className="page-hero page-hero--explore" aria-labelledby="page-title">
         <img className="page-hero__media" src={heroImage} alt="" width="1200" height="675" />
         <div className="sky" aria-hidden="true"></div>
         <div className="container">
           <p className="eyebrow">The catalogue</p>
-          <h1 id="page-title" className="page-hero__title">Explore the cosmos.</h1>
+          <h1 id="page-title" className="page-hero__title">Explore<br />the cosmos.</h1>
           <p className="lede page-hero__lede">Twenty-six planets, moons, stars, galaxies and nebulae — from your own backyard to a galaxy 23 million light-years away.</p>
         </div>
       </section>

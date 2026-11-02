@@ -152,11 +152,35 @@ legend {
 
 body {
     min-height: 100vh;
-    background: var(--bg-primary);
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     font: 400 var(--fs-body) / 1.65 var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+.page-transition > main > *:not(.page-bg) {
+        animation: page-in 0.5s var(--ease) both;
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
 }
 
 ::selection {
@@ -1541,8 +1565,9 @@ strong {
 
 /* Floating control panel overlapping the hero */
 .toolbar-wrap {
-    position: relative;
-    z-index: 2;
+    position: sticky;
+    top: calc(var(--header-h) + 0.75rem);
+    z-index: 20;
     margin-top: calc(-1 * clamp(2.75rem, 5vw, 3.75rem));
 }
 
@@ -1553,12 +1578,20 @@ strong {
     align-items: end;
     gap: 1.25rem 1.5rem;
     padding: 1.25rem 1.5rem 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid rgba(255, 255, 255, 0.22);
     border-radius: var(--radius-lg);
-    background: rgba(21, 24, 45, 0.86);
-    box-shadow: var(--shadow-lift);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.14) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.09) 100%
+    );
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.1);
+    backdrop-filter: blur(18px) saturate(140%) brightness(1.1);
 }
 
 .toolbar__search { grid-area: search; }
@@ -1597,7 +1630,7 @@ fieldset.field > legend {
     padding: 0 1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--bg-primary);
+    background-color: rgba(255, 255, 255, 0.04);
     color: var(--text-primary);
     font-size: var(--fs-sm);
     -webkit-appearance: none;
@@ -1704,7 +1737,7 @@ fieldset.field > legend {
     padding: 0 1rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: var(--bg-primary);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--text-secondary);
     font-size: var(--fs-sm);
     white-space: nowrap;
@@ -1726,13 +1759,14 @@ fieldset.field > legend {
 }
 
 .chip input:checked + .chip__face {
-    border-color: var(--accent-line);
-    background: var(--accent-soft);
-    color: var(--text-primary);
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 600;
 }
 
 .chip input:checked + .chip__face .chip__count {
-    color: var(--accent-light);
+    color: rgba(8, 9, 20, 0.7);
 }
 
 .chip input:focus-visible + .chip__face {

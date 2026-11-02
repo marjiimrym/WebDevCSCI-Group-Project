@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/crab-nebula.svg';
+import image0 from '../../../assets/images/crab-nebula.jpg';
 
 export default function CrabNebulaPage() {
   return (

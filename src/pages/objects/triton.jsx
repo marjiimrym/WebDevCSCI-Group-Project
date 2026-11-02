@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/triton.svg';
+import image0 from '../../../assets/images/triton.png';
 
 export default function TritonPage() {
   return (

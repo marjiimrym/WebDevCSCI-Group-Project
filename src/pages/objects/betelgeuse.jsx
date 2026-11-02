@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/betelgeuse.svg';
+import image0 from '../../../assets/images/betelgeuse.png';
 
 export default function BetelgeusePage() {
   return (

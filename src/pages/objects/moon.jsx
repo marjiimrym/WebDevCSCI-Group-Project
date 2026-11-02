@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/moon.jpg';
+import image0 from '../../../assets/images/moon.png';
 
 export default function MoonPage() {
   return (

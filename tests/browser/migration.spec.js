@@ -71,6 +71,27 @@ for (const object of objects) {
   });
 }
 
+test('Orion profile remains usable while its image is loading', async ({ page }) => {
+  let releaseImage;
+  const imageReady = new Promise((resolve) => { releaseImage = resolve; });
+  await page.route(/\/assets\/orion-nebula-[^/]+\.jpg$/, async (route) => {
+    await imageReady;
+    await route.continue();
+  });
+
+  try {
+    await page.goto('/objects/orion-nebula', { waitUntil: 'domcontentloaded' });
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Orion Nebula');
+    await expect(page.locator('.facts .fact')).toHaveCount(8);
+    await page.getByRole('link', { name: 'Back to Explore' }).click();
+    await expect(page).toHaveURL(/\/explore$/);
+    await expect(page.locator('.card-grid .card')).toHaveCount(26);
+  } finally {
+    releaseImage();
+    await page.unrouteAll({ behavior: 'wait' });
+  }
+});
+
 test('every legacy URL redirects to its React route', async ({ page }) => {
   for (const [file, target] of Object.entries(legacyRoutes)) {
     await page.goto(file === 'index.html' ? '/index.html' : `/pages/${file}`);
@@ -147,9 +168,9 @@ test('unknown routes have a usable recovery page', async ({ page }) => {
   }
 });
 
-test('all local page links point at real routes or section anchors', async ({ page }) => {
-  const validRoutes = new Set(['/', '/favourites', ...Object.values(legacyRoutes)]);
-  for (const route of validRoutes) {
+const validRoutes = new Set(['/', '/favourites', ...Object.values(legacyRoutes)]);
+for (const route of validRoutes) {
+  test(`all local page links point at real routes or section anchors: ${route}`, async ({ page }) => {
     await page.goto(route);
     await expect(page.locator('main h1')).toBeVisible();
     const links = await page.locator('a[href]').evaluateAll((elements) => elements.map((element) => element.getAttribute('href')));
@@ -162,8 +183,8 @@ test('all local page links point at real routes or section anchors', async ({ pa
         expect(href).not.toContain('.html');
       }
     }
-  }
-});
+  });
+}
 
 test('pages fit mobile screens and use a single HTML entry point', async ({ page }) => {
   expect(readdirSync('.').filter((name) => name.endsWith('.html'))).toEqual(['index.html']);

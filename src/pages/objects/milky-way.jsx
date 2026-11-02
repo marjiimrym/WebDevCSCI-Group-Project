@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/milky-way.svg';
+import image0 from '../../../assets/images/milky-way.jpg';
 
 export default function MilkyWayPage() {
   return (

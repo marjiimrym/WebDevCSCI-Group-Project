@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/proxima-centauri.svg';
+import image0 from '../../../assets/images/proxima-centauri.png';
 
 export default function ProximaCentauriPage() {
   return (

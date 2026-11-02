@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/europa.svg';
+import image0 from '../../../assets/images/europa.png';
 
 export default function EuropaPage() {
   return (

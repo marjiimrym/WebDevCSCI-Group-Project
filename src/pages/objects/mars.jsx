@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/mars.webp';
+import image0 from '../../../assets/images/mars.png';
 
 export default function MarsPage() {
   return (

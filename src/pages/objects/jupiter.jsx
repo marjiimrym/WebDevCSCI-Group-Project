@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/jupiter.jpg';
+import image0 from '../../../assets/images/jupiter.png';
 
 export default function JupiterPage() {
   return (

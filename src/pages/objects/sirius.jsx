@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/sirius.svg';
+import image0 from '../../../assets/images/sirius.png';
 
 export default function SiriusPage() {
   return (

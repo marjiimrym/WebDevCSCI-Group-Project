@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/vega.svg';
+import image0 from '../../../assets/images/vega.png';
 
 export default function VegaPage() {
   return (

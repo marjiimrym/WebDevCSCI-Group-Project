@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/uranus.svg';
+import image0 from '../../../assets/images/uranus.png';
 
 export default function UranusPage() {
   return (

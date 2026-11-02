@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/whirlpool.svg';
+import image0 from '../../../assets/images/whirlpool.jpg';
 
 export default function WhirlpoolPage() {
   return (

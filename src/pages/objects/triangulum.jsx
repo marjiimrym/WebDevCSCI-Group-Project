@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/triangulum.svg';
+import image0 from '../../../assets/images/triangulum.jpg';
 
 export default function TriangulumPage() {
   return (

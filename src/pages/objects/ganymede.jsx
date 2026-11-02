@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/ganymede.svg';
+import image0 from '../../../assets/images/ganymede.png';
 
 export default function GanymedePage() {
   return (

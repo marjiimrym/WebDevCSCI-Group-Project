@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/earth.svg';
+import image0 from '../../../assets/images/earth.png';
 
 export default function EarthPage() {
   return (

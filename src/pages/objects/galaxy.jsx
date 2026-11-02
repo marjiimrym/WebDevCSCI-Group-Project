@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image0 from '../../../assets/images/andromeda.png';
+import image0 from '../../../assets/images/andromeda.jpg';
 
 export default function GalaxyPage() {
   return (
