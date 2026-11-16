@@ -1565,7 +1565,7 @@ strong {
 
 /* Floating control panel overlapping the hero */
 .toolbar-wrap {
-    position: sticky;
+    position: static;
     top: calc(var(--header-h) + 0.75rem);
     z-index: 20;
     margin-top: calc(-1 * clamp(2.75rem, 5vw, 3.75rem));
