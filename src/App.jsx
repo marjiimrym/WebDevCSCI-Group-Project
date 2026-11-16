@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -12,6 +12,7 @@ import MilestonesPage from './pages/MilestonesPage.jsx';
 import AsteroidsPage from './pages/AsteroidsPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import legacyRoutes from './data/legacyRoutes.json';
+import useFavourites from './hooks/useFavourites.js';
 
 
 function LegacyRedirect({ to }) {
@@ -42,13 +43,7 @@ function LegacyRedirect({ to }) {
   }
 
 export default function App() {
-  const [favouriteIds, setFavouriteIds] = useState([]);
-
-  function toggleFavourite(id) {
-    setFavouriteIds((currentIds) => currentIds.includes(id)
-      ? currentIds.filter((currentId) => currentId !== id)
-      : [...currentIds, id]);
-  }
+  const { favouriteIds, toggleFavourite } = useFavourites();
 
 
   /*
