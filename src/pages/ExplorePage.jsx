@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import objects from '../../data/objects.json';
-import heroImage from '../../assets/images/openpage.jpg';
+import HeroBackdrop from '../components/ui/HeroBackdrop.jsx';
 import ObjectCard from '../components/ObjectCard.jsx';
 import bgImage from '../../assets/images/background.jpg';
 // AI-assisted - see AI-USAGE.md #5.
@@ -42,8 +42,7 @@ export default function ExplorePage({ favouriteIds, onToggleFavourite }) {
       }}
     />
       <section className="page-hero page-hero--explore" aria-labelledby="page-title">
-        <img className="page-hero__media" src={heroImage} alt="" width="1200" height="675" />
-        <div className="sky" aria-hidden="true"></div>
+        <HeroBackdrop variant="catalogue" />
         <div className="container">
           <p className="eyebrow">The catalogue</p>
           <h1 id="page-title" className="page-hero__title">Explore<br />the cosmos.</h1>

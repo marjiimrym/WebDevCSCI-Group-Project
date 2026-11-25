@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "url": null,
+ "root": "dist",
+ "kind": "software",
+ "category": "astronomy catalogue",
+ "primary": "Open the catalogue",
+ "rounds": 3,
+ "start": "2026-11-25T16:32:36.471Z",
+ "by": "gate.mjs --start"
+}

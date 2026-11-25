@@ -1,23 +1,21 @@
 import { Link } from 'react-router-dom';
 // AI-assisted - see AI-USAGE.md #5.
 import NasaHighlights from '../components/NasaHighlights.jsx';
-// AI-assisted - see AI-USAGE.md #4
-import heroImage from '../../assets/images/openpage.jpg';
-import sunImage from '../../assets/images/sun.jpg';
-import moonImage from '../../assets/images/moon.jpg';
-import marsImage from '../../assets/images/mars.webp';
-import jupiterImage from '../../assets/images/jupiter.jpg';
-import saturnImage from '../../assets/images/saturn.png';
-import andromedaImage from '../../assets/images/andromeda.png';
+import ObjectCard from '../components/ObjectCard.jsx';
+import HeroBackdrop from '../components/ui/HeroBackdrop.jsx';
+import objects from '../../data/objects.json';
 
-export default function HomePage() {
+const featuredIds = ['moon', 'mars', 'galaxy'];
+const featuredObjects = featuredIds
+  .map((id) => objects.find((object) => object.id === id))
+  .filter(Boolean);
+
+export default function HomePage({ favouriteIds = [], onToggleFavourite }) {
   return (
     <main id="main" tabIndex={-1}>
         {/* Hero */}
-        <section className="hero" aria-labelledby="hero-title">
-            <img className="hero__media" src={heroImage} alt="" width="1200" height="675" />
-            <div className="sky" aria-hidden="true"></div>
-            <div className="orbits" aria-hidden="true"><span className="orbits__body"></span></div>
+        <section className="hero" data-enter aria-labelledby="hero-title">
+            <HeroBackdrop variant="home" />
 
             <div className="container hero__inner">
                 <p className="eyebrow">
@@ -26,18 +24,17 @@ export default function HomePage() {
                     <span>Astronomy</span>
                 </p>
                 <h1 id="hero-title" className="hero__title">
-                    <span className="hero__line">Explore the</span>
-                    <span className="hero__line hero__line--accent">Universe.</span>
+                    <span className="hero__line">Explore 26 objects.</span>
+                    <span className="hero__line hero__line--accent">An astronomy catalogue.</span>
                 </h1>
-                <p className="lede hero__lede">Cosmic Explorer is your guide to the night sky. Discover planets, moons, stars, galaxies, nebulae and other astronomical objects, each with a detailed profile of the facts that define it.</p>
+                <p className="lede hero__lede">Browse 26 objects, from the Moon to the Andromeda Galaxy. Each one has a clear summary, key facts and a full profile.</p>
                 <div className="hero__actions">
-                    <Link className="btn btn--primary btn--lg" to="/explore">Launch Explorer <span className="arrow" aria-hidden="true">→</span></Link>
-                    <a className="btn btn--ghost btn--lg" href="#discover">Discover More</a>
+                    <Link className="btn btn--primary btn--lg" to="/explore">Open the catalogue <span className="arrow" aria-hidden="true">→</span></Link>
+                    <a className="btn btn--ghost btn--lg" href="#discover">See how it works</a>
                 </div>
             </div>
 
             <div className="scroll-cue" aria-hidden="true">
-                <span>Scroll to explore</span>
                 <span className="scroll-cue__line"></span>
             </div>
         </section>
@@ -47,7 +44,7 @@ export default function HomePage() {
             <div className="container intro">
                 <div>
                     <p className="section-label"><span className="section-label__num">01</span>Explore the cosmos</p>
-                    <h2 id="intro-title" className="section-title">A field guide to the universe, built for the web.</h2>
+                    <h2 id="intro-title" className="section-title">Browse objects from our solar system and beyond.</h2>
                 </div>
                 <div className="intro__body">
                     <p className="lede">Cosmic Explorer is a single-page web application for exploring astronomy and space discovery data.</p>
@@ -76,86 +73,27 @@ export default function HomePage() {
                 <div className="section-head">
                     <div>
                         <p className="section-label"><span className="section-label__num">02</span>Featured discoveries</p>
-                        <h2 id="featured-title" className="section-title">From our nearest neighbour to the nearest large galaxy.</h2>
+                        <h2 id="featured-title" className="section-title">Three featured objects.</h2>
                     </div>
                     <div className="section-head__aside">
-                        <p className="text">Twenty-six objects to explore — planets, moons, stars, galaxies and nebulae, from the Moon next door to a galaxy 23 million light-years away. Six are featured below; each opens into its own detailed page.</p>
-                        <Link className="text-link" to="/explore">View all objects <span className="arrow" aria-hidden="true">→</span></Link>
+                        <p className="text">The Moon is next door, Mars is our nearest planetary neighbour, and Andromeda is the nearest large galaxy. Each opens into a detailed profile.</p>
+                        <p className="spotlight__note">Near, mid and far: one object at each scale.</p>
                     </div>
                 </div>
 
                 <div className="discoveries">
-                    <article className="card card--feature type-star">
-                        <div className="card__media">
-                            <img src={sunImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Star</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/sun">The Sun</Link></h3>
-                            <p className="card__text">The star at the centre of our solar system. It holds 99.8 percent of all the mass in it.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
+                    {featuredObjects.map((object) => (
+                        <ObjectCard
+                            key={object.id}
+                            object={object}
+                            isFavourite={favouriteIds.includes(object.id)}
+                            onToggleFavourite={onToggleFavourite}
+                        />
+                    ))}
+                </div>
 
-                    <article className="card card--feature type-moon">
-                        <div className="card__media">
-                            <img src={moonImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Moon</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/moon">The Moon</Link></h3>
-                            <p className="card__text">Earth's only natural satellite. Its pull drives our ocean tides, and its far side always faces away from us.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
-
-                    <article className="card type-planet">
-                        <div className="card__media">
-                            <img src={marsImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Planet</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/mars">Mars</Link></h3>
-                            <p className="card__text">A cold, dusty desert world with the tallest volcano in the solar system and two tiny moons.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
-
-                    <article className="card type-planet">
-                        <div className="card__media">
-                            <img src={jupiterImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Planet</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/jupiter">Jupiter</Link></h3>
-                            <p className="card__text">The largest planet, a banded gas giant with a storm wider than Earth that has raged for centuries.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
-
-                    <article className="card type-planet">
-                        <div className="card__media">
-                            <img src={saturnImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Planet</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/saturn">Saturn</Link></h3>
-                            <p className="card__text">Famous for its wide, bright rings, made mostly of water ice. It is light enough to float in water.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
-
-                    <article className="card card--wide type-galaxy">
-                        <div className="card__media">
-                            <img src={andromedaImage} alt="" width="733" height="783" loading="lazy" />
-                        </div>
-                        <div className="card__body">
-                            <p className="category">Galaxy</p>
-                            <h3 className="card__title"><Link className="card__link" to="/objects/galaxy">Andromeda Galaxy</Link></h3>
-                            <p className="card__text">The nearest large galaxy to ours, home to roughly a trillion stars — and on a slow collision course with the Milky Way.</p>
-                            <span className="card__cta" aria-hidden="true">Explore <span className="arrow">→</span></span>
-                        </div>
-                    </article>
+                <div className="spotlight__action">
+                    <Link className="text-link" to="/explore">View all 26 objects <span className="arrow" aria-hidden="true">→</span></Link>
                 </div>
             </div>
         </section>
@@ -211,7 +149,7 @@ export default function HomePage() {
                         <h2 id="nasa-title" className="section-title">Built on open NASA data.</h2>
                         <p className="text">Cosmic Explorer connects astronomy discovery with publicly available NASA data, drawn from NASA's Open API platform.</p>
                         <a className="text-link" href="https://api.nasa.gov/" rel="external">api.nasa.gov <span className="arrow" aria-hidden="true">↗</span></a>
-                        <p className="nasa__note">NASA data updates automatically. Each live section shows its last successful update and identifies cached or sample data.</p>
+                        <p className="nasa__note">NASA data refreshes on its own. Each live section shows when it last updated and whether you are seeing a cached copy.</p>
                     </div>
 
                     <ul className="tiles" role="list">
@@ -245,11 +183,11 @@ export default function HomePage() {
         {/* Closing call to action */}
         <section className="section cta" aria-labelledby="cta-title">
             <div className="container cta__inner">
-                <p className="section-label">Ready when you are</p>
-                <h2 id="cta-title" className="section-title">Ready to explore?</h2>
+                <p className="section-label">Start anywhere</p>
+                <h2 id="cta-title" className="section-title">Pick a starting point.</h2>
                 <p className="lede">Browse the catalogue, search NASA imagery, or explore the latest near-Earth asteroid approaches.</p>
                 <div className="cta__actions">
-                    <Link className="btn btn--primary btn--lg" to="/explore">Launch Explorer <span className="arrow" aria-hidden="true">→</span></Link>
+                    <Link className="btn btn--primary btn--lg" to="/explore">Open the catalogue <span className="arrow" aria-hidden="true">→</span></Link>
                     <Link className="btn btn--ghost btn--lg" to="/milestones">View milestones</Link>
                 </div>
             </div>

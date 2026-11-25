@@ -27,8 +27,13 @@ export default function NasaImageSearch() {
   const [query, setQuery] = useState('');
   return <section className="section section--alt nasa-live" aria-labelledby="nasa-images-title">
     <div className="container">
-      <h2 id="nasa-images-title" className="section-title">Search NASA imagery</h2>
-      <p>Discover photographs from the NASA Image and Video Library.</p>
+      <div className="section-head">
+        <div>
+          <p className="section-label">NASA Image Library</p>
+          <h2 id="nasa-images-title" className="section-title">Search NASA imagery</h2>
+        </div>
+        <p className="text section-head__aside">Photographs and mission imagery from the NASA Image and Video Library, searched live.</p>
+      </div>
       <form className="nasa-search" onSubmit={(event) => {
         event.preventDefault();
         const value = input.trim().replace(/\s+/g, ' ').toLowerCase();
@@ -40,7 +45,7 @@ export default function NasaImageSearch() {
         </div>
         <button className="btn btn--primary" type="submit">Search NASA images</button>
       </form>
-      {query ? <ImageResults key={query} query={query} /> : <p>Enter a topic to search NASA’s image collection.</p>}
+      {query ? <ImageResults key={query} query={query} /> : <p className="nasa-empty">Enter a topic to search NASA’s image collection.</p>}
     </div>
   </section>;
 }

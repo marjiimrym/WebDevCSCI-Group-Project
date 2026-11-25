@@ -26,7 +26,7 @@ function LegacyRedirect({ to }) {
     return (
       <div key={location.pathname} className="page-transition">
         <Routes location={location}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
           <Route path="/explore" element={<ExplorePage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
           <Route path="/objects/:id" element={<ObjectDetailPage />} />
           <Route path="/favourites" element={<FavouritesPage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
@@ -55,7 +55,7 @@ export default function App() {
         <RouteEffects />
         <AppRoutes favouriteIds={favouriteIds} onToggleFavourite={toggleFavourite} />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
           <Route path="/explore" element={<ExplorePage favouriteIds={favouriteIds} onToggleFavourite={toggleFavourite} />} />
           <Route path="/objects/:id" element={<ObjectDetailPage />} />
           <Route path="/favourites" element={<FavouritesPage favouriteIds={favouriteIds} onToggleFavourite={toggleFavourite} />} />

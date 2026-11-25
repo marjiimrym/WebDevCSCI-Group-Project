@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeroBackdrop from '../../components/ui/HeroBackdrop.jsx';
 import image0 from '../../../assets/images/orion-nebula.jpg';
 
 export default function OrionNebulaPage() {
@@ -6,7 +7,7 @@ export default function OrionNebulaPage() {
     <main id="main" tabIndex={-1}>
         <article className="object type-nebula" aria-labelledby="page-title">
             <header className="object-hero">
-                <div className="sky" aria-hidden="true"></div>
+                <HeroBackdrop variant="article" />
                 <div className="container">
                     <nav className="breadcrumb" aria-label="Breadcrumb">
                         <ol role="list">
