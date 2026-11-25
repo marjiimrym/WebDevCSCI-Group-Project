@@ -2792,8 +2792,10 @@ fieldset.field > legend {
     }
 }
 
-@media (max-width: 641px) {
-    /* Phone header: wordmark + Menu button; the links open as a full-width sheet */
+/* Compact header: wordmark + Menu button; the links open as a full-width sheet.
+   The full row (wordmark, five links, Log in) needs ~805px of content width,
+   and wider fallback fonts (Linux CI) need more, so collapse well before that. */
+@media (max-width: 960px) {
     .nav-toggle {
         display: inline-flex;
     }
@@ -2843,7 +2845,9 @@ fieldset.field > legend {
     .site-nav__link.is-active::after {
         transform: translateY(50%) scale(1);
     }
+}
 
+@media (max-width: 641px) {
     .card-grid,
     .discoveries,
     .team,
@@ -3185,8 +3189,8 @@ fieldset.field > legend {
     color: var(--text-primary);
 }
 
-/* Phones: the auth control is the last row of the Menu sheet (same breakpoint) */
-@media (max-width: 641px) {
+/* Compact header: the auth control is the last row of the Menu sheet (same breakpoint) */
+@media (max-width: 960px) {
     .site-nav__auth {
         margin-left: 0;
         padding-top: 0.75rem;
