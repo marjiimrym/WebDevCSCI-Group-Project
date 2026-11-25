@@ -21,6 +21,7 @@
     "cors": "^2.8.6",
     "express": "^5.3.0",
     "express-rate-limit": "^8.7.2",
+    "firebase": "^13.3.0",
     "helmet": "^8.3.0",
     "html-to-text": "^10.0.1",
     "react": "^19.3.1",
