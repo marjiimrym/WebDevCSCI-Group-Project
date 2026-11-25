@@ -24,7 +24,7 @@ export default function HomePage({ favouriteIds = [], onToggleFavourite }) {
                     <span>Astronomy</span>
                 </p>
                 <h1 id="hero-title" className="hero__title">
-                    <span className="hero__line">Explore 26 objects.</span>
+                    <span className="hero__line">Explore 26 objects.</span>{' '}
                     <span className="hero__line hero__line--accent">An astronomy catalogue.</span>
                 </h1>
                 <p className="lede hero__lede">Browse 26 objects, from the Moon to the Andromeda Galaxy. Each one has a clear summary, key facts and a full profile.</p>

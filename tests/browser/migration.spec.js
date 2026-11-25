@@ -30,7 +30,7 @@ async function checkImages(page) {
 
 test('landing page, keyboard skip link and client-side navigation', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('#root h1')).toHaveText('Explore theUniverse.');
+  await expect(page.locator('#root h1')).toHaveText('Explore 26 objects. An astronomy catalogue.');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
   await page.keyboard.press('Enter');
