@@ -6,6 +6,10 @@ import App from './App.jsx';
 import '../assets/css/styles.css';
 import '../assets/css/nasa.css';
 
+// Turns on the one-time hero entrance (styles.css). Set here, not inline in
+// index.html, because the server's CSP only allows scripts from 'self'.
+document.documentElement.classList.add('m-enter');
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
