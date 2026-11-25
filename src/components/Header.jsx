@@ -1,6 +1,8 @@
  // AI-assisted - see AI-USAGE.md #4
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext.jsx';
+import AuthModal from './AuthModal.jsx';
 
 const links = [
   ['/explore', 'Explore'],
@@ -11,6 +13,8 @@ const links = [
 ];
 
 export default function Header() {
+  const { user, logout } = useAuth();
+  const [authOpen, setAuthOpen] = useState(false);
   const { pathname } = useLocation();
   // The menu button only shows on phones; on wider screens the list is always visible.
   const [open, setOpen] = useState(false);
@@ -26,7 +30,7 @@ export default function Header() {
         <nav
           className={`site-nav${open ? ' is-open' : ''}`}
           aria-label="Main"
-          onClick={(event) => event.target.closest('a') && setOpen(false)}
+          onClick={(event) => event.target.closest('a, .site-nav__auth button') && setOpen(false)}
         >
           <button
             className="nav-toggle"
@@ -49,9 +53,25 @@ export default function Header() {
                 </NavLink>
               </li>
             ))}
+
+            <li className="site-nav__auth">
+              {user ? (
+                <>
+                  <span className="site-nav__user">{user.email}</span>
+                  <button type="button" className="btn btn--ghost btn--sm" onClick={logout}>
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <button type="button" className="btn btn--primary btn--sm" onClick={() => setAuthOpen(true)}>
+                  Log in
+                </button>
+              )}
+            </li>
           </ul>
         </nav>
       </div>
+      {authOpen && <AuthModal onClose={() => setAuthOpen(false)} />}
     </header>
   );
 }
