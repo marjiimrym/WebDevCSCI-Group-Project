@@ -64,8 +64,9 @@
 }
 .daily-feature__play-icon::after {
   content: ""; position: absolute; top: 50%; left: 54%;
-  border-block: 9px solid transparent;
-  border-left: 14px solid var(--accent-light);
+  width: 14px; height: 18px;
+  background: var(--accent-light);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translate(-50%, -50%);
 }
 .daily-feature__play:hover .daily-feature__play-icon { transform: scale(1.06); background: rgba(255, 159, 67, .18); }
