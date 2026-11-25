@@ -1,11 +1,10 @@
-
+import HeroBackdrop from '../components/ui/HeroBackdrop.jsx';
 
 export default function MilestonesPage() {
   return (
     <main id="main" tabIndex={-1}>
         <section className="page-hero" aria-labelledby="page-title">
-            <div className="sky" aria-hidden="true"></div>
-            <div className="orbits" aria-hidden="true"><span className="orbits__body"></span></div>
+            <HeroBackdrop variant="article" />
             <div className="container">
                 <p className="eyebrow">Milestones</p>
                 <h1 id="page-title" className="page-hero__title">From proposal to product.</h1>

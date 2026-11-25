@@ -1,0 +1,2423 @@
+{
+ "start": "2026-11-25T16:32:36.471Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-25T16:56:04.301Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 63,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-25T16:59:52.980Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 62,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-25T17:03:33.713Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 62,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/index.html",
+  "url": null,
+  "root": "dist",
+  "kind": "software",
+  "category": "astronomy catalogue",
+  "primary": "Open the catalogue",
+  "rounds": 3,
+  "start": "2026-11-25T16:32:36.471Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "e0a1c0f16dbf6949:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "e0a1c0f16dbf6949",
+ "page": "dist/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "sample-label",
+    "where": "div.container > div.nasa__panel > div.nasa__intro > p.nasa__note \"NASA data updates automatically. Each li\"",
+    "msg": "a note that the page's names or figures are examples (\"sample data\"): it reads as an apology and undercuts every claim",
+    "fix": "drop the \"sample\" tags and any note that names and figures are examples: take each from the brief, or remove the claim",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "sample-label"
+    ],
+    "wheres": [
+     "div.container > div.nasa__panel > div.nasa__intro > p.nasa__note \"NASA data updates automatically. Each li\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#discover \"Browse objects from our solar system and\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#discover \"Browse objects from our solar system and\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main#main > section.section:nth-of-type(4) \"Four ways into the cosmos.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main#main > section.section:nth-of-type(4) \"Four ways into the cosmos.\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main#main > section.section.section--alt:nth-of-type(6) \"Astronomy Picture of the Day\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main#main > section.section.section--alt:nth-of-type(6) \"Astronomy Picture of the Day\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "main#main > section.section.cta \"Ready to explore?\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "main#main > section.section.cta \"Ready to explore?\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "section.section.section--tight > div.container > div.nasa__panel > ul.tiles \"01 APOD Astronomy Picture of the Day — a\"",
+    "msg": "4 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "section.section.section--tight > div.container > div.nasa__panel > ul.tiles \"01 APOD Astronomy Picture of the Day — a\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "h2#intro-title \"Browse objects from our solar system and\"",
+    "msg": "\"Browse objects from our solar system and beyond.\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Four ways into the cosmo\", \"Browse celestial objects\", \"Find objects quickly.\", \"Recent solar flares\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "h2#intro-title \"Browse objects from our solar system and\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "h2#intro-title \"Browse objects from our solar system and\"",
+    "msg": "h2 headings in 2 sizes, 25.5px (\"Recent solar flares\") to 56px (x2.20)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "h2#intro-title \"Browse objects from our solar system and\""
+    ]
+   },
+   {
+    "check": "photo-upscale",
+    "where": "main#main > section.hero > img.hero__media \"img: openpage-Bl8SSI4J.jpg\"",
+    "msg": "openpage-Bl8SSI4J.jpg: 720x360 shown at 1440x828, blown up 2.30x",
+    "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "photo-upscale"
+    ],
+    "wheres": [
+     "main#main > section.hero > img.hero__media \"img: openpage-Bl8SSI4J.jpg\""
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "main#main > section.section.section--alt:nth-of-type(3) \"Three featured objects.\"",
+    "msg": "the section is 957px tall (1.06 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 2441px) shows 57px of it and 767px of the next section, its heading \"Four ways into the cosmos.\" on screen",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "main#main > section.section.section--alt:nth-of-type(3) \"Three featured objects.\""
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "main#main > section.section.cta \"Ready to explore?\"",
+    "msg": "67% of the section is empty: 16px above its first content, 16px under its last (a.btn.btn--primary), 60% beside content that covers under half the container, in its 360px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "main#main > section.section.cta \"Ready to explore?\""
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "div.container > div.discoveries:nth-of-type(2) > article.card.object-card:nth-of-type(1) > button.favourite-button \"Add The Moon to favourites\"",
+    "msg": "Tab stop 10, button \"Add The Moon to favourites\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "div.container > div.discoveries:nth-of-type(2) > article.card.object-card:nth-of-type(1) > button.favourite-button \"Add The Moon to favourites\""
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "hero-screen",
+    "where": "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\"",
+    "msg": "the hero's content is 512px taller than the hero (scrollHeight 1340, clientHeight 828): it spills out or scrolls inside it (SR-1)",
+    "fix": "fit the hero's content inside the hero's box: shorten the text or the picture, never let it spill",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-screen"
+    ],
+    "wheres": [
+     "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "div#root > footer.site-footer \"Cosmic ExplorerExploring the universe, o\"",
+    "msg": "the section is 463px tall (0.5 screens), 437px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "div#root > footer.site-footer \"Cosmic ExplorerExploring the universe, o\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "msg": "the section is 576px tall (0.6 screens), 324px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+     "main#main > section.section.section--alt:nth-of-type(6) \"NASA discoveriesAstronomy Picture of the\"",
+     "main#main > section.section.section--tight \"04Powered by NASA dataBuilt on open NASA\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#discover \"01Explore the cosmosBrowse objects from \"",
+    "msg": "the section is 640px tall (0.7 screens), 260px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 4 more like it: \"04Powered by NASA dataBu\", \"03A universe to discover\", \"NASA discoveriesAstronom\") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#discover \"01Explore the cosmosBrowse objects from \"",
+     "#discover section.section \"01Explore the cosmosBrowse objec\""
+    ]
+   },
+   {
+    "check": "section-air",
+    "where": "main#main > section.section:nth-of-type(4) > div.container > ul.features \"DiscoverBrowse celestial objects.Move th\"",
+    "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
+    "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-air"
+    ],
+    "wheres": [
+     "main#main > section.section:nth-of-type(4) > div.container > ul.features \"DiscoverBrowse celestial objects.Move th\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "msg": "the screen at scroll 4917px (the top of section 8) shows 364px of section 7 and the content of 2 sections, over 24px each beside section 8: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+     "main#main > section.section.section--tight \"04Powered by NASA dataBuilt on open NASA\"",
+     "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "h2#nasa-title \"Built on open NASA data.\"",
+    "msg": "the screen at scroll 2700px (stride 3) shows 335px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (and 9 more like it: scroll 4778px, scroll 901px, scroll 900px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "h2#nasa-title \"Built on open NASA data.\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "h2#weather-title \"Recent solar flares\"",
+    "msg": "the section holds 2 h2 headings: one per section, first in its .wrap (SR-5)",
+    "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "h2#weather-title \"Recent solar flares\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "div.container > div.footer__grid > div.footer__col:nth-of-type(2) > h2.footer__heading \"Course\"",
+    "msg": "the section holds 3 h2 headings: one per section, first in its .wrap (SR-5)",
+    "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "div.container > div.footer__grid > div.footer__col:nth-of-type(2) > h2.footer__heading \"Course\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "h2#featured-title \"Three featured objects.\"",
+    "msg": "headings of two sections show whole on one screen at 13 of 99 scroll positions (13.1%; at scroll 950, 1000, 4150, 4200px), here with \"Browse objects from our solar sy\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "h2#featured-title \"Three featured objects.\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "msg": "the content of section 7 runs 352px from the left and 352px from the right (read from its outermost blocks: no .wrap): the page's container starts at 96px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main#main > section.section.cta \"Ready when you areReady to explore?Brows\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#root \"Skip to main contentCosmic ExplorerExplo\"",
+    "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#root \"Skip to main contentCosmic ExplorerExplo\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\"",
+    "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (and 12 more like it: main#main > section.hero > img.hero__media, main#main > section.hero > div.sky, main#main > section.hero > div.orbits) (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main > section.hero > div.orbits",
+    "msg": "a box runs 781-1440px, outside the container lines of section 1 at 96-1344px: full width is for background layers and grounds only (SR-6)",
+    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main#main > section.hero > div.orbits"
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.container > div.footer__grid > div.footer__col:nth-of-type(3) > h2.footer__heading \"Data\"",
+    "msg": "the h2 starts 1008px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.container > div.footer__grid > div.footer__col:nth-of-type(3) > h2.footer__heading \"Data\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.container > div.section-head > div.section-head__aside > p.text \"The Moon is next door, Mars is our neare\"",
+    "msg": "3 text blocks start on a left line at x 818, 722px from the container's left: text starts on the container's left, or on one split line (x 626, 732, 838) (also \"Near, mid and far: one object at\", \"Cosmic Explorer is designed arou\") (and 11 more like it: \"Course\", x 707, \"Navigate\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.container > div.section-head > div.section-head__aside > p.text \"The Moon is next door, Mars is our neare\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main > section.section.cta > div.container.cta__inner > p.section-label \"Ready when you are\"",
+    "msg": "\"Ready when you are\" is set centred across 736px, over half the 736px container: text that wide is set left (and 2 more like it: \"Browse the catalogue, se\", \"Ready to explore?\") (SR-6)",
+    "fix": "set the text left (text-align: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main#main > section.section.cta > div.container.cta__inner > p.section-label \"Ready when you are\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "main#main > section.section:nth-of-type(4) > div.container > div.section-head \"03A universe to discoverFour ways into t\"",
+    "msg": "the two columns of the split start 77px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "main#main > section.section:nth-of-type(4) > div.container > div.section-head \"03A universe to discoverFour ways into t\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "main#main > section.section.section--alt:nth-of-type(3) > div.container > div.section-head \"02Featured discoveriesThree featured obj\"",
+    "msg": "the two columns of the split start 31px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "main#main > section.section.section--alt:nth-of-type(3) > div.container > div.section-head \"02Featured discoveriesThree featured obj\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 675, the first split's at 707; its right column starts at x 675, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#discover > div.container.intro \"01Explore the cosmosBrowse objects from \"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 707, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#discover > div.container.intro \"01Explore the cosmosBrowse objects from \""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.intro__body > dl.stats > div.stat:nth-of-type(1) > dd.stat__value \"26\"",
+    "msg": "the figure \"26\" is set at 36px, larger than the section headings (h2 32px); 2 more like it",
+    "fix": "set figures at the h2 size or under: a stat reads as data, not as the heading",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "div.intro__body > dl.stats > div.stat:nth-of-type(1) > dd.stat__value \"26\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#discover div.intro__body \"Cosmic Explorer is a single-page\"",
+    "msg": "starts at x 706.9; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#discover div.intro__body \"Cosmic Explorer is a single-page\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#discover p.lede \"Cosmic Explorer is a single-page\"",
+    "msg": "starts at x 706.9; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#discover p.lede \"Cosmic Explorer is a single-page\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#discover p.text \"Browse celestial objects from ou\"",
+    "msg": "starts at x 706.9; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#discover p.text \"Browse celestial objects from ou\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#discover dl.stats \"Featured objects26NASA datasets0\"",
+    "msg": "starts at x 706.9; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#discover dl.stats \"Featured objects26NASA datasets0\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--alt p.text \"The Moon is next door, Mars is o\"",
+    "msg": "starts at x 817.8; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--alt p.text \"The Moon is next door, Mars is o\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--alt p.spotlight__note \"Near, mid and far: one object at\"",
+    "msg": "starts at x 817.8; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--alt p.spotlight__note \"Near, mid and far: one object at\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section p.text \"Cosmic Explorer is designed arou\"",
+    "msg": "starts at x 817.8; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section p.text \"Cosmic Explorer is designed arou\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--tight p.section-label \"04Powered by NASA data\"",
+    "msg": "starts at x 169; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--tight p.section-label \"04Powered by NASA data\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--tight h2.section-title \"Built on open NASA data.\"",
+    "msg": "starts at x 169; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--tight h2.section-title \"Built on open NASA data.\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--tight p.text \"Cosmic Explorer connects astrono\"",
+    "msg": "starts at x 169; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--tight p.text \"Cosmic Explorer connects astrono\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--tight p.nasa__note \"NASA data updates automatically.\"",
+    "msg": "starts at x 169; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--tight p.nasa__note \"NASA data updates automatically.\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.section.section--tight ul.tiles \"01APODAstronomy Picture of the D\"",
+    "msg": "starts at x 674.8; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.section.section--tight ul.tiles \"01APODAstronomy Picture of the D\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.hero section.hero \"NASA Data •Space Discovery •Astr\"",
+    "msg": "828px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.hero section.hero \"NASA Data •Space Discovery •Astr\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#discover section.section \"01Explore the cosmosBrowse objec\"",
+    "msg": "framed, 84px of section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#discover section.section \"01Explore the cosmosBrowse objec\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\"",
+    "msg": "957px, 1.06 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.section section.section \"03A universe to discoverFour way\"",
+    "msg": "767px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.section section.section \"03A universe to discoverFour way\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.section section.section \"03A universe to discoverFour way\"",
+    "msg": "767px, 0.85 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.section section.section \"03A universe to discoverFour way\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+    "msg": "745px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+    "msg": "745px, 0.83 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+    "msg": "framed, 10px of section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\"",
+    "msg": "768px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\"",
+    "msg": "768px, 0.85 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.section.cta section.section.cta \"Ready when you areReady to explo\"",
+    "msg": "576px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.section.cta section.section.cta \"Ready when you areReady to explo\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.section.cta section.section.cta \"Ready when you areReady to explo\"",
+    "msg": "576px, 0.64 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.section.cta section.section.cta \"Ready when you areReady to explo\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "section.hero section.hero \"NASA Data •Space Discovery •Astr\"",
+    "msg": "starts at y 73, not under the nav",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "section.hero section.hero \"NASA Data •Space Discovery •Astr\""
+    ]
+   },
+   {
+    "check": "neighbour-ground",
+    "where": "#discover section.section \"01Explore the cosmosBrowse objec\"",
+    "msg": "framed, 68px of section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\"'s ground shows",
+    "fix": "end the ground with the section",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour-ground"
+    ],
+    "wheres": [
+     "#discover section.section \"01Explore the cosmosBrowse objec\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "section.section section.section \"03A universe to discoverFour way\"",
+    "msg": "framed, 67px of section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "section.section section.section \"03A universe to discoverFour way\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "assets",
+    "where": "(the page)",
+    "msg": "the data file api/apod did not load (404)",
+    "fix": "fix the path, or remove the reference",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "col-edge",
+    "where": "section.section.section--tight > div.container > div.nasa__panel > ul.tiles \"01 APOD Astronomy Picture of the Day — a\"",
+    "msg": "the second column starts at 3 places: 675px (section.section.section--tight), 707px (section#discover), 818px (section.section.section--alt:nth-of-type(3), section.section:nth-of-type(4))",
+    "fix": "start the second column of every split on the same one or two grid columns",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#main > section.hero / section#discover",
+    "msg": "145px between these sections, -46% against the median 269px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(1) > a.site-nav__link \"Explore\"",
+    "msg": "\"Explore\" goes to /explore, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(2) > a.site-nav__link \"Favourites\"",
+    "msg": "\"Favourites\" goes to /favourites, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(3) > a.site-nav__link \"Asteroids\"",
+    "msg": "\"Asteroids\" goes to /asteroids, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(4) > a.site-nav__link \"About\"",
+    "msg": "\"About\" goes to /about, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(5) > a.site-nav__link \"Milestones\"",
+    "msg": "\"Milestones\" goes to /milestones, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "article.card.object-card:nth-of-type(1) > div.card__body > h3.card__title > a.card__link \"The Moon\"",
+    "msg": "\"The Moon\" goes to /objects/moon, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "article.card.object-card:nth-of-type(2) > div.card__body > h3.card__title > a.card__link \"Mars\"",
+    "msg": "\"Mars\" goes to /objects/mars, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "article.card.object-card:nth-of-type(3) > div.card__body > h3.card__title > a.card__link \"Andromeda Galaxy\"",
+    "msg": "\"Andromeda Galaxy\" goes to /objects/galaxy, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.discoveries > article.card.object-card:nth-of-type(2) > div.card__media > img \"mars-DvGoXVHZ.png\"",
+    "msg": "3 photographs in more than one look: warm and cool photographs mixed (b* -8 to +15); the odd one out is mars-DvGoXVHZ.png",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-align",
+    "where": "h2#cta-title \"Ready to explore?\"",
+    "msg": "6 section headings sit on the left, 1 centred: \"Ready to explore?\"",
+    "fix": "set every section heading in one place: all on the left grid, or all centred",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "main#main > section.section.section--alt:nth-of-type(3) \"Three featured objects.\"",
+    "msg": "3 sections over 90 words a screen outside the UI mocks (\"Three featured objects.\" 107, \"Built on open NASA data.\" 101, \"Four ways into the cosmo\" 99); 73 words a screen across the page (521 words in 7.1 screens): a tech page says it in about 80 or fewer",
+    "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "font-load",
+    "where": "h1#hero-title \"Fraunces\"",
+    "msg": "\"Fraunces\" is asked for by --font-display, the h1 and the h2s but never loaded (no font link or @font-face loads it): it shows in its fallback",
+    "fix": "load every family the type asks for: name it in the font link as start.mjs prints it, spelt as Google Fonts spells it, or ask for a family the page loads",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "font-load",
+    "where": "body \"Figtree\"",
+    "msg": "\"Figtree\" is asked for by the body text but never loaded (no font link or @font-face loads it): it shows in its fallback",
+    "fix": "load every family the type asks for: name it in the font link as start.mjs prints it, spelt as Google Fonts spells it, or ask for a family the page loads",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "article.card.object-card:nth-of-type(1) > div.card__body > div.card__eyebrow > p.category \"MOON\"",
+    "msg": "a muted 11px line of 1 row sits 14px under the picture moon-DHiTSNs_.png: it reads as a caption: \"MOON\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "article.card.object-card:nth-of-type(2) > div.card__body > div.card__eyebrow > p.category \"PLANET\"",
+    "msg": "a muted 11px line of 1 row sits 14px under the picture mars-DvGoXVHZ.png: it reads as a caption: \"PLANET\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "article.card.object-card:nth-of-type(3) > div.card__body > div.card__eyebrow > p.category \"GALAXY\"",
+    "msg": "a muted 11px line of 1 row sits 14px under the picture andromeda-BBMkSy-V.jpg: it reads as a caption: \"GALAXY\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks twitter:card: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "msg": "the content fills 49.8% of the section's height (287 of 576px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "main#main > section.section.section--tight \"04Powered by NASA dataBuilt on open NASA\"",
+    "msg": "the content fills 54.3% of the section's height (405 of 745px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#discover \"01Explore the cosmosBrowse objects from \"",
+    "msg": "the content fills 54.6% of the section's height (350 of 640px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "nav.site-nav > ul.site-nav__list > li:nth-of-type(5) > a.site-nav__link \"Milestones\"",
+    "msg": "the nav is lopsided: its last item ends 8px outside the content's edge (370px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "nav.footer__col > ul.footer__list > li:nth-of-type(1) > a \"Home\"",
+    "msg": "a 40x33px tap target (and 5 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-styles",
+    "where": "div#root > a.skip-link \"Skip to main content\"",
+    "msg": "on the phone 2 buttons run the full width of their column, but  \"Skip to main content\" is 196px of 390px: one action in two sizes",
+    "fix": "give every button the same width rule on the phone: all full width, or all at their own width",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "main#main > section.section:nth-of-type(4) \"Four ways into the cosmos.\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "h2#intro-title \"Browse objects from our solar system and\"",
+    "msg": "h2 headings in 2 sizes, 25.5px (\"Recent solar flares\") to 32px (x1.25)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "main#main > section.hero > div.container.hero__inner > p.lede.hero__lede \"Browse 26 objects, from the Moon to the \"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-em-dash",
+    "msg": "4 em dashes in the body (budget 2)",
+    "fix": "use a comma, a colon, parentheses or a full stop where each is natural (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   },
+   {
+    "check": "copy-numbered",
+    "msg": "10 step numbers",
+    "fix": "number only steps that happen in order (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   },
+   {
+    "check": "copy-eyebrows",
+    "msg": "11 eyebrow or kicker labels",
+    "fix": "one or two a page; a heading that names the thing needs no label over it (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 138,
+   "layout": 16
+  }
+ },
+ "open": [
+  {
+   "check": "sample-label",
+   "where": "div.container > div.nasa__panel > div.nasa__intro > p.nasa__note \"NASA data updates automatically. Each li\"",
+   "msg": "a note that the page's names or figures are examples (\"sample data\"): it reads as an apology and undercuts every claim",
+   "fix": "drop the \"sample\" tags and any note that names and figures are examples: take each from the brief, or remove the claim",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "sample-label"
+   ],
+   "wheres": [
+    "div.container > div.nasa__panel > div.nasa__intro > p.nasa__note \"NASA data updates automatically. Each li\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#discover \"Browse objects from our solar system and\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#discover \"Browse objects from our solar system and\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main#main > section.section:nth-of-type(4) \"Four ways into the cosmos.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main#main > section.section:nth-of-type(4) \"Four ways into the cosmos.\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main#main > section.section.section--alt:nth-of-type(6) \"Astronomy Picture of the Day\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main#main > section.section.section--alt:nth-of-type(6) \"Astronomy Picture of the Day\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "main#main > section.section.cta \"Ready to explore?\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "main#main > section.section.cta \"Ready to explore?\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "section.section.section--tight > div.container > div.nasa__panel > ul.tiles \"01 APOD Astronomy Picture of the Day — a\"",
+   "msg": "4 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "section.section.section--tight > div.container > div.nasa__panel > ul.tiles \"01 APOD Astronomy Picture of the Day — a\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "h2#intro-title \"Browse objects from our solar system and\"",
+   "msg": "\"Browse objects from our solar system and beyond.\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Four ways into the cosmo\", \"Browse celestial objects\", \"Find objects quickly.\", \"Recent solar flares\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "h2#intro-title \"Browse objects from our solar system and\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "h2#intro-title \"Browse objects from our solar system and\"",
+   "msg": "h2 headings in 2 sizes, 25.5px (\"Recent solar flares\") to 56px (x2.20)",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "h2#intro-title \"Browse objects from our solar system and\""
+   ]
+  },
+  {
+   "check": "photo-upscale",
+   "where": "main#main > section.hero > img.hero__media \"img: openpage-Bl8SSI4J.jpg\"",
+   "msg": "openpage-Bl8SSI4J.jpg: 720x360 shown at 1440x828, blown up 2.30x",
+   "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "photo-upscale"
+   ],
+   "wheres": [
+    "main#main > section.hero > img.hero__media \"img: openpage-Bl8SSI4J.jpg\""
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "main#main > section.section.section--alt:nth-of-type(3) \"Three featured objects.\"",
+   "msg": "the section is 957px tall (1.06 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 2441px) shows 57px of it and 767px of the next section, its heading \"Four ways into the cosmos.\" on screen",
+   "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "main#main > section.section.section--alt:nth-of-type(3) \"Three featured objects.\""
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "main#main > section.section.cta \"Ready to explore?\"",
+   "msg": "67% of the section is empty: 16px above its first content, 16px under its last (a.btn.btn--primary), 60% beside content that covers under half the container, in its 360px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "main#main > section.section.cta \"Ready to explore?\""
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "div.container > div.discoveries:nth-of-type(2) > article.card.object-card:nth-of-type(1) > button.favourite-button \"Add The Moon to favourites\"",
+   "msg": "Tab stop 10, button \"Add The Moon to favourites\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "div.container > div.discoveries:nth-of-type(2) > article.card.object-card:nth-of-type(1) > button.favourite-button \"Add The Moon to favourites\""
+   ]
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "hero-screen",
+   "where": "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\"",
+   "msg": "the hero's content is 512px taller than the hero (scrollHeight 1340, clientHeight 828): it spills out or scrolls inside it (SR-1)",
+   "fix": "fit the hero's content inside the hero's box: shorten the text or the picture, never let it spill",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-screen"
+   ],
+   "wheres": [
+    "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "div#root > footer.site-footer \"Cosmic ExplorerExploring the universe, o\"",
+   "msg": "the section is 463px tall (0.5 screens), 437px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "div#root > footer.site-footer \"Cosmic ExplorerExploring the universe, o\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+   "msg": "the section is 576px tall (0.6 screens), 324px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "main#main > section.section.section--alt:nth-of-type(6) \"NASA discoveriesAstronomy Picture of the\"",
+    "main#main > section.section.section--tight \"04Powered by NASA dataBuilt on open NASA\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#discover \"01Explore the cosmosBrowse objects from \"",
+   "msg": "the section is 640px tall (0.7 screens), 260px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 4 more like it: \"04Powered by NASA dataBu\", \"03A universe to discover\", \"NASA discoveriesAstronom\") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#discover \"01Explore the cosmosBrowse objects from \"",
+    "#discover section.section \"01Explore the cosmosBrowse objec\""
+   ]
+  },
+  {
+   "check": "section-air",
+   "where": "main#main > section.section:nth-of-type(4) > div.container > ul.features \"DiscoverBrowse celestial objects.Move th\"",
+   "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
+   "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-air"
+   ],
+   "wheres": [
+    "main#main > section.section:nth-of-type(4) > div.container > ul.features \"DiscoverBrowse celestial objects.Move th\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+   "msg": "the screen at scroll 4917px (the top of section 8) shows 364px of section 7 and the content of 2 sections, over 24px each beside section 8: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+    "main#main > section.section.section--tight \"04Powered by NASA dataBuilt on open NASA\"",
+    "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "h2#nasa-title \"Built on open NASA data.\"",
+   "msg": "the screen at scroll 2700px (stride 3) shows 335px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (and 9 more like it: scroll 4778px, scroll 901px, scroll 900px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "h2#nasa-title \"Built on open NASA data.\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "h2#weather-title \"Recent solar flares\"",
+   "msg": "the section holds 2 h2 headings: one per section, first in its .wrap (SR-5)",
+   "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "h2#weather-title \"Recent solar flares\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "div.container > div.footer__grid > div.footer__col:nth-of-type(2) > h2.footer__heading \"Course\"",
+   "msg": "the section holds 3 h2 headings: one per section, first in its .wrap (SR-5)",
+   "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "div.container > div.footer__grid > div.footer__col:nth-of-type(2) > h2.footer__heading \"Course\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "h2#featured-title \"Three featured objects.\"",
+   "msg": "headings of two sections show whole on one screen at 13 of 99 scroll positions (13.1%; at scroll 950, 1000, 4150, 4200px), here with \"Browse objects from our solar sy\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "h2#featured-title \"Three featured objects.\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main#main > section.section.cta \"Ready when you areReady to explore?Brows\"",
+   "msg": "the content of section 7 runs 352px from the left and 352px from the right (read from its outermost blocks: no .wrap): the page's container starts at 96px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main#main > section.section.cta \"Ready when you areReady to explore?Brows\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#root \"Skip to main contentCosmic ExplorerExplo\"",
+   "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#root \"Skip to main contentCosmic ExplorerExplo\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\"",
+   "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (and 12 more like it: main#main > section.hero > img.hero__media, main#main > section.hero > div.sky, main#main > section.hero > div.orbits) (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main#main > section.hero \"NASA Data •Space Discovery •AstronomyExp\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main#main > section.hero > div.orbits",
+   "msg": "a box runs 781-1440px, outside the container lines of section 1 at 96-1344px: full width is for background layers and grounds only (SR-6)",
+   "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main#main > section.hero > div.orbits"
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.container > div.footer__grid > div.footer__col:nth-of-type(3) > h2.footer__heading \"Data\"",
+   "msg": "the h2 starts 1008px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.container > div.footer__grid > div.footer__col:nth-of-type(3) > h2.footer__heading \"Data\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.container > div.section-head > div.section-head__aside > p.text \"The Moon is next door, Mars is our neare\"",
+   "msg": "3 text blocks start on a left line at x 818, 722px from the container's left: text starts on the container's left, or on one split line (x 626, 732, 838) (also \"Near, mid and far: one object at\", \"Cosmic Explorer is designed arou\") (and 11 more like it: \"Course\", x 707, \"Navigate\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.container > div.section-head > div.section-head__aside > p.text \"The Moon is next door, Mars is our neare\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main#main > section.section.cta > div.container.cta__inner > p.section-label \"Ready when you are\"",
+   "msg": "\"Ready when you are\" is set centred across 736px, over half the 736px container: text that wide is set left (and 2 more like it: \"Browse the catalogue, se\", \"Ready to explore?\") (SR-6)",
+   "fix": "set the text left (text-align: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main#main > section.section.cta > div.container.cta__inner > p.section-label \"Ready when you are\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "main#main > section.section:nth-of-type(4) > div.container > div.section-head \"03A universe to discoverFour ways into t\"",
+   "msg": "the two columns of the split start 77px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "main#main > section.section:nth-of-type(4) > div.container > div.section-head \"03A universe to discoverFour ways into t\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "main#main > section.section.section--alt:nth-of-type(3) > div.container > div.section-head \"02Featured discoveriesThree featured obj\"",
+   "msg": "the two columns of the split start 31px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "main#main > section.section.section--alt:nth-of-type(3) > div.container > div.section-head \"02Featured discoveriesThree featured obj\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 675, the first split's at 707; its right column starts at x 675, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "main#main > section.section.section--tight > div.container > div.nasa__panel \"04Powered by NASA dataBuilt on open NASA\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#discover > div.container.intro \"01Explore the cosmosBrowse objects from \"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 707, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#discover > div.container.intro \"01Explore the cosmosBrowse objects from \""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "div.intro__body > dl.stats > div.stat:nth-of-type(1) > dd.stat__value \"26\"",
+   "msg": "the figure \"26\" is set at 36px, larger than the section headings (h2 32px); 2 more like it",
+   "fix": "set figures at the h2 size or under: a stat reads as data, not as the heading",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "div.intro__body > dl.stats > div.stat:nth-of-type(1) > dd.stat__value \"26\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#discover div.intro__body \"Cosmic Explorer is a single-page\"",
+   "msg": "starts at x 706.9; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#discover div.intro__body \"Cosmic Explorer is a single-page\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#discover p.lede \"Cosmic Explorer is a single-page\"",
+   "msg": "starts at x 706.9; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#discover p.lede \"Cosmic Explorer is a single-page\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#discover p.text \"Browse celestial objects from ou\"",
+   "msg": "starts at x 706.9; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#discover p.text \"Browse celestial objects from ou\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#discover dl.stats \"Featured objects26NASA datasets0\"",
+   "msg": "starts at x 706.9; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#discover dl.stats \"Featured objects26NASA datasets0\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--alt p.text \"The Moon is next door, Mars is o\"",
+   "msg": "starts at x 817.8; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--alt p.text \"The Moon is next door, Mars is o\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--alt p.spotlight__note \"Near, mid and far: one object at\"",
+   "msg": "starts at x 817.8; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--alt p.spotlight__note \"Near, mid and far: one object at\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section p.text \"Cosmic Explorer is designed arou\"",
+   "msg": "starts at x 817.8; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section p.text \"Cosmic Explorer is designed arou\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--tight p.section-label \"04Powered by NASA data\"",
+   "msg": "starts at x 169; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--tight p.section-label \"04Powered by NASA data\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--tight h2.section-title \"Built on open NASA data.\"",
+   "msg": "starts at x 169; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--tight h2.section-title \"Built on open NASA data.\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--tight p.text \"Cosmic Explorer connects astrono\"",
+   "msg": "starts at x 169; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--tight p.text \"Cosmic Explorer connects astrono\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--tight p.nasa__note \"NASA data updates automatically.\"",
+   "msg": "starts at x 169; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--tight p.nasa__note \"NASA data updates automatically.\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.section.section--tight ul.tiles \"01APODAstronomy Picture of the D\"",
+   "msg": "starts at x 674.8; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.section.section--tight ul.tiles \"01APODAstronomy Picture of the D\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.hero section.hero \"NASA Data •Space Discovery •Astr\"",
+   "msg": "828px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.hero section.hero \"NASA Data •Space Discovery •Astr\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#discover section.section \"01Explore the cosmosBrowse objec\"",
+   "msg": "framed, 84px of section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#discover section.section \"01Explore the cosmosBrowse objec\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\"",
+   "msg": "957px, 1.06 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.section section.section \"03A universe to discoverFour way\"",
+   "msg": "767px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.section section.section \"03A universe to discoverFour way\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.section section.section \"03A universe to discoverFour way\"",
+   "msg": "767px, 0.85 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.section section.section \"03A universe to discoverFour way\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+   "msg": "745px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+   "msg": "745px, 0.83 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\"",
+   "msg": "framed, 10px of section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\"",
+   "msg": "768px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\"",
+   "msg": "768px, 0.85 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.section.section--alt section.section.section--alt \"NASA discoveriesAstronomy Pictur\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.section.cta section.section.cta \"Ready when you areReady to explo\"",
+   "msg": "576px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.section.cta section.section.cta \"Ready when you areReady to explo\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.section.cta section.section.cta \"Ready when you areReady to explo\"",
+   "msg": "576px, 0.64 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.section.cta section.section.cta \"Ready when you areReady to explo\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "section.hero section.hero \"NASA Data •Space Discovery •Astr\"",
+   "msg": "starts at y 73, not under the nav",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "section.hero section.hero \"NASA Data •Space Discovery •Astr\""
+   ]
+  },
+  {
+   "check": "neighbour-ground",
+   "where": "#discover section.section \"01Explore the cosmosBrowse objec\"",
+   "msg": "framed, 68px of section.section.section--alt section.section.section--alt \"02Featured discoveriesThree feat\"'s ground shows",
+   "fix": "end the ground with the section",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour-ground"
+   ],
+   "wheres": [
+    "#discover section.section \"01Explore the cosmosBrowse objec\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "section.section section.section \"03A universe to discoverFour way\"",
+   "msg": "framed, 67px of section.section.section--tight section.section.section--tight \"04Powered by NASA dataBuilt on o\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "section.section section.section \"03A universe to discoverFour way\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 32,
+ "at": "2026-11-25T17:03:33.719Z",
+ "openTold": true
+}

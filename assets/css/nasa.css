@@ -1,29 +1,155 @@
 /* AI-assisted - see AI-USAGE.md #5. Scoped additions preserve the existing layouts. */
+
+/* ---- Data status line ---- */
 .data-status { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-block: 1rem; }
-.data-status p { flex: 1 1 20rem; margin: 0; font-size: .9rem; overflow-wrap: anywhere; }
+.data-status p {
+  flex: 1 1 18rem; margin: 0;
+  color: var(--text-muted);
+  font: 500 var(--fs-label) / 1.6 var(--font-mono);
+  letter-spacing: .02em;
+  overflow-wrap: anywhere;
+}
+.data-status p:not(:empty)::before {
+  content: ""; display: inline-block; width: 6px; height: 6px; margin-right: .6rem;
+  border-radius: 50%; vertical-align: .1em;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
 .data-status button { flex-shrink: 0; }
 .data-status button:disabled { opacity: .6; cursor: not-allowed; }
+.section-head__aside .data-status { margin-block: 0; }
+
 .nasa-live { overflow-wrap: anywhere; }
-.daily-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
-.daily-feature__image { width: 100%; height: auto; max-height: 32rem; object-fit: contain; border-radius: 1rem; }
-.daily-feature__explanation { white-space: pre-line; line-height: 1.7; }
-.daily-feature .notice { display: flex; margin-block: 1rem; }
-.space-weather { margin-top: 3rem; }
+.nasa-empty { color: var(--text-secondary); }
+
+/* ---- Astronomy Picture of the Day ---- */
+.daily-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+.daily-feature__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255, 159, 67, .12), transparent 70%),
+    var(--bg-primary);
+}
+.daily-feature__image {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.daily-feature__media:hover .daily-feature__image { transform: scale(1.025); }
+
+/* Video days: an honest play panel that links to NASA's player */
+.daily-feature__play {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+.daily-feature__play-icon {
+  position: relative;
+  width: 4.5rem; height: 4.5rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 50%;
+  background: var(--accent-soft);
+  transition: transform var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.daily-feature__play-icon::after {
+  content: ""; position: absolute; top: 50%; left: 54%;
+  border-block: 9px solid transparent;
+  border-left: 14px solid var(--accent-light);
+  transform: translate(-50%, -50%);
+}
+.daily-feature__play:hover .daily-feature__play-icon { transform: scale(1.06); background: rgba(255, 159, 67, .18); }
+.daily-feature__play:active .daily-feature__play-icon { transform: scale(.97); }
+
+.daily-feature__meta {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  color: var(--text-muted);
+  font: 500 var(--fs-label) / 1.4 var(--font-mono);
+  letter-spacing: .16em; text-transform: uppercase;
+}
+.daily-feature__title {
+  margin-top: .75rem;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+.daily-feature__explanation {
+  display: -webkit-box;
+  margin-top: 1rem;
+  overflow: hidden;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+}
+.daily-feature__credit {
+  margin-block: 1rem 1.5rem;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* ---- Solar flares ---- */
+.space-weather { margin-top: clamp(3.5rem, 7vw, 5.5rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--hairline); }
+.space-weather__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .75rem 2rem; }
+.space-weather__title { font-size: var(--fs-h3); }
+.space-weather__head .notice { margin: 0; }
+
 .weather-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; gap: 1rem; }
-.weather-list li { display: grid; gap: .6rem; padding: 1rem; border: 1px solid #56667a; border-radius: .75rem; }
+.flare {
+  --flare: var(--text-secondary);
+  position: relative;
+  display: grid; gap: .35rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.flare[data-class="M"] { --flare: var(--accent-light); }
+.flare[data-class="X"] { --flare: var(--type-hazard); }
+.flare:hover { transform: translateY(-2px); border-color: var(--border-strong); }
+.flare__class {
+  color: var(--flare);
+  font: 400 2.25rem / 1 var(--font-display);
+  letter-spacing: -.02em;
+}
+/* The link covers the whole card; the visible class figure above carries the name */
+.flare__link { color: var(--text-primary); font-weight: 500; text-decoration: none; }
+.flare__link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.flare time, .flare__region { color: var(--text-muted); font-size: var(--fs-sm); }
+
+/* ---- NASA image search (Explore) ---- */
 .nasa-search { display: flex; align-items: end; gap: 1rem; margin-block: 1.5rem; flex-wrap: wrap; }
 .nasa-search .field { flex: 1 1 15rem; min-width: 0; }
 .nasa-search .input { width: 100%; }
 .nasa-image-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; list-style: none; gap: 1.5rem; }
-.nasa-image-card { border: 1px solid #56667a; border-radius: 1rem; overflow: hidden; }
+.nasa-image-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--bg-surface); }
 .nasa-image-card img { width: 100%; height: 14rem; object-fit: cover; }
-.nasa-image-card > div { padding: 1rem; }
-.nasa-live a:focus-visible, .data-status button:focus-visible { outline: 3px solid #a8d8ff; outline-offset: 4px; }
+.nasa-image-card > div { padding: 1rem 1.25rem 1.25rem; }
+
+.nasa-live a:focus-visible, .data-status button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (max-width: 900px) {
+  .daily-feature { grid-template-columns: 1fr; }
+}
 @media (max-width: 768px) {
-  .daily-feature, .weather-list { grid-template-columns: 1fr; }
+  .weather-list { grid-template-columns: 1fr; }
   .nasa-image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 480px) {
   .nasa-image-grid { grid-template-columns: 1fr; }
   .nasa-search button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .daily-feature__media:hover .daily-feature__image, .flare:hover { transform: none; }
 }

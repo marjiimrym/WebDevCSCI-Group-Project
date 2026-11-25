@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeroBackdrop from '../../components/ui/HeroBackdrop.jsx';
 import image0 from '../../../assets/images/whirlpool.jpg';
 
 export default function WhirlpoolPage() {
@@ -6,7 +7,7 @@ export default function WhirlpoolPage() {
     <main id="main" tabIndex={-1}>
         <article className="object type-galaxy" aria-labelledby="page-title">
             <header className="object-hero">
-                <div className="sky" aria-hidden="true"></div>
+                <HeroBackdrop variant="article" />
                 <div className="container">
                     <nav className="breadcrumb" aria-label="Breadcrumb">
                         <ol role="list">

@@ -38,7 +38,7 @@ test('landing page, keyboard skip link and client-side navigation', async ({ pag
   await checkImages(page);
 
   await page.evaluate(() => { window.navigationSentinel = 'same document'; });
-  await page.getByRole('link', { name: 'Launch Explorer' }).first().click();
+  await page.getByRole('link', { name: 'Open the catalogue' }).first().click();
   await expect(page).toHaveURL(/\/explore$/);
   await expect(page.locator('.card-grid .card')).toHaveCount(26);
   await checkImages(page);
@@ -128,7 +128,7 @@ test('catalogue controls survive detail navigation, back and refresh', async ({ 
 
 test('favourites survive navigation across all React pages', async ({ page }) => {
   await page.goto('/explore');
-  await page.getByRole('button', { name: 'Favourite Mars', exact: true }).click();
+  await page.getByRole('button', { name: 'Add Mars to favourites', exact: true }).click();
   for (const [route, path] of [['About', '/about'], ['Milestones', '/milestones'], ['Asteroids', '/asteroids'], ['Favourites', '/favourites']]) {
     await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: route, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`${path}$`));
@@ -138,7 +138,7 @@ test('favourites survive navigation across all React pages', async ({ page }) =>
   await page.getByRole('link', { name: 'Mars', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Mars');
   await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: 'Favourites' }).click();
-  await page.getByRole('button', { name: 'Favourite Mars', exact: true }).click();
+  await page.getByRole('button', { name: 'Remove Mars from favourites', exact: true }).click();
   await expect(page.getByText('No favourites yet')).toBeVisible();
 });
 

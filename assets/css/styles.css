@@ -318,6 +318,7 @@ strong {
 .text-link {
     display: inline-flex;
     align-items: center;
+    min-height: 44px;
     gap: 0.45rem;
     color: var(--text-primary);
     font-weight: 500;
@@ -753,6 +754,72 @@ strong {
     transform: scaleX(1);
 }
 
+/* Menu button: phones only (see the 641px breakpoint) */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-primary);
+    font: 500 var(--fs-sm) / 1 var(--font-body);
+    cursor: pointer;
+    transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+
+.nav-toggle:hover {
+    border-color: var(--border-strong);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-toggle:active {
+    transform: scale(0.97);
+}
+
+.nav-toggle__icon {
+    position: relative;
+    width: 14px;
+    height: 8px;
+    border-block: 1.5px solid currentColor;
+    transition: border-color var(--dur) var(--ease);
+}
+
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    margin-top: -0.75px;
+    background: currentColor;
+    opacity: 0;
+    transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon {
+    border-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::before {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::after {
+    opacity: 1;
+    transform: rotate(-45deg);
+}
+
+@keyframes nav-sheet {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Current page (aria-current) and current section (detail pages → Explore) */
 .site-nav__link[aria-current="page"],
 .site-nav__link.is-active {
@@ -776,55 +843,110 @@ strong {
 .hero {
     position: relative;
     isolation: isolate;
-    display: flex;
-    align-items: center;
-    min-height: max(34rem, calc(88vh - var(--header-h)));
-    min-height: max(34rem, calc(88svh - var(--header-h)));
-    padding-block: clamp(4rem, 8vw, 7rem) clamp(7rem, 11vw, 9rem);
+    height: max(34rem, calc(100vh - var(--header-h)));
+    height: max(34rem, calc(100svh - var(--header-h)));
+    min-height: max(34rem, calc(100vh - var(--header-h)));
+    min-height: max(34rem, calc(100svh - var(--header-h)));
     overflow: hidden;
     background: var(--bg-primary);
 }
 
-.hero__media {
+/* Readability overlay: left-weighted for the copy, fades into the page */
+.hero-backdrop::after {
+    content: "";
     position: absolute;
     inset: 0;
-    z-index: -3;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 55% 70% at 18% 55%, rgba(8, 9, 20, 0.68), transparent 70%),
+        linear-gradient(90deg, rgba(8, 9, 20, 0.94) 0%, rgba(8, 9, 20, 0.76) 38%, rgba(8, 9, 20, 0.28) 72%, rgba(8, 9, 20, 0.5) 100%),
+        linear-gradient(180deg, rgba(8, 9, 20, 0.48) 0%, transparent 22%, transparent 60%, var(--bg-primary) 100%);
+}
+
+.hero-backdrop--catalogue::after,
+.hero-backdrop--article::after {
+    background:
+        linear-gradient(90deg, rgba(8, 9, 20, 0.94) 0%, rgba(8, 9, 20, 0.78) 42%, rgba(8, 9, 20, 0.16) 74%, rgba(8, 9, 20, 0.42) 100%),
+        linear-gradient(180deg, rgba(8, 9, 20, 0.42) 0%, transparent 28%, transparent 62%, var(--bg-primary) 100%);
+}
+
+.halftone-nebula {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+/* Shared shader layer used by every hero. Declared after the base component
+   so the generic relative rule can never push hero copy behind the canvas. */
+.hero-backdrop.halftone-nebula {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 60% 50%;
-    opacity: 0.9;
-    animation: hero-settle 2.4s var(--ease) both;
 }
 
-/* Readability overlay: left-weighted for the copy, fades into the page */
-.hero::before {
-    content: "";
+/* Hero copy is always a sibling layer above the shader. */
+.hero > .container,
+.page-hero > .container,
+.object-hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* No stacking context here, so the object photo's `lighten` blend reaches the
+   starfield behind it and its black space background disappears. Tree order
+   still paints the copy above the backdrop. */
+.object-hero > .container {
+    z-index: auto;
+}
+
+.halftone-nebula--interactive {
+    cursor: crosshair;
+}
+
+.halftone-nebula--scroll {
+    touch-action: pan-y;
+}
+
+.halftone-nebula--draw {
+    touch-action: none;
+}
+
+.halftone-nebula__canvas,
+.halftone-nebula__fallback {
     position: absolute;
     inset: 0;
-    z-index: -2;
-    background:
-        radial-gradient(ellipse 55% 70% at 18% 55%, rgba(8, 9, 20, 0.6), transparent 70%),
-        linear-gradient(90deg, rgba(8, 9, 20, 0.95) 0%, rgba(8, 9, 20, 0.8) 38%, rgba(8, 9, 20, 0.35) 72%, rgba(8, 9, 20, 0.55) 100%),
-        linear-gradient(180deg, rgba(8, 9, 20, 0.55) 0%, transparent 22%, transparent 58%, var(--bg-primary) 100%);
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-/* Warm atmospheric glow, lower right */
-.hero::after {
-    content: "";
-    position: absolute;
-    right: -20rem;
-    bottom: -32rem;
-    z-index: -1;
-    width: 62rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 159, 67, 0.16), transparent 60%);
+.halftone-nebula__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+}
+
+.halftone-nebula__content a,
+.halftone-nebula__content button {
+    pointer-events: auto;
 }
 
 .hero__inner {
     position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .hero__title {
@@ -859,6 +981,7 @@ strong {
     position: absolute;
     bottom: 2rem;
     left: 50%;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -893,9 +1016,17 @@ strong {
     to { top: 100%; }
 }
 
-@keyframes hero-settle {
-    from { opacity: 0; transform: scale(1.06); }
-    to   { opacity: 0.9; transform: scale(1); }
+html.m-enter .hero[data-enter] .hero__inner > * {
+    animation: hero-rise 420ms var(--ease) both;
+}
+
+html.m-enter .hero[data-enter] .hero__inner > *:nth-child(2) { animation-delay: 80ms; }
+html.m-enter .hero[data-enter] .hero__inner > *:nth-child(3) { animation-delay: 160ms; }
+html.m-enter .hero[data-enter] .hero__inner > *:nth-child(4) { animation-delay: 240ms; }
+
+@keyframes hero-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ---- Inner page hero (Explore, About, Milestones) ---- */
@@ -916,8 +1047,9 @@ strong {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, transparent 45%, var(--bg-primary));
+    z-index: 1;
+    background: linear-gradient(180deg, transparent 55%, var(--bg-primary));
+    pointer-events: none;
 }
 
 .page-hero__media {
@@ -941,6 +1073,37 @@ strong {
 
 .page-hero__lede {
     margin-top: 1.5rem;
+}
+
+/* A page that is only a hero (404) fills the screen instead of floating above the footer */
+.page-hero--fill {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - var(--header-h));
+    border-bottom: 0;
+}
+
+/* Empty shelf: a message and one action, followed by suggestions */
+.empty-state {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2.5rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+}
+
+.empty-state__title {
+    flex: 1 1 100%;
+    font-size: var(--fs-h3);
+}
+
+.empty-state .text {
+    flex: 1 1 22rem;
+    margin: 0;
 }
 
 .page-hero .stats {
@@ -1033,7 +1196,7 @@ strong {
 
 .feature__title {
     margin-top: 0.75rem;
-    font-size: var(--fs-h3);
+    font-size: 1.25rem;
 }
 
 .feature__text {
@@ -1428,10 +1591,7 @@ strong {
     border-radius: var(--radius-lg);
 }
 
-.card__link:focus-visible {
-    outline: none;
-}
-
+.card__link:focus-visible,
 .card__link:focus-visible::after {
     outline: 2px solid var(--accent-light);
     outline-offset: -2px;
@@ -1490,64 +1650,92 @@ strong {
     transform: translateX(4px);
 }
 
+/* ---- Compact catalogue card ---- */
+
+.object-card {
+    isolation: isolate;
+    border-radius: 14px;
+}
+
+.object-card:hover {
+    transform: translateY(-2px);
+}
+
+.object-card .card__media {
+    aspect-ratio: 16 / 10;
+    max-height: 230px;
+}
+
+.object-card .card__body {
+    gap: 0.35rem;
+    padding: 0.85rem 1rem 1rem;
+}
+
+.object-card .card__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.object-card .category {
+    margin: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+}
+
+.object-card .card__distance {
+    margin: 0;
+    font: 500 0.7rem / 1.2 var(--font-mono);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.object-card .card__title {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.15;
+}
+
+.object-card .card__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.object-card .card__text {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.object-card .card__link::after {
+    border-radius: 14px;
+}
+
 /* ---- Home: featured discoveries layout ---- */
 
 .discoveries {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
-.discoveries > .card {
-    grid-column: span 2;
+.spotlight__note {
+    margin: 0.75rem 0 0;
+    font: 500 var(--fs-label) / 1.4 var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
-.discoveries > .card--feature {
-    grid-column: span 3;
-}
-
-.discoveries > .card--wide {
-    grid-column: 1 / -1;
-}
-
-.card--feature .card__media {
-    aspect-ratio: 16 / 10;
-}
-
-.card--feature .card__title {
-    font-size: 2rem;
-}
-
-.card--wide {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-}
-
-.card--wide .card__media {
-    aspect-ratio: auto;
-    min-height: 22rem;
-}
-
-.card--wide .card__media::after {
-    background: linear-gradient(90deg, transparent 60%, rgba(13, 16, 32, 0.7));
-}
-
-.card--wide .card__body {
+.spotlight__action {
+    display: flex;
     justify-content: center;
-    padding: clamp(1.75rem, 4vw, 3.5rem);
-}
-
-.card--wide .card__title {
-    font-size: var(--fs-h2);
-}
-
-.card--wide .card__text {
-    max-width: 40ch;
-    font-size: var(--fs-body);
-}
-
-.card--wide .card__cta {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 
@@ -2510,12 +2698,7 @@ fieldset.field > legend {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .discoveries > .card,
-    .discoveries > .card--feature {
-        grid-column: span 1;
-    }
-
-    .discoveries > .card--wide {
+    .discoveries > .object-card:last-child {
         grid-column: 1 / -1;
     }
 
@@ -2588,19 +2771,6 @@ fieldset.field > legend {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .card--wide {
-        display: flex;
-    }
-
-    .card--wide .card__media {
-        aspect-ratio: 16 / 10;
-        min-height: 0;
-    }
-
-    .card--wide .card__media::after {
-        background: linear-gradient(180deg, transparent 55%, rgba(13, 16, 32, 0.6));
-    }
-
     .tech {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -2623,37 +2793,55 @@ fieldset.field > legend {
 }
 
 @media (max-width: 641px) {
-    :root {
-        --header-h: 6.25rem;
+    /* Phone header: wordmark + Menu button; the links open as a full-width sheet */
+    .nav-toggle {
+        display: inline-flex;
     }
 
-    /* Two-row header: wordmark, then full-width nav with even touch targets */
-    .site-header__inner {
+    /* The list becomes a sheet under the sticky header (its containing block) */
+    .site-nav__list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding-top: 0.35rem;
+        padding: 0.5rem max(var(--gutter), (100% - var(--container)) / 2) 1rem;
+        border-bottom: 1px solid var(--hairline);
+        background: rgba(8, 9, 20, 0.97);
     }
 
-    .site-nav__list {
-        justify-content: space-between;
-        margin-inline: -0.75rem;
-    }
-
-    .site-nav__list li {
-        flex: 1;
+    .site-nav.is-open .site-nav__list {
+        display: flex;
+        animation: nav-sheet var(--dur) var(--ease) both;
     }
 
     .site-nav__link {
-        justify-content: center;
         width: 100%;
-        padding: 0 0.5rem;
+        min-height: 3rem;
+        padding: 0;
+        font-size: 1.0625rem;
+    }
+
+    .site-nav__list li + li .site-nav__link {
+        border-top: 1px solid var(--hairline);
     }
 
     .site-nav__link::after {
-        right: 25%;
-        left: 25%;
-        transform-origin: center;
+        right: 0;
+        bottom: 50%;
+        left: auto;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        transform: translateY(50%) scale(0);
+    }
+
+    .site-nav__link[aria-current="page"]::after,
+    .site-nav__link.is-active::after {
+        transform: translateY(50%) scale(1);
     }
 
     .card-grid,
@@ -2707,12 +2895,6 @@ fieldset.field > legend {
 }
 
 @media (max-width: 480px) {
-    /* Keep the five navigation links readable on narrow screens. */
-    .site-nav__link {
-        padding: 0 0.25rem;
-        font-size: 0.875rem;
-    }
-
     .hero__actions,
     .cta__actions {
         flex-direction: column;
@@ -2769,18 +2951,6 @@ fieldset.field > legend {
    15. REDUCED MOTION
    ========================================================================= */
 
-@media (max-width: 360px) {
-    :root {
-        --header-h: 9rem;
-    }
-
-    .site-nav__list {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-inline: 0;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -2796,6 +2966,9 @@ fieldset.field > legend {
 
     .btn:hover,
     .card:hover,
+    .object-card:hover,
+    .favourite-button:hover,
+    .favourite-button:active,
     .member:hover,
     .timeline__card:hover,
     .object-nav__link:hover,
@@ -2804,21 +2977,55 @@ fieldset.field > legend {
     }
 }
 .favourite-button {
-    position: relative;
-    z-index: 2;
-    align-self: flex-start;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid var(--border-strong);
+    position: absolute;
+    z-index: 3;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 50%;
-    background: transparent;
-    color: var(--text-secondary);
+    background: rgba(8, 9, 20, 0.62);
+    color: var(--text-primary);
     cursor: pointer;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition:
+        transform var(--dur-fast) var(--ease),
+        border-color var(--dur-fast) var(--ease),
+        background-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease);
 }
 
-.favourite-button:hover,
+.favourite-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.favourite-button:hover {
+    border-color: var(--accent);
+    background: rgba(8, 9, 20, 0.82);
+    color: var(--accent-light);
+    transform: scale(1.05);
+}
+
+.favourite-button:active {
+    transform: scale(0.96);
+}
+
+.favourite-button:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #080914, 0 0 0 7px var(--accent-light);
+}
+
 .favourite-button[aria-pressed="true"] {
     border-color: var(--accent);
+    background: rgba(255, 159, 67, 0.18);
     color: var(--accent-light);
 }
 

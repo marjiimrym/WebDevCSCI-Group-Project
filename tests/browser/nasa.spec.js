@@ -47,14 +47,14 @@ test('APOD displays the image field, video links, and solar-flare observations',
   await expect(page.getByRole('link', { name: 'M1.0 solar flare' })).toBeVisible();
   await page.route('**/api/apod', (route) => route.fulfill({ json: { data: { ...responses.apod, mediaType: 'video', imageUrl: null }, meta } }));
   await page.reload();
-  await expect(page.getByText(/Video or interactive feature/)).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Watch today’s video on NASA' })).toBeVisible();
   await expect(page.locator('iframe')).toHaveCount(0);
 });
 test('image search uses explicit submission, empty results, and does not alter favourites', async ({ page }) => {
   let calls = 0;
   await page.route('**/api/images?*', (route) => { calls++; return route.fulfill({ json: { data: calls === 1 ? responses.images : [], meta } }); });
   await page.goto('/explore');
-  await page.getByRole('button', { name: 'Favourite Mars', exact: true }).click();
+  await page.getByRole('button', { name: 'Add Mars to favourites', exact: true }).click();
   await page.getByLabel('NASA image keywords').fill('orion');
   expect(calls).toBe(0);
   await page.getByRole('button', { name: 'Search NASA images' }).click();

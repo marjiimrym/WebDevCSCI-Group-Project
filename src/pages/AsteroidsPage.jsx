@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import useNasa from '../hooks/useNasa.js';
 import DataStatus from '../components/DataStatus.jsx';
 import { filterAsteroids } from '../../assets/js/asteroid-filters.js';
-import heroImage from '../../assets/images/openpage.jpg';
+import HeroBackdrop from '../components/ui/HeroBackdrop.jsx';
 
 const num = new Intl.NumberFormat('en-CA');
 const formatDate = (iso) => new Date(iso).toLocaleDateString('en-CA', {
@@ -36,8 +36,7 @@ export default function AsteroidsPage() {
   return (
     <main id="main" tabIndex={-1}>
       <section className="page-hero page-hero--explore" aria-labelledby="page-title">
-        <img className="page-hero__media" src={heroImage} alt="" width="1200" height="675" />
-        <div className="sky" aria-hidden="true"></div>
+        <HeroBackdrop variant="catalogue" />
         <div className="container">
           <p className="eyebrow">Near-Earth objects</p>
           <h1 id="page-title" className="page-hero__title">Near-Earth Asteroids</h1>

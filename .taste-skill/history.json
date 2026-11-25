@@ -1,0 +1,21 @@
+{
+  "moments": [
+    {
+      "id": "letters-assemble",
+      "at": "2026-11-25T16:32:54.218Z",
+      "seed": "87b7abfb"
+    },
+    {
+      "id": "line-carries-colour",
+      "at": "2026-11-25T16:32:54.218Z",
+      "seed": "87b7abfb"
+    }
+  ],
+  "palettes": [],
+  "types": [],
+  "dealt": [
+    "gabarito",
+    "onest",
+    "host"
+  ]
+}
