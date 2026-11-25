@@ -12,3 +12,4 @@ playwright-report/
 .cache/
 *.log
 docs/ai-prompts
+.vercel

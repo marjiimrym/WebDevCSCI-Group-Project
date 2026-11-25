@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules
+dist
+.cache
+test-results
+playwright-report
+graphify-out
+.taste-skill
+.impeccable
+.claude
+.playwright-mcp
+docs/ai-prompts
+*.log
