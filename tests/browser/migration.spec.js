@@ -129,7 +129,7 @@ test('catalogue controls survive detail navigation, back and refresh', async ({ 
 test('favourites survive navigation across all React pages', async ({ page }) => {
   await page.goto('/explore');
   await page.getByRole('button', { name: 'Add Mars to favourites', exact: true }).click();
-  for (const [route, path] of [['About', '/about'], ['Milestones', '/milestones'], ['Asteroids', '/asteroids'], ['Favourites', '/favourites']]) {
+  for (const [route, path] of [['About', '/about'], ['Asteroids', '/asteroids'], ['Favourites', '/favourites']]) {
     await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: route, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`${path}$`));
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -168,7 +168,7 @@ test('unknown routes have a usable recovery page', async ({ page }) => {
   }
 });
 
-const validRoutes = new Set(['/', '/favourites', ...Object.values(legacyRoutes)]);
+const validRoutes = new Set(['/', '/favourites', '/gallery', '/apod', '/space-weather', '/compare', ...Object.values(legacyRoutes)]);
 for (const route of validRoutes) {
   test(`all local page links point at real routes or section anchors: ${route}`, async ({ page }) => {
     await page.goto(route);
@@ -191,7 +191,7 @@ test('pages fit mobile screens and use a single HTML entry point', async ({ page
   expect(existsSync('pages') ? readdirSync('pages').filter((name) => name.endsWith('.html')) : []).toEqual([]);
   for (const width of [320, 390, 641, 768]) {
     await page.setViewportSize({ width, height: 844 });
-    for (const route of ['/', '/explore', '/objects/mars', '/asteroids', '/about', '/milestones', '/favourites']) {
+    for (const route of ['/', '/explore', '/objects/mars', '/asteroids', '/about', '/favourites', '/gallery', '/apod', '/space-weather', '/compare']) {
       await page.goto(route);
       await expect(page.locator('#root h1')).toBeVisible();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${width}px: ${route}`).toBe(true);
