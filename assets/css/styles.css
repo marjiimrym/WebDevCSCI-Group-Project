@@ -1029,7 +1029,7 @@ html.m-enter .hero[data-enter] .hero__inner > *:nth-child(4) { animation-delay: 
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Inner page hero (Explore, About, Milestones) ---- */
+/* ---- Inner page hero (Explore, About) ---- */
 
 .page-hero {
     position: relative;
@@ -2398,155 +2398,6 @@ fieldset.field > legend {
   color: var(--accent);
 }
 
-/* =========================================================================
-   12. TIMELINE
-   ========================================================================= */
-
-.timeline {
-    position: relative;
-    display: grid;
-    gap: 1.5rem;
-    max-width: 60rem;
-}
-
-/* The rail: lit where work is done, fading into what's ahead */
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 2rem;
-    bottom: 2rem;
-    left: calc(1.25rem - 0.5px);
-    width: 1px;
-    background: linear-gradient(var(--accent) 0%, var(--accent-line) 28%, var(--border) 42%, var(--hairline) 100%);
-}
-
-.timeline__item {
-    position: relative;
-    display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr);
-    gap: 1.5rem;
-}
-
-.timeline__node {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: 1.75rem;
-    border: 1px solid var(--border-strong);
-    border-radius: 50%;
-    background: var(--bg-primary);
-}
-
-.timeline__node::after {
-    content: "";
-    width: 0.6rem;
-    height: 0.6rem;
-    border: 1px solid var(--text-muted);
-    border-radius: 50%;
-}
-
-.timeline__item--complete .timeline__node {
-    border-color: var(--accent-line);
-}
-
-.timeline__item--complete .timeline__node::after {
-    border-color: var(--accent);
-    background: var(--accent);
-}
-
-.timeline__item--current .timeline__node {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 6px var(--accent-soft);
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.timeline__item--current .timeline__node::after {
-    border-color: var(--accent-light);
-    background: var(--accent-light);
-    box-shadow: 0 0 12px var(--accent);
-}
-
-@keyframes pulse {
-    50% { box-shadow: 0 0 0 10px rgba(255, 159, 67, 0.04); }
-}
-
-.timeline__card {
-    padding: clamp(1.5rem, 3vw, 2.25rem);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background: linear-gradient(160deg, var(--bg-surface), var(--bg-secondary));
-    transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
-}
-
-.timeline__card:hover {
-    border-color: var(--border-strong);
-    transform: translateY(-2px);
-}
-
-.timeline__item--current .timeline__card {
-    border-color: var(--accent-line);
-    box-shadow: 0 0 0 1px var(--accent-soft), var(--shadow-lift);
-}
-
-.timeline__head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem 1rem;
-}
-
-.timeline__num {
-    font: 400 clamp(2.5rem, 2rem + 2vw, 3.5rem) / 1 var(--font-display);
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-}
-
-.timeline__item--upcoming .timeline__num {
-    color: var(--text-muted);
-}
-
-.timeline__title {
-    margin-top: 1rem;
-    font-size: var(--fs-h3);
-}
-
-.timeline__text {
-    max-width: 60ch;
-    margin-top: 0.75rem;
-    color: var(--text-secondary);
-}
-
-.timeline__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 2.25rem;
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--hairline);
-}
-
-.timeline__meta div {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6rem;
-}
-
-.timeline__meta dt {
-    font: 500 var(--fs-label) / 1.4 var(--font-mono);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-}
-
-.timeline__meta dd {
-    font-size: var(--fs-sm);
-    color: var(--text-primary);
-}
-
 /* Status pill */
 .status {
     display: inline-flex;
@@ -2792,8 +2643,10 @@ fieldset.field > legend {
     }
 }
 
-@media (max-width: 641px) {
-    /* Phone header: wordmark + Menu button; the links open as a full-width sheet */
+/* Compact header: wordmark + Menu button; the links open as a full-width sheet.
+   The full row (wordmark, eight links, Log in) needs a ~1220px viewport,
+   and wider fallback fonts (Linux CI) need ~1310px, so collapse below 1361px. */
+@media (max-width: 1360px) {
     .nav-toggle {
         display: inline-flex;
     }
@@ -2843,7 +2696,9 @@ fieldset.field > legend {
     .site-nav__link.is-active::after {
         transform: translateY(50%) scale(1);
     }
+}
 
+@media (max-width: 641px) {
     .card-grid,
     .discoveries,
     .team,
@@ -2926,19 +2781,6 @@ fieldset.field > legend {
         width: 100%;
     }
 
-    .timeline::before {
-        left: calc(0.875rem - 0.5px);
-    }
-
-    .timeline__item {
-        grid-template-columns: 1.75rem minmax(0, 1fr);
-        gap: 0.875rem;
-    }
-
-    .timeline__node {
-        width: 1.75rem;
-        height: 1.75rem;
-    }
 
     .member,
     .tile {
@@ -2970,7 +2812,6 @@ fieldset.field > legend {
     .favourite-button:hover,
     .favourite-button:active,
     .member:hover,
-    .timeline__card:hover,
     .object-nav__link:hover,
     .card:hover .card__media img {
         transform: none;
@@ -3185,8 +3026,8 @@ fieldset.field > legend {
     color: var(--text-primary);
 }
 
-/* Phones: the auth control is the last row of the Menu sheet (same breakpoint) */
-@media (max-width: 641px) {
+/* Compact header: the auth control is the last row of the Menu sheet (same breakpoint) */
+@media (max-width: 1360px) {
     .site-nav__auth {
         margin-left: 0;
         padding-top: 0.75rem;
@@ -3203,3 +3044,20 @@ fieldset.field > legend {
     }
 }
 
+/* Compare page: two equal pickers that stack on narrow screens */
+.toolbar--pair {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    grid-template-areas: none;
+}
+
+/* Standalone fact lists (Compare, Space Weather) */
+.fact-list {
+    margin-block: 1.5rem 2rem;
+}
+
+/* Space Weather page: the section already has its own spacing */
+.space-weather.space-weather--page {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}

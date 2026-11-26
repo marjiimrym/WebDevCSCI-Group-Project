@@ -8,7 +8,10 @@ import ExplorePage from './pages/ExplorePage.jsx';
 import FavouritesPage from './pages/FavouritesPage.jsx';
 import ObjectDetailPage from './pages/ObjectDetailPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
-import MilestonesPage from './pages/MilestonesPage.jsx';
+import ApodPage from './pages/ApodPage.jsx';
+import SpaceWeatherPage from './pages/SpaceWeatherPage.jsx';
+import GalleryPage from './pages/GalleryPage.jsx';
+import ComparePage from './pages/ComparePage.jsx';
 import AsteroidsPage from './pages/AsteroidsPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import legacyRoutes from './data/legacyRoutes.json';
@@ -31,8 +34,11 @@ function LegacyRedirect({ to }) {
           <Route path="/objects/:id" element={<ObjectDetailPage />} />
           <Route path="/favourites" element={<FavouritesPage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
           <Route path="/asteroids" element={<AsteroidsPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/apod" element={<ApodPage />} />
+          <Route path="/space-weather" element={<SpaceWeatherPage />} />
+          <Route path="/compare" element={<ComparePage favouriteIds={favouriteIds} onToggleFavourite={onToggleFavourite} />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/milestones" element={<MilestonesPage />} />
           {Object.entries(legacyRoutes).map(([file, to]) => (
             <Route key={file} path={file === 'index.html' ? '/index.html' : `/pages/${file}`} element={<LegacyRedirect to={to} />} />
           ))}
@@ -61,7 +67,6 @@ export default function App() {
           <Route path="/favourites" element={<FavouritesPage favouriteIds={favouriteIds} onToggleFavourite={toggleFavourite} />} />
           <Route path="/asteroids" element={<AsteroidsPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/milestones" element={<MilestonesPage />} />
           {Object.entries(legacyRoutes).map(([file, to]) => (
             <Route key={file} path={file === 'index.html' ? '/index.html' : `/pages/${file}`} element={<LegacyRedirect to={to} />} />
           ))}

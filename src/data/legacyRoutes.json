@@ -2,7 +2,7 @@
   "index.html": "/",
   "explore.html": "/explore",
   "about.html": "/about",
-  "milestones.html": "/milestones",
+  "milestones.html": "/about",
   "asteroids.html": "/asteroids",
   "moon.html": "/objects/moon",
   "mars.html": "/objects/mars",

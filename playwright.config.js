@@ -5,6 +5,8 @@ export default defineConfig({
   testDir: './tests/browser',
   use: {
     baseURL: 'http://127.0.0.1:4173',
+    // Wide enough for the full header row (it collapses to a Menu button at 1360px and below).
+    viewport: { width: 1440, height: 900 },
     // Set PLAYWRIGHT_CHANNEL=msedge to use an installed Microsoft Edge browser.
     channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
   },

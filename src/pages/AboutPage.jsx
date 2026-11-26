@@ -73,7 +73,6 @@ export default function AboutPage() {
                     <p className="lede">Cosmic Explorer is the group project for CSCI 3230U — Web Development.</p>
                     <p className="text">The course asks each team to design and build a single-page application that browses and acts on a collection of items drawn from a web service: a searchable, filterable collection of cards, each with a detail page, favourites, and data loaded from an API.</p>
                     <p className="text">Our team applied that brief to astronomy. Planets, moons, stars and galaxies form the collection; NASA's public API platform is the data source. The work is delivered in five graded milestones, so the product grows from a static prototype into a deployed application.</p>
-                    <Link className="text-link" to="/milestones">See the milestones <span className="arrow" aria-hidden="true">→</span></Link>
                 </div>
             </div>
         </section>

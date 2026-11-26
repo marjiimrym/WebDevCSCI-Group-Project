@@ -24,7 +24,7 @@ export default function HomePage({ favouriteIds = [], onToggleFavourite }) {
                     <span>Astronomy</span>
                 </p>
                 <h1 id="hero-title" className="hero__title">
-                    <span className="hero__line">Explore 26 objects.</span>
+                    <span className="hero__line">Explore 26 objects.</span>{' '}
                     <span className="hero__line hero__line--accent">An astronomy catalogue.</span>
                 </h1>
                 <p className="lede hero__lede">Browse 26 objects, from the Moon to the Andromeda Galaxy. Each one has a clear summary, key facts and a full profile.</p>
@@ -188,7 +188,7 @@ export default function HomePage({ favouriteIds = [], onToggleFavourite }) {
                 <p className="lede">Browse the catalogue, search NASA imagery, or explore the latest near-Earth asteroid approaches.</p>
                 <div className="cta__actions">
                     <Link className="btn btn--primary btn--lg" to="/explore">Open the catalogue <span className="arrow" aria-hidden="true">→</span></Link>
-                    <Link className="btn btn--ghost btn--lg" to="/milestones">View milestones</Link>
+                    <Link className="btn btn--ghost btn--lg" to="/asteroids">Track asteroids</Link>
                 </div>
             </div>
         </section>

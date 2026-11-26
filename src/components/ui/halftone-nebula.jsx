@@ -565,6 +565,14 @@ export default function HalftoneNebula({
       setFailed(true);
       return;
     }
+    // No GPU (headless CI, VMs, blocklisted drivers): the shader would run on
+    // the CPU at 60fps and starve the page, so show the still sky instead.
+    const info = gl.getExtension("WEBGL_debug_renderer_info");
+    const renderer = String(gl.getParameter(info ? info.UNMASKED_RENDERER_WEBGL : gl.RENDERER));
+    if (/swiftshader|llvmpipe|software/i.test(renderer)) {
+      setFailed(true);
+      return;
+    }
 
     const compile = (type, src) => {
       const shader = gl.createShader(type);

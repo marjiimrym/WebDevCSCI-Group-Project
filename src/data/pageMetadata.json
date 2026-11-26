@@ -51,10 +51,6 @@
     "title": "Mercury | Cosmic Explorer",
     "description": "The smallest planet and the closest to the Sun, a cratered world of rock with no atmosphere to soften its swings from scorching to freezing."
   },
-  "/milestones": {
-    "title": "Milestones | Cosmic Explorer",
-    "description": "The five project milestones for Cosmic Explorer, from team and topic to a deployed React application and demo video."
-  },
   "/objects/milky-way": {
     "title": "Milky Way Galaxy | Cosmic Explorer",
     "description": "Our home galaxy: a barred spiral of 100 to 400 billion stars, with a supermassive black hole at its centre."
@@ -118,5 +114,21 @@
   "/objects/whirlpool": {
     "title": "Whirlpool Galaxy | Cosmic Explorer",
     "description": "A grand-design spiral 31 million light-years away, caught mid-interaction with a smaller companion galaxy."
+  },
+  "/gallery": {
+    "title": "Image Gallery | Cosmic Explorer",
+    "description": "Search the NASA Image and Video Library for mission photographs and telescope imagery."
+  },
+  "/apod": {
+    "title": "Astronomy Picture of the Day | Cosmic Explorer",
+    "description": "Today’s NASA Astronomy Picture of the Day, with an explanation from a professional astronomer."
+  },
+  "/space-weather": {
+    "title": "Space Weather | Cosmic Explorer",
+    "description": "Solar flares recorded by NASA’s DONKI database over the past seven days."
+  },
+  "/compare": {
+    "title": "Compare Objects | Cosmic Explorer",
+    "description": "Compare the size and distance of any two planets, moons, stars, galaxies or nebulae."
   }
 }
