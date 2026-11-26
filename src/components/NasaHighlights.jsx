@@ -13,7 +13,7 @@ function ResilientImage({ src, alt, ...props }) {
   }} />;
 }
 
-export { ResilientImage };
+export { ResilientImage, DailyFeature, FlareList };
 
 // APOD text often repeats its own field name ("Explanation: …", "Credit: Credit: …").
 const stripLabel = (text, label) => text.replace(new RegExp(`^(\\s*${label}:\\s*)+`, 'i'), '');
@@ -50,6 +50,20 @@ function DailyFeature({ data }) {
   );
 }
 
+function FlareList({ weather, limit }) {
+  return weather.data.length ? <ul className="weather-list" role="list">
+    {weather.data.slice(0, limit).map((event) => {
+      const flareClass = event.classType || 'Unclassified';
+      return <li key={event.id} className="flare" data-class={flareClass[0]}>
+        <span className="flare__class" aria-hidden="true">{flareClass}</span>
+        <a className="flare__link" href={event.pageUrl} rel="external">{flareClass} solar flare</a>
+        <time dateTime={event.beginTime}>{new Date(event.beginTime).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' })}</time>
+        <span className="flare__region">Region {event.sourceLocation || 'unavailable'}</span>
+      </li>;
+    })}
+  </ul> : <p className="nasa-empty">{weather.loading ? 'Loading space weather…' : weather.meta.source === 'nasa' ? 'No solar flares reported in this period.' : 'Space weather observations are currently unavailable.'}</p>;
+}
+
 export default function NasaHighlights() {
   const apod = useNasa('apod');
   const weather = useNasa('weather');
@@ -76,17 +90,7 @@ export default function NasaHighlights() {
             <p className="notice">NASA DONKI research observations from the past seven days; not an operational forecast.</p>
           </div>
           <DataStatus resource={weather} />
-          {weather.data.length ? <ul className="weather-list" role="list">
-            {weather.data.slice(0, 3).map((event) => {
-              const flareClass = event.classType || 'Unclassified';
-              return <li key={event.id} className="flare" data-class={flareClass[0]}>
-                <span className="flare__class" aria-hidden="true">{flareClass}</span>
-                <a className="flare__link" href={event.pageUrl} rel="external">{flareClass} solar flare</a>
-                <time dateTime={event.beginTime}>{new Date(event.beginTime).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' })}</time>
-                <span className="flare__region">Region {event.sourceLocation || 'unavailable'}</span>
-              </li>;
-            })}
-          </ul> : <p className="nasa-empty">{weather.loading ? 'Loading space weather…' : weather.meta.source === 'nasa' ? 'No solar flares reported in this period.' : 'Space weather observations are currently unavailable.'}</p>}
+          <FlareList weather={weather} limit={3} />
         </div>
       </div>
     </section>

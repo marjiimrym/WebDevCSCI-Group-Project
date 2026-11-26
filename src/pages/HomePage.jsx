@@ -188,7 +188,7 @@ export default function HomePage({ favouriteIds = [], onToggleFavourite }) {
                 <p className="lede">Browse the catalogue, search NASA imagery, or explore the latest near-Earth asteroid approaches.</p>
                 <div className="cta__actions">
                     <Link className="btn btn--primary btn--lg" to="/explore">Open the catalogue <span className="arrow" aria-hidden="true">→</span></Link>
-                    <Link className="btn btn--ghost btn--lg" to="/milestones">View milestones</Link>
+                    <Link className="btn btn--ghost btn--lg" to="/asteroids">Track asteroids</Link>
                 </div>
             </div>
         </section>

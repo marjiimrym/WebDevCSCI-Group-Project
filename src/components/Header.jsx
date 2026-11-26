@@ -8,8 +8,11 @@ const links = [
   ['/explore', 'Explore'],
   ['/favourites', 'Favourites'],
   ['/asteroids', 'Asteroids'],
+  ['/gallery', 'Gallery'],
+  ['/apod', 'Daily Image'],
+  ['/space-weather', 'Space Weather'],
+  ['/compare', 'Compare'],
   ['/about', 'About'],
-  ['/milestones', 'Milestones'],
 ];
 
 export default function Header() {

@@ -55,6 +55,7 @@ test('image search uses explicit submission, empty results, and does not alter f
   await page.route('**/api/images?*', (route) => { calls++; return route.fulfill({ json: { data: calls === 1 ? responses.images : [], meta } }); });
   await page.goto('/explore');
   await page.getByRole('button', { name: 'Add Mars to favourites', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Main', exact: true }).getByRole('link', { name: 'Gallery' }).click();
   await page.getByLabel('NASA image keywords').fill('orion');
   expect(calls).toBe(0);
   await page.getByRole('button', { name: 'Search NASA images' }).click();
@@ -67,9 +68,21 @@ test('image search uses explicit submission, empty results, and does not alter f
   await expect(page.getByRole('heading', { level: 1, name: 'Favourites' })).toBeVisible();
   await expect(page.locator('.card-grid .card__title')).toHaveText('Mars');
 });
+test('new pages show APOD, every solar flare, and object comparisons', async ({ page }) => {
+  await page.goto('/apod');
+  await expect(page.getByRole('img', { name: 'A blue nebula' })).toBeVisible();
+  await page.goto('/space-weather');
+  await expect(page.locator('.weather-list .flare')).toHaveCount(responses.weather.length);
+  await page.goto('/compare?a=jupiter&b=earth');
+  await expect(page.getByText('Jupiter is 11× wider than Earth.')).toBeVisible();
+  await expect(page.getByText('Earth is our viewpoint, so there is no distance to compare.')).toBeVisible();
+  await page.getByLabel('Second object').selectOption('mars');
+  await expect(page).toHaveURL(/a=jupiter&b=mars/);
+  await expect(page.getByText('Jupiter is 3.5× farther from Earth than Mars.')).toBeVisible();
+});
 test('new content fits mobile screens and is keyboard accessible', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 844 });
-  await page.goto('/explore');
+  await page.goto('/gallery');
   await page.getByLabel('NASA image keywords').fill('orion');
   await page.keyboard.press('Enter');
   await expect(page.locator('.nasa-image-card')).toHaveCount(1);

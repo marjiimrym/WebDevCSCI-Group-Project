@@ -20,8 +20,11 @@ export default function Footer() {
                         <li><Link to="/explore">Explore</Link></li>
                         <li><Link to="/favourites">Favourites</Link></li>
                         <li><Link to="/asteroids">Asteroids</Link></li>
+                        <li><Link to="/gallery">Gallery</Link></li>
+                        <li><Link to="/apod">Daily Image</Link></li>
+                        <li><Link to="/space-weather">Space Weather</Link></li>
+                        <li><Link to="/compare">Compare</Link></li>
                         <li><Link to="/about">About</Link></li>
-                        <li><Link to="/milestones">Milestones</Link></li>
                     </ul>
                 </nav>
                 <div className="footer__col">
